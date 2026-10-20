@@ -5,17 +5,17 @@
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 33856212,
+   "reported_total": 33858112,
    "committees": [
     {
      "id": "1484470",
      "name": "Yes on 40 - Billionaire Tax Now - No on 41 & 42 (SEIU-UHW)",
-     "reported_total": 32481914
+     "reported_total": 32482814
     },
     {
      "id": "1497412",
      "name": "Working Families Say No to Props 41 and 42, Sponsored by Labor Unions",
-     "reported_total": 950000
+     "reported_total": 951000
     },
     {
      "id": "1495036",
@@ -23,9 +23,9 @@
      "reported_total": 424298
     }
    ],
-   "itemized_total": 33841346,
-   "contributions": 198,
-   "donor_count": 90,
+   "itemized_total": 33843246,
+   "contributions": 202,
+   "donor_count": 91,
    "top_donors": [
     {
      "name": "Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",
@@ -213,7 +213,7 @@
     },
     {
      "place": "Sacramento, CA",
-     "amount": 8445964
+     "amount": 8446964
     },
     {
      "place": "Oakland, CA",
@@ -257,12 +257,12 @@
     }
    ],
    "by_state": {
-    "California": 33695673,
-    "Out of state": 145673
+    "California": 33696673,
+    "Out of state": 146573
    },
    "by_type": {
-    "Committee": 32808563,
-    "Individual": 990183,
+    "Committee": 32809563,
+    "Individual": 991083,
     "Business or group": 42600
    }
   },
@@ -270,7 +270,7 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 129841019,
+   "reported_total": 130009744,
    "committees": [
     {
      "id": "1492108",
@@ -283,19 +283,19 @@
      "reported_total": 10450000
     },
     {
+     "id": "1485228",
+     "name": "Californians Against Tax Increases (CA Business Roundtable)",
+     "reported_total": 423724
+    },
+    {
      "id": "1485007",
      "name": "Stop the Squeeze - No on Prop 40",
      "reported_total": 400000
-    },
-    {
-     "id": "1485228",
-     "name": "Californians Against Tax Increases (CA Business Roundtable)",
-     "reported_total": 255000
     }
    ],
-   "itemized_total": 129841019,
-   "contributions": 30,
-   "donor_count": 12,
+   "itemized_total": 130009744,
+   "contributions": 32,
+   "donor_count": 13,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
@@ -332,6 +332,13 @@
      "n": 1,
      "type": "Individual",
      "place": "Chicago, IL"
+    },
+    {
+     "name": "RIGHT PATH CALIFORNIA ISSUES PAC",
+     "amount": 168724,
+     "n": 2,
+     "type": "Committee",
+     "place": "San Rafael, CA"
     },
     {
      "name": "Ronald Conway",
@@ -386,7 +393,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 118750000
+     "amount": 118918724
     },
     {
      "place": "San Francisco, CA",
@@ -406,11 +413,11 @@
     }
    ],
    "by_state": {
-    "California": 129541019,
+    "California": 129709744,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 119239294,
+    "Committee": 119408018,
     "Business or group": 5301726,
     "Individual": 5300000
    }
