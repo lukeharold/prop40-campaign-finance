@@ -660,6 +660,23 @@
     })
     .catch(() => { $("#chart").replaceChildren(el("p", { class: "error" }, "The data couldn't be loaded. Try refreshing the page.")); });
 })();
+
+// Embedded in an iframe: tell the host page our height whenever it changes,
+// so the iframe can grow and shrink with the content (no inner scrollbar).
+// Only a number is sent; the host checks it came from this site.
+(() => {
+  if (window.parent === window) return;
+  let last = 0;
+  const post = () => {
+    const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    if (h !== last) {
+      last = h;
+      window.parent.postMessage({ type: "prop40-embed-height", height: h }, "*");
+    }
+  };
+  new ResizeObserver(post).observe(document.documentElement);
+  addEventListener("load", post);
+})();
 </script>
 </body>
 </html>
