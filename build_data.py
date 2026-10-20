@@ -408,6 +408,7 @@ def write_site_data(receipts, reported_by_cmte, bbc, bbc_spending, stats):
 
     data = {
         "updated": stats["updated"],
+        "as_of": stats["as_of"],
         "segments": segments,
         "bbc": {
             "name": "Building a Better California",
@@ -444,6 +445,7 @@ def write_site_data(receipts, reported_by_cmte, bbc, bbc_spending, stats):
     rows_out.sort(key=lambda x: -x[10])
     (site / "contributions.json").write_text(json.dumps({
         "updated": stats["updated"],
+        "as_of": stats["as_of"],
         "columns": ["date", "name", "type", "city", "state", "zip", "employer",
                     "occupation", "faction", "recipient", "amount", "form"],
         "rows": rows_out,
@@ -456,6 +458,10 @@ def main():
     OUT.mkdir(exist_ok=True)
 
     with zipfile.ZipFile(ZIP_PATH) as zf:
+        # The state builds the snapshot overnight; the filings table's
+        # timestamp is the "data as of" date shown to readers.
+        cvr = next(i for i in zf.infolist() if i.filename.upper().endswith("/CVR_CAMPAIGN_DISCLOSURE_CD.TSV"))
+        as_of = date(*cvr.date_time[:3]).isoformat()
         filings = load_filings(zf, set(POSITIONS) | {BBC_ID})
         cutoff = latest_460(filings)
         receipts = load_receipts(zf, filings, cutoff)
@@ -611,7 +617,8 @@ def main():
     for r in rows:
         totals[r["side"]] += r["amount"]
     stats = {
-        "updated": str(latest or ""),
+        "updated": str(latest or ""),   # latest contribution date
+        "as_of": as_of,                 # date of the Cal-Access snapshot
         "yes_total": round(totals["Yes"]),
         "no_total": round(totals["No"]),
         "people_yes": sum(1 for r in people if r["side"] == "Yes"),

@@ -36,11 +36,19 @@ def pct(x):
     return f"{x:.0%}"
 
 
+def as_of(s):
+    """'Oct. 20, 2026' from the snapshot date (AP-style month)."""
+    from datetime import date
+    d = date.fromisoformat(s.get("as_of") or s["updated"])
+    mon = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."][d.month - 1]
+    return f"Data as of {mon} {d.day}, {d.year}, from the state's daily Cal-Access snapshot."
+
+
 def notes(s):
     """Chart notes, filled from output/stats.json so they stay current."""
     base = ("Itemized contributions ($100+) to the six committees formed for or against "
-            "Prop 40, from Form 460s and 24-hour Form 497 reports, through {updated}. "
-            "Both Yes committees also campaign on other measures.").format(**s)
+            "Prop 40, from Form 460s and 24-hour Form 497 reports. " + as_of(s) + " "
+            "Both Yes committees also campaign on other measures.")
     bbc = ("Most No money comes through Building a Better California, which raised "
            f"{usd(s['bbc_raised'])} and gave {usd(s['bbc_to_40'])} "
            f"({pct(s['bbc_share_to_40'])} of its spending) to No on 40.")
@@ -50,7 +58,7 @@ def notes(s):
                          f"{pct(s['bbc_out_of_state_share'])} of that committee's money came "
                          "from donors with out-of-state addresses."),
         "bbc_donors": (f"Itemized contributions to Building a Better California since Jan. 1, "
-                       f"2025, through {s['updated']}. The committee spent {usd(s['bbc_spent'])}, "
+                       f"2025. {as_of(s)} The committee spent {usd(s['bbc_spent'])}, "
                        f"{pct(s['bbc_share_to_40'])} of it on No on 40; the rest went mainly to "
                        "Props 41 and 42 and other measures. Amounts shown are total gifts to "
                        "the committee, not gifts to the Prop 40 campaign."),
@@ -58,12 +66,12 @@ def notes(s):
                 f"the Yes side ({pct(s['people_share_yes'])} of its money) and "
                 f"{s['people_no']} to the No side ({pct(s['people_share_no'])} of its money). "
                 "Most money on both sides comes from unions, companies and committees, which "
-                f"are not mapped. {bbc} Data through {s['updated']}."),
+                f"are not mapped. {bbc} {as_of(s)}"),
         **{f"funding_{m}": funding_note(s) for m in ("40", "41", "42")},
         "coalition": ("Totals are each committee's own reported contributions: the totals on its "
                       "Form 460 campaign statements (including in-kind and contributions under $100), "
-                      "plus contributions on 24-hour reports filed since its last statement, through "
-                      f"{s['updated']}. The Yes on 40 / No on 41 and 42 side is "
+                      "plus contributions on 24-hour reports filed since its last statement. "
+                      f"{as_of(s)} The Yes on 40 / No on 41 and 42 side is "
                       "SEIU-UHW's \"Yes on 40 - Billionaire Tax Now - No on 41 & 42,\" Tax the "
                       "Ultra-Rich Now, and Working Families Say No to Props 41 and 42, a labor "
                       "committee formed in October that has filed only 24-hour reports so far. "
@@ -74,8 +82,8 @@ def notes(s):
 
 
 def funding_note(s):
-    return ("Itemized contributions ($100+) from Form 460s and 24-hour Form 497 reports, "
-            f"through {s['updated']}. The main Yes on 40 committee, SEIU-UHW's \"Yes on 40 - "
+    return ("Itemized contributions ($100+) from Form 460s and 24-hour Form 497 reports. "
+            f"{as_of(s)} The main Yes on 40 committee, SEIU-UHW's \"Yes on 40 - "
             "Billionaire Tax Now - No on 41 & 42,\" also campaigns against Props 41 and 42, so "
             "its money is counted on each of those sides; the Secretary of State lists it only "
             "under Prop 40. SEIU-UHW includes the union's nonprofit arm and political committees.")

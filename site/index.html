@@ -643,7 +643,7 @@
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then((d) => {
       data = d;
-      $("#meta").textContent = `Contributions reported through ${prettyDate(d.updated)}.`;
+      $("#meta").textContent = `Data as of ${prettyDate(d.as_of || d.updated)}, from the state's daily Cal-Access snapshot. Filings made later in the day appear the next day.`;
       renderChart();
       const start = location.hash.slice(1);
       if (start === "search") showTab("search");
