@@ -147,6 +147,10 @@ CHARTS = {
             "custom-colors": {"California donors": NO, "Out-of-state donors": "#7a3d12"},
             "value-label-format": "$0.[0]a",
             "show-color-key": True,
+            # Each donor is in one group, so show the total at the end of the
+            # bar instead of a label inside it (small bars can't fit one).
+            "show-value-labels": False,
+            "totals-labels": True,
         },
     },
     "coalition": {
