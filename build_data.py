@@ -630,21 +630,25 @@ def main():
     )
 
     # Building a Better California: who funds it, where its money went.
-    bbc_donors, bbc_display, bbc_state = defaultdict(float), {}, {}
+    bbc_donors, bbc_display = defaultdict(float), {}
     for r in bbc:
         k = norm(r["name"])
         bbc_donors[k] += r["amount"]
         bbc_display.setdefault(k, r["name"])
-        bbc_state.setdefault(k, r["state"])
     bbc_raised = sum(bbc_donors.values())
     bbc_spent = sum(s["amount"] for s in bbc_spending)
     bbc_to_40 = sum(s["amount"] for s in bbc_spending
                     if s["payee_cmte_id"] in COMMITTEES or PROP40_NAME.search(s["payee"].upper()))
     bbc_out_of_state = sum(r["amount"] for r in bbc if r["state"] and r["state"] != "CA")
+    # Split each donor's total by California vs. out-of-state address, so
+    # the chart has two series readers can highlight by hovering.
+    bbc_split = defaultdict(lambda: {"CA": 0.0, "out": 0.0})
+    for r in bbc:
+        bbc_split[norm(r["name"])]["CA" if r["state"] == "CA" else "out"] += r["amount"]
     write_csv(
         OUT / "bbc_donors.csv",
-        ["Donor", "State", "Contributed"],
-        [[bbc_display[k], bbc_state[k], round(v)]
+        ["Donor", "California donors", "Out-of-state donors"],
+        [[bbc_display[k], round(bbc_split[k]["CA"]) or "", round(bbc_split[k]["out"]) or ""]
          for k, v in sorted(bbc_donors.items(), key=lambda kv: -kv[1])[:15]],
     )
 

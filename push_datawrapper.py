@@ -140,12 +140,13 @@ CHARTS = {
     },
     "bbc_donors": {
         "csv": "bbc_donors.csv",
-        "type": "d3-bars",
+        "type": "d3-bars-stacked",
         "title": "Who funds the main committee behind No on 40",
         "intro": "Largest donors to Building a Better California, the committee that supplies most of the No campaign's money",
         "visualize": {
-            "base-color": NO,
+            "custom-colors": {"California donors": NO, "Out-of-state donors": "#7a3d12"},
             "value-label-format": "$0.[0]a",
+            "show-color-key": True,
         },
     },
     "coalition": {
@@ -289,7 +290,8 @@ def main():
                 "legends": {"color": {"labelFormat": "$0a"}},
                 "tooltip": {"title": spec["tooltip_title"], "body": TOOLTIP_BODY, "enabled": True},
             })
-        call("PATCH", f"/charts/{cid}", {"title": spec["title"], "metadata": meta})
+        # Sending the type too lets a chart's type be changed later.
+        call("PATCH", f"/charts/{cid}", {"title": spec["title"], "type": spec["type"], "metadata": meta})
         call("POST", f"/charts/{cid}/publish")
         print(f"published {name}: https://datawrapper.dwcdn.net/{cid}/")
 
