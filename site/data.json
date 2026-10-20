@@ -1,0 +1,804 @@
+{
+ "updated": "2026-10-16",
+ "segments": [
+  {
+   "id": "yes40",
+   "label": "Yes on 40 / No on 41 and 42",
+   "camp": "pro",
+   "reported_total": 33856212,
+   "committees": [
+    {
+     "id": "1484470",
+     "name": "Yes on 40 - Billionaire Tax Now - No on 41 & 42 (SEIU-UHW)",
+     "reported_total": 32481914
+    },
+    {
+     "id": "1497412",
+     "name": "Working Families Say No to Props 41 and 42, Sponsored by Labor Unions",
+     "reported_total": 950000
+    },
+    {
+     "id": "1495036",
+     "name": "Tax the Ultra-Rich Now, Yes on 3 & 40, No on 41 & 42",
+     "reported_total": 424298
+    }
+   ],
+   "itemized_total": 33841346,
+   "contributions": 198,
+   "donor_count": 90,
+   "top_donors": [
+    {
+     "name": "Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",
+     "amount": 22077899,
+     "n": 73,
+     "type": "Committee",
+     "place": "Los Angeles, CA",
+     "note": "Union treasury or union committee; its money comes from member dues and isn't itemized further."
+    },
+    {
+     "name": "SEIU United Health Care Workers West  Political Issues Committee",
+     "amount": 7725664,
+     "n": 17,
+     "type": "Committee",
+     "place": "Sacramento, CA",
+     "note": "Union treasury or union committee; its money comes from member dues and isn't itemized further."
+    },
+    {
+     "name": "SEIU United Healthcare Workers West PAC",
+     "amount": 2000000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Oakland, CA",
+     "note": "Union treasury or union committee; its money comes from member dues and isn't itemized further."
+    },
+    {
+     "name": "Million More Voters, Sponsored by the California Labor Federation, AFL-CIO",
+     "amount": 500000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "Alan Davis",
+     "amount": 325000,
+     "n": 3,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "United Domestic Workers of America Issues PAC",
+     "amount": 250000,
+     "n": 1,
+     "type": "Committee",
+     "place": "CA"
+    },
+    {
+     "name": "Saikat Chakrabarti",
+     "amount": 201000,
+     "n": 1,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "Ross Boucher",
+     "amount": 200000,
+     "n": 2,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "Hillary Perkins",
+     "amount": 100000,
+     "n": 1,
+     "type": "Individual",
+     "place": "San Rafael, CA"
+    },
+    {
+     "name": "PACE of California School Employees Association - Issues",
+     "amount": 100000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "California Federation of Teachers COPE PROP/BALLOT Committee",
+     "amount": 100000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "Excessive Wealth",
+     "amount": 40000,
+     "n": 1,
+     "type": "Business or group",
+     "place": "Washington, DC"
+    },
+    {
+     "name": "American Federation of State, County & Municipal Employees Council 57 Issues PAC",
+     "amount": 25000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Norwalk, CA"
+    },
+    {
+     "name": "John O'Farrell",
+     "amount": 25000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Atherton, CA"
+    },
+    {
+     "name": "William Connell",
+     "amount": 25000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Lake Forest, IL"
+    },
+    {
+     "name": "John Esler",
+     "amount": 25000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Sutton, MA"
+    },
+    {
+     "name": "James Stone",
+     "amount": 25000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Boston, MA"
+    },
+    {
+     "name": "California Donor Table Issues Committee",
+     "amount": 20000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "Nicole Pesco",
+     "amount": 10000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Modesto, CA"
+    },
+    {
+     "name": "JB Moss Voice of the Electorate (Vote) FED PAC ID# C00007898",
+     "amount": 10000,
+     "n": 1,
+     "type": "Committee",
+     "place": "New York, NY"
+    },
+    {
+     "name": "Mark Schlesinger",
+     "amount": 7500,
+     "n": 1,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "David Olsen",
+     "amount": 5100,
+     "n": 2,
+     "type": "Individual",
+     "place": "Ventura, CA"
+    },
+    {
+     "name": "Betsy Krieger",
+     "amount": 5000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Baltimore, MD"
+    },
+    {
+     "name": "Louise Brotsky",
+     "amount": 5000,
+     "n": 1,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "Neil (Tony) Holtzman",
+     "amount": 4000,
+     "n": 2,
+     "type": "Individual",
+     "place": "Menlo Park, CA"
+    }
+   ],
+   "top_places": [
+    {
+     "place": "Los Angeles, CA",
+     "amount": 22079379
+    },
+    {
+     "place": "Sacramento, CA",
+     "amount": 8445964
+    },
+    {
+     "place": "Oakland, CA",
+     "amount": 2000100
+    },
+    {
+     "place": "San Francisco, CA",
+     "amount": 742150
+    },
+    {
+     "place": "CA",
+     "amount": 250000
+    },
+    {
+     "place": "San Rafael, CA",
+     "amount": 100100
+    },
+    {
+     "place": "Washington, DC",
+     "amount": 42750
+    },
+    {
+     "place": "Norwalk, CA",
+     "amount": 25000
+    },
+    {
+     "place": "Atherton, CA",
+     "amount": 25000
+    },
+    {
+     "place": "Lake Forest, IL",
+     "amount": 25000
+    },
+    {
+     "place": "Sutton, MA",
+     "amount": 25000
+    },
+    {
+     "place": "Boston, MA",
+     "amount": 25000
+    }
+   ],
+   "by_state": {
+    "California": 33695673,
+    "Out of state": 145673
+   },
+   "by_type": {
+    "Committee": 32808563,
+    "Individual": 990183,
+    "Business or group": 42600
+   }
+  },
+  {
+   "id": "no40",
+   "label": "No on 40",
+   "camp": "anti",
+   "reported_total": 129841019,
+   "committees": [
+    {
+     "id": "1492108",
+     "name": "No on Prop 40 - Doctors, Teachers, Small Businesses...",
+     "reported_total": 118736019
+    },
+    {
+     "id": "1486695",
+     "name": "Golden State Promise - No on Prop 40",
+     "reported_total": 10450000
+    },
+    {
+     "id": "1485007",
+     "name": "Stop the Squeeze - No on Prop 40",
+     "reported_total": 400000
+    },
+    {
+     "id": "1485228",
+     "name": "Californians Against Tax Increases (CA Business Roundtable)",
+     "reported_total": 255000
+    }
+   ],
+   "itemized_total": 129841019,
+   "contributions": 30,
+   "donor_count": 12,
+   "top_donors": [
+    {
+     "name": "BUILDING A BETTER CALIFORNIA",
+     "amount": 118500000,
+     "n": 10,
+     "type": "Committee",
+     "place": "San Rafael, CA",
+     "drill": "bbc"
+    },
+    {
+     "name": "Chris Larsen",
+     "amount": 5000000,
+     "n": 1,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "Ripple Labs",
+     "amount": 5000000,
+     "n": 1,
+     "type": "Business or group",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "CALIFORNIA BUSINESS ROUNDTABLE ISSUES PAC",
+     "amount": 700000,
+     "n": 9,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "Daniel Tierney",
+     "amount": 200000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Chicago, IL"
+    },
+    {
+     "name": "Ronald Conway",
+     "amount": 100000,
+     "n": 1,
+     "type": "Individual",
+     "place": "San Francisco, CA"
+    },
+    {
+     "name": "Intersect USA, LLC(Michael Wheeler)",
+     "amount": 100000,
+     "n": 1,
+     "type": "Business or group",
+     "place": "Beaverton, OR"
+    },
+    {
+     "name": "CALIFORNIA MEDICAL ASSOCIATION",
+     "amount": 100000,
+     "n": 1,
+     "type": "Business or group",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "CALIFORNIA PRIMARY CARE ASSOCIATION ADVOCATES",
+     "amount": 100000,
+     "n": 1,
+     "type": "Business or group",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "PLANNED PARENTHOOD AFFILIATES OF CALIFORNIA VOTES PAC",
+     "amount": 34294,
+     "n": 2,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "CALIFORNIA BUSINESS PROPERTIES ASSOCIATION ISSUES PAC",
+     "amount": 5000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "PLANNED PARENTHOOD AFFILIATES OF CALIFORNIA, INC",
+     "amount": 1726,
+     "n": 1,
+     "type": "Business or group",
+     "place": "Sacramento, CA"
+    }
+   ],
+   "top_places": [
+    {
+     "place": "San Rafael, CA",
+     "amount": 118750000
+    },
+    {
+     "place": "San Francisco, CA",
+     "amount": 10100000
+    },
+    {
+     "place": "Sacramento, CA",
+     "amount": 691019
+    },
+    {
+     "place": "Chicago, IL",
+     "amount": 200000
+    },
+    {
+     "place": "Beaverton, OR",
+     "amount": 100000
+    }
+   ],
+   "by_state": {
+    "California": 129541019,
+    "Out of state": 300000
+   },
+   "by_type": {
+    "Committee": 119239294,
+    "Business or group": 5301726,
+    "Individual": 5300000
+   }
+  },
+  {
+   "id": "yes41",
+   "label": "Yes on 41",
+   "camp": "anti",
+   "reported_total": 58376446,
+   "committees": [
+    {
+     "id": "1488423",
+     "name": "Yes on 41 - Californians for Transparency and Accountability",
+     "reported_total": 58376446
+    }
+   ],
+   "itemized_total": 58376408,
+   "contributions": 16,
+   "donor_count": 4,
+   "top_donors": [
+    {
+     "name": "BUILDING A BETTER CALIFORNIA",
+     "amount": 58350000,
+     "n": 13,
+     "type": "Committee",
+     "place": "San Rafael, CA",
+     "drill": "bbc"
+    },
+    {
+     "name": "REFORM CALIFORNIA WITH CARL DE MAIO - BALLOT MEASURE COMMITTEE",
+     "amount": 21808,
+     "n": 1,
+     "type": "Committee",
+     "place": "San Marcos, CA"
+    },
+    {
+     "name": "REFORM LOCAL GOVERNMENT PAC",
+     "amount": 4500,
+     "n": 1,
+     "type": "Committee",
+     "place": "San Marcos, CA"
+    },
+    {
+     "name": "MARY STRONG",
+     "amount": 100,
+     "n": 1,
+     "type": "Individual",
+     "place": "Daly City, CA"
+    }
+   ],
+   "top_places": [
+    {
+     "place": "San Rafael, CA",
+     "amount": 58350000
+    },
+    {
+     "place": "San Marcos, CA",
+     "amount": 26308
+    },
+    {
+     "place": "Daly City, CA",
+     "amount": 100
+    }
+   ],
+   "by_state": {
+    "California": 58376408
+   },
+   "by_type": {
+    "Committee": 58376308,
+    "Individual": 100
+   }
+  },
+  {
+   "id": "yes42",
+   "label": "Yes on 42",
+   "camp": "anti",
+   "reported_total": 127977037,
+   "committees": [
+    {
+     "id": "1488418",
+     "name": "Yes on 42 - Protect Retirement & Life Savings",
+     "reported_total": 127977037
+    }
+   ],
+   "itemized_total": 127977037,
+   "contributions": 21,
+   "donor_count": 4,
+   "top_donors": [
+    {
+     "name": "BUILDING A BETTER CALIFORNIA",
+     "amount": 127800000,
+     "n": 18,
+     "type": "Committee",
+     "place": "San Rafael, CA",
+     "drill": "bbc"
+    },
+    {
+     "name": "PEACE OFFICERS RESEARCH ASSOCIATION OF CALIFORNIA POLITICAL ISSUES COMMITTEE (PORAC PIC)",
+     "amount": 150000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
+     "name": "REFORM CALIFORNIA WITH CARL DE MAIO - BALLOT MEASURE COMMITTEE",
+     "amount": 22537,
+     "n": 1,
+     "type": "Committee",
+     "place": "San Marcos, CA"
+    },
+    {
+     "name": "REFORM LOCAL GOVERNMENT PAC",
+     "amount": 4500,
+     "n": 1,
+     "type": "Committee",
+     "place": "San Marcos, CA"
+    }
+   ],
+   "top_places": [
+    {
+     "place": "San Rafael, CA",
+     "amount": 127800000
+    },
+    {
+     "place": "Sacramento, CA",
+     "amount": 150000
+    },
+    {
+     "place": "San Marcos, CA",
+     "amount": 27037
+    }
+   ],
+   "by_state": {
+    "California": 127977037
+   },
+   "by_type": {
+    "Committee": 127977037
+   }
+  }
+ ],
+ "bbc": {
+  "name": "Building a Better California",
+  "filer_id": "1486767",
+  "raised": 333247849,
+  "spent": 325210829,
+  "spent_to": {
+   "other": 20560829,
+   "yes41": 58350000,
+   "yes42": 127800000,
+   "no40": 118500000
+  },
+  "itemized_total": 333247849,
+  "contributions": 121,
+  "donor_count": 78,
+  "top_donors": [
+   {
+    "name": "SERGEY BRIN",
+    "amount": 102000000,
+    "n": 7,
+    "type": "Individual",
+    "place": "Reno, NV"
+   },
+   {
+    "name": "ERIC SCHMIDT",
+    "amount": 40236457,
+    "n": 6,
+    "type": "Individual",
+    "place": "West Hollywood, CA"
+   },
+   {
+    "name": "L. JOHN DOERR, III",
+    "amount": 40000000,
+    "n": 6,
+    "type": "Individual",
+    "place": "San Rafael, CA"
+   },
+   {
+    "name": "PATRICK COLLISON",
+    "amount": 33169794,
+    "n": 5,
+    "type": "Individual",
+    "place": "Redwood City, CA"
+   },
+   {
+    "name": "VINOD KHOSLA",
+    "amount": 12561504,
+    "n": 1,
+    "type": "Individual",
+    "place": "Portola Valley, CA"
+   },
+   {
+    "name": "CHRIS LARSEN",
+    "amount": 12511845,
+    "n": 3,
+    "type": "Individual",
+    "place": "San Francisco, CA"
+   },
+   {
+    "name": "MICHAEL MORITZ",
+    "amount": 7500000,
+    "n": 3,
+    "type": "Individual",
+    "place": "Palo Alto, CA"
+   },
+   {
+    "name": "KAVITARK RAM SHRIRAM",
+    "amount": 5005599,
+    "n": 1,
+    "type": "Individual",
+    "place": "Palo Alto, CA"
+   },
+   {
+    "name": "FRANK SLOOTMAN",
+    "amount": 5000000,
+    "n": 1,
+    "type": "Individual",
+    "place": "West Palm Beach, FL"
+   },
+   {
+    "name": "ALPHAFOXTROT LLC(RESPONSIBLE OFFICER: LYNSI SNYDER)",
+    "amount": 4968061,
+    "n": 1,
+    "type": "Business or group",
+    "place": "Irvine, CA"
+   },
+   {
+    "name": "STEWART RESNICK",
+    "amount": 4500000,
+    "n": 3,
+    "type": "Individual",
+    "place": "Los Angeles, CA"
+   },
+   {
+    "name": "JOHN HERING",
+    "amount": 3921961,
+    "n": 3,
+    "type": "Individual",
+    "place": "San Rafael, CA"
+   },
+   {
+    "name": "TONY XU",
+    "amount": 3493982,
+    "n": 3,
+    "type": "Individual",
+    "place": "San Francisco, CA"
+   },
+   {
+    "name": "MAKSIM RAFAEL LEVCHIN",
+    "amount": 3021884,
+    "n": 3,
+    "type": "Individual",
+    "place": "San Francisco, CA"
+   },
+   {
+    "name": "ALFRED LIN",
+    "amount": 3000000,
+    "n": 1,
+    "type": "Individual",
+    "place": "San Mateo, CA"
+   },
+   {
+    "name": "ANDREW KARAM",
+    "amount": 3000000,
+    "n": 2,
+    "type": "Individual",
+    "place": "Atherton, CA"
+   },
+   {
+    "name": "MEYER MALKA",
+    "amount": 2986174,
+    "n": 3,
+    "type": "Individual",
+    "place": "Palo Alto, CA"
+   },
+   {
+    "name": "JAMES COULTER",
+    "amount": 2527189,
+    "n": 1,
+    "type": "Individual",
+    "place": "Fort Worth, TX"
+   },
+   {
+    "name": "BRUCE DUNLEVIE",
+    "amount": 2110000,
+    "n": 1,
+    "type": "Individual",
+    "place": "Woodside, CA"
+   },
+   {
+    "name": "GEORGE MARCUS",
+    "amount": 2000000,
+    "n": 2,
+    "type": "Individual",
+    "place": "Palo Alto, CA"
+   },
+   {
+    "name": "JAMES SLAVIK",
+    "amount": 1998899,
+    "n": 2,
+    "type": "Individual",
+    "place": "Newport Beach, CA"
+   },
+   {
+    "name": "PAUL SLAVIK",
+    "amount": 1998899,
+    "n": 2,
+    "type": "Individual",
+    "place": "Newport Beach, CA"
+   },
+   {
+    "name": "FREDERICK E EHRSAM III",
+    "amount": 1979908,
+    "n": 2,
+    "type": "Individual",
+    "place": "San Francisco, CA"
+   },
+   {
+    "name": "PHILIPPE LAFFONT",
+    "amount": 1500077,
+    "n": 1,
+    "type": "Individual",
+    "place": "New York, NY"
+   },
+   {
+    "name": "THOMAS LAFFONT",
+    "amount": 1500077,
+    "n": 1,
+    "type": "Individual",
+    "place": "New York, NY"
+   }
+  ],
+  "top_places": [
+   {
+    "place": "Reno, NV",
+    "amount": 102000000
+   },
+   {
+    "place": "San Rafael, CA",
+    "amount": 43921961
+   },
+   {
+    "place": "West Hollywood, CA",
+    "amount": 40236457
+   },
+   {
+    "place": "Redwood City, CA",
+    "amount": 34696951
+   },
+   {
+    "place": "San Francisco, CA",
+    "amount": 28388102
+   },
+   {
+    "place": "Palo Alto, CA",
+    "amount": 19852501
+   },
+   {
+    "place": "Portola Valley, CA",
+    "amount": 12708231
+   },
+   {
+    "place": "Menlo Park, CA",
+    "amount": 6085968
+   },
+   {
+    "place": "Los Angeles, CA",
+    "amount": 5753329
+   },
+   {
+    "place": "West Palm Beach, FL",
+    "amount": 5000000
+   },
+   {
+    "place": "Irvine, CA",
+    "amount": 4968061
+   },
+   {
+    "place": "San Mateo, CA",
+    "amount": 4774892
+   }
+  ],
+  "by_state": {
+   "Out of state": 116757925,
+   "California": 216489924
+  },
+  "by_type": {
+   "Individual": 327279786,
+   "Business or group": 5968063
+  }
+ }
+}

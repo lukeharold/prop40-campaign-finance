@@ -1,0 +1,508 @@
+filer_id,source,date,name,entity,city,state,zip,amount
+747285,F460,2025-02-10,Service Employees International Union United Healthcare Workers West,OTH,Los Angeles,CA,90017,2321.09
+747285,F460,2025-02-19,Service Employees International Union United Healthcare Workers West,OTH,Los Angeles,CA,90017,1069.26
+747285,F460,2025-03-31,Service Employees International Union United Healthcare Workers West,OTH,Los Angeles,CA,90017,2673.76
+1483073,F460,2025-09-18,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1200000.0
+1483073,F460,2025-11-04,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,72261.72
+1483073,F460,2025-11-07,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1275806.72
+1483073,F460,2025-11-13,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1200000.0
+1483073,F460,2025-12-04,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1200000.0
+1483073,F460,2025-12-10,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1200000.0
+747285,F460,2025-07-18,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,5729.36
+747285,F460,2025-08-19,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,3787.62
+747285,F460,2025-09-24,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,2322.81
+747285,F460,2025-10-15,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,2177.77
+747285,F460,2025-11-17,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,1998.02
+747285,F460,2025-12-08,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,5712.38
+991800,F460,2026-02-04,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,2074.89
+991800,F460,2026-02-23,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,3030.5
+991800,F460,2026-03-31,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,4458.0
+747285,F460,2026-02-04,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,1795.78
+747285,F460,2026-02-23,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,2999.28
+747285,F460,2026-03-31,Service Employees International Union - United Healthcare Workers West,OTH,Oakland,CA,94612,2264.45
+1483073,F460,2026-01-07,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,600000.0
+1483073,F460,2026-01-09,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,625338.88
+1483073,F460,2026-01-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1482916.0
+1483073,F460,2026-01-26,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,71261.72
+1483073,F460,2026-01-29,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,2415592.0
+1483073,F460,2026-02-12,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,2100000.0
+1483073,F460,2026-02-24,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,5651.0
+1483073,F460,2026-03-10,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,262500.0
+1483073,F460,2026-03-10,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,262500.0
+1488423,F460,2026-02-20,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,2750000.0
+1488423,F460,2026-02-27,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,16000000.0
+1488423,F460,2026-03-13,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,10000000.0
+991800,F460,2026-05-13,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,530913.71
+1484470,F460,2025-10-24,Jasmine Pedroso,IND,Alameda,CA,94501,100.0
+1484470,F460,2025-10-29,Linda Worthman,IND,Berkeley,CA,94702,100.0
+1484470,F460,2025-12-17,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,900000.0
+1484470,F460,2025-12-03,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2025-12-04,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2025-12-29,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1488418,F460,2026-02-20,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,2750000.0
+1488418,F460,2026-02-27,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,9000000.0
+1488418,F460,2026-03-13,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,16000000.0
+1484470,F460,2026-03-03,Maria Antonescu,IND,Dublin,CA,94568,100.0
+1484470,F460,2026-01-14,Allison Chow,IND,Los Angeles,CA,90064,100.0
+1484470,F460,2026-02-02,Gerald Davis,IND,Los Angeles,CA,90042,100.0
+1484470,F460,2026-02-18,Joseph Eichenhofer,IND,San Francisco,CA,94115,100.0
+1484470,F460,2026-02-08,Robert Gillespie,IND,San Francisco,CA,94117,100.0
+1484470,F460,2026-01-13,Marco Graziano,IND,San Mateo,CA,94401,100.0
+1484470,F460,2026-01-19,Julian Hopf,IND,Costa Mesa,CA,92627,100.0
+1484470,F460,2026-01-31,Mary Marks,IND,Pinole,CA,94564,100.0
+1484470,F460,2026-02-07,Maeve Phelan,IND,Boulder,CO,80304,200.0
+1484470,F460,2026-01-07,Rachel Reeves,IND,Davis,CA,95618,180.0
+1484470,F460,2026-01-13,Mark Sawyer,IND,Sacramento,CA,95811,100.0
+1484470,F460,2026-03-18,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-03-19,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-03-20,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-03-30,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-03-31,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-01-29,William Skinner,IND,New Haven,CT,06511,400.0
+1484470,F460,2026-01-10,Matthew Walsh,IND,San Francisco,CA,94109,100.0
+1484470,F460,2026-02-18,Sylvia Yanagisako,IND,Palo Alto,CA,94306,100.0
+1484470,F460,2026-01-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,82665.7
+1484470,F460,2026-01-16,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,90822.7
+1484470,F460,2026-01-28,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1153758.0
+1484470,F460,2026-02-09,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,15014.0
+1484470,F460,2026-02-12,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1350000.0
+1484470,F460,2026-03-10,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,2348319.0
+1484470,F460,2026-03-24,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,1100000.0
+1484470,F460,2026-03-26,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,250323.0
+1484470,F460,2026-01-05,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,5000.0
+1484470,F460,2026-01-20,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10468.96
+1484470,F460,2026-02-04,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-02-24,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10630.74
+1484470,F460,2026-03-01,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,15374.28
+1484470,F460,2026-03-03,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,50000.0
+1484470,F460,2026-03-03,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,4182.75
+1484470,F460,2026-03-05,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,8500.0
+1484470,F460,2026-03-05,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,13732.97
+1484470,F460,2026-03-05,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,40000.0
+1484470,F460,2026-03-09,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-03-10,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,12576.57
+1484470,F460,2026-03-15,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,3338.73
+1484470,F460,2026-03-17,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,392526.87
+1484470,F460,2026-03-17,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,264361.48
+1484470,F460,2026-03-24,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,181811.87
+1484470,F460,2026-03-31,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10347.24
+1484470,F460,2026-03-31,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,320308.53
+1484470,F460,2026-04-03,Daniel Zickuhr,IND,San Jose,CA,95118,100.0
+1484470,F460,2026-04-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,87618.7
+1484470,F460,2026-04-16,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,8925.0
+1484470,F460,2026-04-07,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,211100.74
+1484470,F460,2026-04-14,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,132852.63
+1484470,F460,2026-04-14,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,54735.63
+1484470,F460,2026-04-21,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,152205.97
+1484470,F460,2026-04-27,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10562.6
+1484470,F460,2026-04-28,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,301947.28
+1484470,F460,2026-04-28,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,74518.81
+1484470,F460,2026-04-30,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-05-01,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,40000.0
+1484470,F460,2026-05-05,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,110329.95
+1484470,F460,2026-05-12,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,120534.74
+1484470,F460,2026-05-12,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,16231.05
+1484470,F460,2026-05-14,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-05-26,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1810.83
+1484470,F460,2026-05-26,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,8887.3
+1484470,F460,2026-06-02,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10933.18
+1484470,F460,2026-06-02,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,382.37
+1484470,F460,2026-06-09,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,7218.06
+1484470,F460,2026-06-12,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10731.11
+1484470,F460,2026-06-16,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,823.1
+1484470,F460,2026-06-23,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,594.55
+1484470,F460,2026-06-23,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10119.98
+1484470,F460,2026-06-25,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,322.12
+1484470,F460,2026-06-30,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1483073,F460,2026-04-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,51484.84
+1483073,F460,2026-05-07,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,2373495.54
+1483073,F460,2026-05-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,530825.46
+1484470,F460,2026-06-23,Christian Amann,IND,Oakland,CA,94609,100.0
+1484470,F460,2026-05-17,Helena Bader,IND,New Harbor,ME,04554,500.0
+1484470,F460,2026-06-04,Christopher Connery,IND,Santa Cruz,CA,95060,100.0
+1484470,F460,2026-06-16,Convergence,OTH,Highlands Ranch,CO,80126,100.0
+1484470,F460,2026-06-26,Thomas Curtis,IND,Winslow,AZ,86047,100.0
+1484470,F460,2026-05-30,Wendy Eller,IND,Los Angeles,CA,90041,100.0
+1484470,F460,2026-04-23,Friends of Chris Murphy,OTH,Washington,DC,20006,2500.0
+1484470,F460,2026-04-30,SEIU United Healthcare Workers West PAC,SCC,Oakland,CA,94612,2000000.0
+1484470,F460,2026-04-02,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-03,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-06,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-07,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-14,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,900000.0
+1484470,F460,2026-04-15,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-16,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-17,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,500000.0
+1484470,F460,2026-04-22,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-23,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-28,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-29,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-04-30,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-05-01,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,1000000.0
+1484470,F460,2026-05-04,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,402002.0
+1484470,F460,2026-05-11,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,507626.0
+1484470,F460,2026-05-12,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,6753.0
+1484470,F460,2026-05-01,Sabrina Siddiqui,IND,Emeryville,CA,94608,100.0
+1484470,F460,2026-06-26,Jane Stock,IND,Eureka,CA,95501,100.0
+1484470,F460,2026-06-28,Wendy Weaver,IND,Seattle,WA,98101,100.0
+1484470,F460,2026-04-04,Matthew Wolf,IND,Walnut Creek,CA,94597,25.0
+1484470,F460,2026-04-07,Matthew Wolf,IND,Walnut Creek,CA,94597,10.0
+1484470,F460,2026-04-13,Matthew Wolf,IND,Walnut Creek,CA,94597,30.0
+1484470,F460,2026-05-02,Matthew Wolf,IND,Walnut Creek,CA,94597,15.0
+1484470,F460,2026-06-23,Matthew Wolf,IND,Walnut Creek,CA,94597,20.0
+1486767,F460,2026-01-12,SERGEY BRIN,IND,RENO,NV,89509,20000000.0
+1486767,F460,2026-01-12,ERIC SCHMIDT,IND,WEST HOLLYWOOD,CA,90069,2000000.0
+1486767,F460,2026-01-13,PATRICK COLLISON,IND,REDWOOD CITY,CA,94061,2000000.0
+1486767,F460,2026-01-14,MAKSIM RAFAEL LEVCHIN,IND,SAN FRANCISCO,CA,94123,1000000.0
+1486767,F460,2026-01-23,"L. JOHN DOERR, III",IND,SAN RAFAEL,CA,94901,2000000.0
+1486767,F460,2026-01-26,STEWART RESNICK,IND,LOS ANGELES,CA,90064,2000000.0
+1486767,F460,2026-01-27,TONY XU,IND,SAN FRANCISCO,CA,94115,2000000.0
+1486767,F460,2026-01-28,CHRIS LARSEN,IND,SAN FRANCISCO,CA,94109,2000000.0
+1486767,F460,2026-01-28,MICHAEL MORITZ,IND,PALO ALTO,CA,94304,2000000.0
+1486767,F460,2026-02-27,SERGEY BRIN,IND,RENO,NV,89509,25000000.0
+1486767,F460,2026-02-27,MICHAEL MORITZ,IND,PALO ALTO,CA,94304,5000000.0
+1486767,F460,2026-03-02,"L. JOHN DOERR, III",IND,SAN RAFAEL,CA,94901,7500000.0
+1486767,F460,2026-03-12,PATRICK COLLISON,IND,REDWOOD CITY,CA,94061,5000000.0
+1486767,F460,2026-03-12,ERIC SCHMIDT,IND,WEST HOLLYWOOD,CA,90069,1026176.51
+1486767,F460,2026-03-13,DANIEL TIERNEY,IND,CHICAGO,IL,60601,500000.0
+1486767,F460,2026-04-03,SERGEY BRIN,IND,RENO,NV,89509,3000000.0
+1486767,F460,2026-04-03,"L. JOHN DOERR, III",IND,SAN RAFAEL,CA,94901,500000.0
+1486767,F460,2026-04-03,CHRIS LARSEN,IND,SAN FRANCISCO,CA,94109,500000.0
+1486767,F460,2026-04-03,MICHAEL MORITZ,IND,PALO ALTO,CA,94304,500000.0
+1486767,F460,2026-04-03,STEWART RESNICK,IND,LOS ANGELES,CA,90064,500000.0
+1486767,F460,2026-04-10,SERGEY BRIN,IND,RENO,NV,89509,9000000.0
+1486767,F460,2026-04-17,SERGEY BRIN,IND,RENO,NV,89509,9000000.0
+1486767,F460,2026-05-15,SERGEY BRIN,IND,RENO,NV,89509,16000000.0
+1486767,F460,2026-06-05,MARK PINCUS,IND,WOODY CREEK,CO,81656,98619.4
+1484470,F460,2026-09-16,Stephen Scalmanini,IND,Ukiah,CA,95482,100.0
+1484470,F460,2026-09-09,Gail Shannon,IND,Lancaster,CA,93536,100.0
+1484470,F460,2026-09-04,Liza Siegler,IND,San Francisco,CA,94110,1000.0
+1484470,F460,2026-09-19,Louisa Solari,IND,North Miami,FL,33161,100.0
+1484470,F460,2026-09-19,Robert Starr,IND,Sacramento,CA,95819,200.0
+1484470,F460,2026-09-19,Marianne Twyman,IND,Tacoma,WA,98403,125.0
+1484470,F460,2026-09-19,Cynthia Wohlberg,IND,Craftsbury,VT,05826,100.0
+1484470,F460,2026-07-02,Matthew Wolf,IND,Walnut Creek,CA,94597,20.0
+1484470,F460,2026-08-01,Matthew Wolf,IND,Walnut Creek,CA,94597,20.0
+1484470,F460,2026-09-01,Matthew Wolf,IND,Walnut Creek,CA,94597,10.0
+1484470,F460,2026-08-02,Linda Worthman,IND,Berkeley,CA,94702,500.0
+1484470,F460,2026-09-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,15000.0
+1484470,F460,2026-09-14,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,5984.84
+1484470,F460,2026-09-15,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,100000.0
+1484470,F460,2026-08-04,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,11405.31
+1484470,F460,2026-08-04,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-08-26,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-08-26,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F460,2026-09-03,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10109.26
+1484470,F460,2026-09-18,"Tax the Ultra-Rich Now, YES on 3 & 40, NO on 41 & 42",COM,Oakland,CA,94607,11250.0
+1484470,F460,2026-08-19,David Altschul,IND,Encino,CA,91316,500.0
+1484470,F460,2026-09-15,"American Federation of State, County & Municipal Employees Council 57 Issues PAC",COM,Norwalk,CA,90650,25000.0
+1484470,F460,2026-09-17,Benjamin Bear,IND,San Francisco,CA,94115,100.0
+1484470,F460,2026-09-19,Legrand Belnap,IND,Salt Lake City,UT,84124,100.0
+1484470,F460,2026-09-17,Joseph Berkson,IND,Seattle,WA,98112,100.0
+1484470,F460,2026-09-01,Ross Boucher,IND,San Francisco,CA,94114,50000.0
+1484470,F460,2026-09-17,David Brown,IND,Westchester,IL,60154,100.0
+1484470,F460,2026-08-21,Tony Crabb,IND,Healdsburg,CA,95448,1000.0
+1484470,F460,2026-08-19,Ashley Craig,IND,Long Beach,CA,90803,500.0
+1484470,F460,2026-09-02,Alan Davis,IND,San Francisco,CA,94118,25000.0
+1484470,F460,2026-09-12,Brian Davis,IND,San Rafael,CA,94903,100.0
+1484470,F460,2026-08-26,Andrew Faulk,IND,San Francisco,CA,94109,2000.0
+1484470,F460,2026-08-22,Patricia Foschi,IND,Santa Fe,NM,87505,2000.0
+1484470,F460,2026-08-31,Teresa Ghilarducci,IND,Tempe,AZ,85281,100.0
+1484470,F460,2026-09-16,Anirban Ghosh,IND,Palo Alto,CA,94306,100.0
+1484470,F460,2026-08-13,Chris Gilbert,IND,Berkeley,CA,94707,100.0
+1484470,F460,2026-09-14,Eric Halgren,IND,San Diego,CA,92117,250.0
+1484470,F460,2026-09-16,Faroll Hamer,IND,Takoma Park,MD,20912,1000.0
+1484470,F460,2026-07-27,Neil (Tony) Holtzman,IND,Menlo Park,CA,94025,2000.0
+1484470,F460,2026-08-24,Jodi Jacobson,IND,Los Angeles,CA,90048,180.0
+1484470,F460,2026-08-31,Kathleen Kennedy Townsend,IND,Washington,DC,20007,250.0
+1484470,F460,2026-08-25,Mary King,IND,Portland,OR,97214,250.0
+1484470,F460,2026-08-19,Betsy Krieger,IND,Baltimore,MD,21210,5000.0
+1484470,F460,2026-09-19,Celia M Wood,IND,Mountain View,OK,73062,250.0
+1484470,F460,2026-09-19,Rita Neumann,IND,Cloverdale,CA,95425,100.0
+1484470,F460,2026-08-24,John O'Farrell,IND,Atherton,CA,94027,25000.0
+1484470,F460,2026-09-17,David Olsen,IND,Ventura,CA,93001,100.0
+1484470,F460,2026-08-20,Todd Oppenheimer,IND,San Francisco,CA,94118,250.0
+1484470,F460,2026-08-21,Hillary Perkins,IND,San Rafael,CA,94901,100000.0
+1484470,F460,2026-08-25,Nicole Pesco,IND,Modesto,CA,95356,10000.0
+1484470,F460,2026-09-16,Mark Pursley,IND,Simi Valley,CA,93063,100.0
+1484470,F460,2026-09-10,Jeff Richmond,IND,Rancho Cordova,CA,95670,100.0
+1488421,F460,2026-02-20,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,2750000.0
+1488421,F460,2026-03-13,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,1500000.0
+1488421,F460,2026-04-03,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,-2400000.0
+1488421,F460,2026-04-17,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,500000.0
+1488421,F460,2026-05-15,BUILDING A BETTER CALIFORNIA,COM,SAN RAFAEL,CA,94901,750000.0
+1486767,F460,2026-07-24,SERGEY BRIN,IND,RENO,NV,89509,20000000.0
+1486767,F460,2026-08-04,"L. JOHN DOERR, III",IND,SAN RAFAEL,CA,94901,7500000.0
+1486767,F460,2026-08-04,JOHN HERING,IND,SAN RAFAEL,CA,94901,946000.0
+1486767,F460,2026-08-04,NEIL MEHTA,IND,SAN FRANCISCO,CA,94129,250000.0
+1486767,F460,2026-08-10,CHRIS LARSEN,IND,SAN FRANCISCO,CA,94109,10011844.8
+1486767,F460,2026-09-03,PATRICK COLLISON,IND,REDWOOD CITY,CA,94061,10000000.0
+1486767,F460,2026-09-10,"L. JOHN DOERR, III",IND,SAN RAFAEL,CA,94901,12500000.0
+1486767,F460,2026-09-10,ALFRED LIN,IND,SAN MATEO,CA,94401,3000000.0
+1486767,F460,2026-09-10,STEWART RESNICK,IND,LOS ANGELES,CA,90064,2000000.0
+1486767,F460,2026-09-11,PATRICK COLLISON,IND,REDWOOD CITY,CA,94061,5000000.0
+1486767,F460,2026-09-14,SKY DAYTON,IND,MCMINNVILLE,OR,97128,100000.0
+1486767,F460,2026-09-14,MATTHEW HUANG,IND,NEW YORK,NY,10022,1000000.0
+1486767,F460,2026-09-14,NEIL MEHTA,IND,SAN FRANCISCO,CA,94129,750000.0
+1486767,F460,2026-09-15,MAKSIM RAFAEL LEVCHIN,IND,SAN FRANCISCO,CA,94123,1000000.0
+1486767,F460,2026-09-16,KEVIN HARTZ,IND,SAN FRANCISCO,CA,94105,100000.0
+1486767,F460,2026-09-16,MEYER MALKA,IND,PALO ALTO,CA,94301,1001656.43
+1486767,F460,2026-09-16,JED MCCALEB,IND,BERKELEY,CA,94705,1000000.0
+1486767,F460,2026-08-31,JAMES RYAN CLARK,IND,HILLSBOROUGH,CA,94010,101018.34
+1486767,F460,2026-08-31,JAMES SLAVIK,IND,NEWPORT BEACH,CA,92660,1008307.3
+1486767,F460,2026-08-31,PAUL SLAVIK,IND,NEWPORT BEACH,CA,92660,1008307.3
+1486767,F460,2026-09-10,STEVE JURVETSON,IND,INCLINE VILLAGE,NV,89451,1001607.8
+1486767,F460,2026-09-10,MARK PINCUS,IND,WOODY CREEK,CO,81656,987127.43
+1486767,F460,2026-09-15,JOHN HERING,IND,SAN RAFAEL,CA,94901,2432375.0
+1486767,F460,2026-09-15,ERIC SCHMIDT,IND,WEST HOLLYWOOD,CA,90069,12115136.5
+1486767,F460,2026-09-16,JOSEPH LONSDALE,IND,AUSTIN,TX,78733,49870.0
+1486767,F460,2026-09-16,BRIAN SINGERMAN,IND,LOS ALTOS,CA,94022,520536.0
+1486767,F460,2026-09-17,KIM DEGEORGE,IND,SANTA MONICA,CA,90402,500112.73
+1486767,F460,2026-09-17,STEVE HUFFMAN,IND,SAN FRANCISCO,CA,94104,101802.64
+1486767,F460,2026-09-17,VINOD KHOSLA,IND,PORTOLA VALLEY,CA,94028,12561504.0
+1486767,F460,2026-09-18,PARKER CONRAD,IND,SAN FRANCISCO,CA,94104,34645.8
+1343651,F497,2012-05-01,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,6468.5
+1343651,F497,2012-02-21,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,44769.14
+1343651,F497,2012-04-11,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,300000.0
+1343651,F497,2012-02-27,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,750000.0
+1343651,F497,2012-01-24,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,21523.24
+1343651,F497,2012-02-07,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,26526.07
+1343651,F497,2012-03-14,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,1000000.0
+1343651,F497,2012-03-27,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,1000000.0
+1343651,F497,2011-12-22,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,400000.0
+1343651,F497,2012-01-26,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,1200000.0
+1362443,F497,2014-02-24,California State Council of Service Employees Issues Committee,COM,Sacramento,CA,95814,500000.0
+1362831,F497,2014-02-25,SEIU United Healthcare Workers West Political Issues Committee,COM,Sacramento,CA,95814,500000.0
+1362443,F497,2014-02-04,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,32491.62
+1362443,F497,2014-01-21,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,28135.44
+1362443,F497,2014-02-18,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,31619.54
+1362831,F497,2014-03-12,SEIU United Healthcare Workers West Political Issues Committee,COM,Sacramento,CA,95814,250000.0
+1362443,F497,2013-12-09,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,500000.0
+1362443,F497,2014-01-24,California State Council of Service Employees Issues Committee,COM,Sacramento,CA,95814,500000.0
+1362831,F497,2014-01-24,SEIU United Healthcare Workers West Political Issues Committee,COM,Sacramento,CA,95814,500000.0
+1362443,F497,2013-12-18,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,10675.0
+1362443,F497,2014-05-13,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,10688.46
+1362831,F497,2014-05-13,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,44770.1
+1362831,F497,2014-05-27,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,123625.37
+1362443,F497,2014-04-15,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,12275.86
+1362443,F497,2014-04-29,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,11772.07
+1362831,F497,2014-04-29,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,7131.79
+1362443,F497,2014-03-07,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,8462.89
+1362443,F497,2014-03-17,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,11503.16
+1362443,F497,2014-04-16,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,7804.93
+1362443,F497,2014-01-17,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,2000000.0
+1362831,F497,2014-03-27,SEIU United Healthcare Workers West Political Issues Committee,COM,Sacramento,CA,95814,220000.0
+1362443,F497,2014-03-18,California State Council of Service Employees Issues Committee,COM,Sacramento,CA,95814,500000.0
+1362831,F497,2014-03-21,SEIU United Healthcare Workers West Political Issues Committee,COM,Sacramento,CA,95814,100000.0
+1362443,F497,2014-03-04,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,32411.47
+1362831,F497,2014-04-03,SEIU United Healthcare Workers West Political Issues Committee,COM,Sacramento,CA,95814,218227.91
+1362443,F497,2014-03-18,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,27553.22
+1362443,F497,2014-03-26,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,2000000.0
+1362831,F497,2014-04-16,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,3000000.0
+1362443,F497,2014-04-01,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,24442.32
+1380738,F497,2016-02-02,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,30562.75
+1385596,F497,2016-05-25,California State Council of Service Employees Political Committee,COM,Sacramento,CA,95814,25000.0
+1380738,F497,2016-04-26,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,10711.6
+1381488,F497,2016-04-26,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,78370.44
+1385598,F497,2016-05-17,SEIU United Health Care Workers West Political Action Committee,SCC,Sacramento,CA,95814,36000.0
+1385596,F497,2016-05-27,"Building and Protecting a Strong California, A Coalition of Firefighters, Building Trades, Realtors, Correctional Officers and Food and Commercial Workers Organization",COM,Sacramento,CA,95833,10000.0
+1381488,F497,2016-05-10,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,22482.15
+1385596,F497,2016-05-12,CA State Council of Service Employees Political Committee,COM,Sacramento,CA,95814,25000.0
+1381488,F497,2016-03-29,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,15144.34
+1380738,F497,2016-04-12,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,27065.15
+1381488,F497,2016-04-12,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,9457.32
+1362831,F497,2015-10-01,SEIU United Healthcare Workers West,OTH,Oakland,CA,94612,3000000.0
+1380738,F497,2015-11-10,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,46345.87
+1380738,F497,2016-02-03,"Lift Up California Wages, Sponsored by Service Employees International Union, United Healthcare Workers West",COM,Oakland,CA,94612,866477.7
+1380738,F497,2016-03-15,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,21292.32
+1381488,F497,2016-03-15,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,7539.9
+1380738,F497,2015-10-27,Service Employees International Union - United Healthcare Workers West,OTH,Commerce,CA,90022,38443.89
+1380738,F497,2015-11-23,The Fairness Project,OTH,Palo Alto,CA,94304,100000.0
+1380738,F497,2015-11-24,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,48677.34
+1380738,F497,2015-12-08,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,30450.62
+1380738,F497,2016-03-29,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,24932.77
+1380738,F497,2016-01-15,The Fairness Project,COM,Palo Alto,CA,94304,100000.0
+1380738,F497,2016-01-16,The Fairness Project,COM,Palo Alto,CA,94304,31800.0
+1380738,F497,2015-12-15,The Fairness Project,COM,Palo Alto,CA,94304,100000.0
+1381488,F497,2015-12-16,Service Employees International Union - United Healthcare Workers West,COM,Los Angeles,CA,90022,3000000.0
+1380738,F497,2015-12-22,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,22701.88
+1380738,F497,2016-01-05,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,8618.26
+1380738,F497,2016-01-19,Service Employees International Union - United Healthcare Workers West,COM,Commerce,CA,90022,36870.24
+1381488,F497,2016-03-03,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,5415.18
+1380738,F497,2016-03-03,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,18378.69
+1380738,F497,2016-03-16,The Fairness Project,COM,Palo Alto,CA,94304,100000.0
+1380738,F497,2016-02-16,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,28478.87
+1380738,F497,2016-02-16,The Fairness Project,COM,Palo Alto,CA,94304,100000.0
+1381488,F497,2016-06-07,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,5380.58
+1381488,F497,2016-06-07,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,1300.0
+1381488,F497,2016-05-24,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,5651.57
+1381488,F497,2016-06-09,SEIU United Healthcare Workers West Political Issues Committee,COM,Oakland,CA,94612,325000.0
+1381488,F497,2016-06-21,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,13037.8
+1381488,F497,2016-06-30,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,3549980.0
+1381488,F497,2016-07-01,SEIU United Healthcare Workers West Political Issues Committee,COM,Oakland,CA,94612,4500000.0
+1381488,F497,2016-06-16,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,850.0
+1381488,F497,2016-06-16,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,7012.41
+1381488,F497,2016-06-16,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,6030.07
+1385598,F497,2016-10-04,SEIU United Health Care Workers West Political Action Committee,SCC,Los Angeles,CA,90017,60000.0
+1381488,F497,2016-09-30,Service Employees International Union - United Healthcare Workers West,COM,Oakland,CA,94612,201622.28
+1398274,F497,2018-01-17,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,500000.0
+1398274,F497,2017-10-18,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,1000000.0
+1398274,F497,2017-12-07,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,500000.0
+1398274,F497,2018-01-26,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,4000000.0
+1402296,F497,2018-02-26,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection and Californians Care",COM,Oakland,CA,94612,500000.0
+1402296,F497,2018-02-08,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection and Californians Care",COM,Oakland,CA,94612,1000000.0
+1402296,F497,2018-05-17,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection and Californians Care",COM,Oakland,CA,94612,155552.0
+1402296,F497,2018-05-21,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection and Californians Care",COM,Oakland,CA,94612,30000.0
+1402296,F497,2018-05-29,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection and Californians Care",COM,Oakland,CA,94612,267351.0
+1398274,F497,2018-08-21,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection and Californians Care",COM,Oakland,CA,94612,11387341.0
+1398274,F497,2018-08-29,California Democratic Party,PTY,Sacramento,CA,95814,483.81
+1398274,F497,2018-10-03,California Democratic Party,PTY,Sacramento,CA,95814,24748.04
+1398274,F497,2018-10-03,California Democratic Party,PTY,Sacramento,CA,95814,10810.41
+1398274,F497,2018-10-03,California Democratic Party,PTY,Sacramento,CA,95814,9959.9
+1398274,F497,2018-10-03,California Democratic Party,PTY,Sacramento,CA,95814,3648.88
+1398274,F497,2018-10-05,California Democratic Party,PTY,Sacramento,CA,95814,203.84
+1398274,F497,2018-10-10,California Democratic Party,PTY,Sacramento,CA,95814,12.75
+1398274,F497,2018-10-12,California Democratic Party,PTY,Sacramento,CA,95814,19.38
+1398274,F497,2018-10-13,California Democratic Party,PTY,Sacramento,CA,95814,481.48
+1398274,F497,2018-10-15,California Democratic Party,PTY,Sacramento,CA,95814,80.51
+1398274,F497,2018-10-16,California Democratic Party,PTY,Sacramento,CA,95814,800.23
+1398274,F497,2018-10-05,California Democratic Party,PTY,Sacramento,CA,95814,628.09
+1398274,F497,2018-10-05,California Democratic Party,PTY,Sacramento,CA,95814,343.82
+1398274,F497,2018-10-09,California Democratic Party,PTY,Sacramento,CA,95814,750.0
+1398274,F497,2018-09-17,CA State Council of Service Employees Issues Committee,COM,Sacramento,CA,95814,1000000.0
+1398274,F497,2018-10-13,SEIU United Healthcare Workers West PAC,OTH,Oakland,CA,94612,1874.78
+1398274,F497,2018-10-23,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Yes on 8 - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,400000.0
+1398274,F497,2018-10-24,Service Employees International Union Political Education and Action Fund,OTH,Washington,DC,20036,1075.12
+1398274,F497,2018-10-27,Service Employees International Union Political Education and Action Fund,OTH,Washington,DC,20036,478.4
+1398274,F497,2018-11-01,Service Employees International Union Political Education and Action Fund,OTH,Washington,DC,20036,1055.35
+1398274,F497,2018-11-05,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Yes on 8 - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,75000.0
+1398274,F497,2020-02-27,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,580514.44
+1398274,F497,2020-03-04,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,1200000.0
+1398274,F497,2020-07-10,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,60000.0
+1398274,F497,2020-06-12,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,200000.0
+1398274,F497,2020-01-09,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,600000.0
+1398274,F497,2020-01-15,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,1000000.0
+1398274,F497,2020-08-11,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,3752.11
+1398274,F497,2020-03-20,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,500000.0
+1398274,F497,2020-02-04,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,1000000.0
+1398274,F497,2020-02-18,SEIU United Healthcare Workers West Political Issues Committee,SCC,Oakland,CA,94612,1000000.0
+1398274,F497,2020-09-02,California Democratic Party,PTY,Sacramento,CA,95814,1256.0
+1398274,F497,2020-10-12,SEIU United Health Care Workers West  Political Issues Committee,OTH,Sacramento,CA,95814,25000.0
+1398274,F497,2020-09-30,California Democratic Party,PTY,Sacramento,CA,95811,5929.43
+1398274,F497,2020-09-30,California Democratic Party,PTY,Sacramento,CA,95811,3442.82
+1398274,F497,2020-10-07,California Democratic Party,PTY,Sacramento,CA,95811,9245.69
+1398274,F497,2020-10-07,California Democratic Party,PTY,Sacramento,CA,95811,5526.06
+1398274,F497,2020-10-13,California Democratic Party,PTY,Sacramento,CA,95811,410.0
+1398274,F497,2020-10-13,California Democratic Party,PTY,Sacramento,CA,95811,5551.69
+1398274,F497,2020-10-13,California Democratic Party,PTY,Sacramento,CA,95811,9352.39
+1398274,F497,2020-10-13,California Democratic Party,PTY,Sacramento,CA,95811,1122.75
+1398274,F497,2020-10-13,SEIU United Health Care Workers West  Political Issues Committee,OTH,Sacramento,CA,95814,639000.0
+1398274,F497,2020-09-17,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,35000.0
+1398274,F497,2020-09-22,"Service Employees International Union, United Healthcare Workers West (Nonprofit 501(c)(5)) - Californians for Kidney Dialysis Patient Protection",COM,Oakland,CA,94612,2050642.0
+1398274,F497,2022-03-09,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,472531.34
+1398274,F497,2021-12-09,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,450000.0
+1398274,F497,2021-10-22,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,115000.0
+1398274,F497,2022-05-10,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,1129550.0
+1398274,F497,2022-01-12,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,473240.28
+1398274,F497,2022-03-31,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,720857.0
+1398274,F497,2021-11-16,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,25500.0
+1398274,F497,2021-11-30,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,225000.0
+1398274,F497,2022-02-16,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,400000.0
+1398274,F497,2022-02-17,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,50000.0
+1398274,F497,2022-05-02,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,1153016.0
+1398274,F497,2022-02-02,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,452921.0
+1398274,F497,2022-04-15,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,993464.97
+1398274,F497,2022-06-28,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,1125000.0
+1398274,F497,2022-09-09,California Democratic Party,PTY,Sacramento,CA,95814,1055.09
+1398274,F497,2022-07-22,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90017,11000.0
+1488423,F497,2026-04-03,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,3000000.0
+1488423,F497,2026-04-06,REFORM CALIFORNIA WITH CARL DE MAIO - BALLOT MEASURE COMMITTEE,COM,San Marcos,CA,92069,21807.92
+1488418,F497,2026-04-06,REFORM LOCAL GOVERNMENT PAC,COM,San Marcos,CA,92069,4500.0
+1488418,F497,2026-04-10,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,4500000.0
+1488423,F497,2026-04-10,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,4500000.0
+1488418,F497,2026-04-03,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,4000000.0
+1488418,F497,2026-04-06,REFORM CALIFORNIA WITH CARL DE MAIO - BALLOT MEASURE COMMITTEE,COM,San Marcos,CA,92069,22537.26
+1488423,F497,2026-04-17,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,5000000.0
+1488418,F497,2026-04-17,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,5000000.0
+1488423,F497,2026-05-15,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,7000000.0
+1488418,F497,2026-05-15,BUILDING A BETTER CALIFORNIA,COM,San Rafael,CA,94901,8000000.0
+1484470,F497,2026-09-29,JB Moss Voice of the Electorate (Vote) FED PAC ID# C00007898,COM,New York,NY,10011,10000.0
+1484470,F497,2026-09-29,Raquel Sefton,IND,West Hills,CA,91304,2000.0
+1484470,F497,2026-09-29,"Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",COM,Los Angeles,CA,90071,10000.0
+1484470,F497,2026-10-03,Neil (Tony) Holtzman,IND,Menlo Park,CA,94025,2000.0
+1484470,F497,2026-09-22,Vincent LeVeque,IND,Los Angeles,CA,90004,1000.0
+1484470,F497,2026-10-06,Louise Brotsky,IND,San Francisco,CA,94131,5000.0
+1484470,F497,2026-10-09,Mark Schlesinger,IND,San Francisco,CA,94123,7500.0
+1486767,F497,2026-09-21,PARKER CONRAD,IND,San Francisco,CA,94104,66627.16
+1486767,F497,2026-09-21,KEVIN KELLY,IND,Menlo Park,CA,94025,1000000.0
+1486767,F497,2026-09-21,SHAUN MAGUIRE,IND,Los Angeles,CA,90069,1003329.11
+1486767,F497,2026-10-05,MAKSIM RAFAEL LEVCHIN,IND,San Francisco,CA,94123,1021883.55
+1486767,F497,2026-10-05,CHAD PEETS,IND,Newport Beach,CA,92660,513270.0
+1486767,F497,2026-10-05,JOHN A. PRITZKER,IND,San Francisco,CA,94129,250000.0
+1486767,F497,2026-10-06,SHAWN CAROLAN,IND,Portola Valley,CA,94028,49875.68
+1486767,F497,2026-10-06,BYRON DEETER,IND,San Francisco,CA,94107,100000.0
+1486767,F497,2026-10-06,BRUCE DUNLEVIE,IND,Woodside,CA,94062,2110000.0
+1486767,F497,2026-10-06,PETER FENTON,IND,San Francisco,CA,94109,496988.37
+1486767,F497,2026-10-06,EOGHAN MCCABE,IND,Berkeley,CA,94709,99885.52
+1486767,F497,2026-10-06,MICHAEL VERNAL,IND,Palo Alto,CA,94301,391500.0
+1486767,F497,2026-10-07,JACK ALTMAN,IND,San Francisco,CA,94105,24819.76
+1486767,F497,2026-10-07,BROOK BYERS,IND,Menlo Park,CA,94025,1004393.67
+1486767,F497,2026-10-07,JAMES COULTER,IND,Fort Worth,TX,76102,2527189.16
+1486767,F497,2026-10-07,NOELLE MOSELEY,IND,San Francisco,CA,94114,50112.4
+1486767,F497,2026-10-07,ERIC SCHMIDT,IND,West Hollywood,CA,90069,5164238.0
+1486767,F497,2026-10-07,BRIAN SINGERMAN,IND,Los Altos,CA,94022,200282.0
+1486767,F497,2026-10-07,JAMES SLAVIK,IND,Newport Beach,CA,92660,990591.84
+1486767,F497,2026-10-07,PAUL SLAVIK,IND,Newport Beach,CA,92660,990591.84
+1486767,F497,2026-10-07,STANLEY TANG,IND,San Francisco,CA,94107,491014.85
+1486767,F497,2026-10-08,FREDERICK E EHRSAM III,IND,San Francisco,CA,94105,894859.76
+1486767,F497,2026-10-08,ANDREW KARAM,IND,Atherton,CA,94027,1000000.0
+1486767,F497,2026-10-08,AARON KATZ,IND,Portola Valley,CA,94028,96851.1
+1486767,F497,2026-10-09,KLEINER PERKINS,OTH,Menlo Park,CA,94025,1000001.34
+1486767,F497,2026-10-09,TONY XU,IND,San Francisco,CA,94115,1424365.3
+1486767,F497,2026-09-22,"G. LEONARD BAKER, JR.",IND,Palo Alto,CA,94304,395829.84
+1486767,F497,2026-09-22,FREDERICK E EHRSAM III,IND,San Francisco,CA,94105,1085048.0
+1486767,F497,2026-09-22,BRAD GERSTNER,IND,Menlo Park,CA,94025,991930.73
+1486767,F497,2026-09-22,NAVAL RAVIKANT,IND,Las Vegas,NV,89135,493357.73
+1486767,F497,2026-09-22,KAVITARK RAM SHRIRAM,IND,Palo Alto,CA,94306,5005599.45
+1486767,F497,2026-09-23,DAVID BASZUCKI,IND,San Mateo,CA,94401,1500000.0
+1486767,F497,2026-09-25,ANDREW KARAM,IND,Atherton,CA,94027,2000000.0
+1486767,F497,2026-09-25,ERIC SCHMIDT,IND,West Hollywood,CA,90069,11987500.0
+1484470,F497,2026-09-23,Ross Boucher,IND,San Francisco,CA,94114,150000.0
+1484470,F497,2026-09-23,Saikat Chakrabarti,IND,San Francisco,CA,94117,201000.0
+1484470,F497,2026-09-25,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,2233.41
+1484470,F497,2026-09-30,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,200000.0
+1484470,F497,2026-10-15,SEIU United Health Care Workers West  Political Issues Committee,COM,Sacramento,CA,95814,15000.0
+1486767,F497,2026-10-12,MEYER MALKA,IND,Palo Alto,CA,94301,985548.39
+1486767,F497,2026-10-12,MATTHEW MURPHY,IND,Palo Alto,CA,94304,101796.96
+1486767,F497,2026-10-13,THOMAS COATES,IND,San Francisco,CA,94111,1000000.0
+1486767,F497,2026-09-29,ROBERT FISHER,IND,Redwood City,CA,94065,1018105.0
+1486767,F497,2026-09-29,WILLIAM FISHER,IND,Redwood City,CA,94065,509052.5
+1486767,F497,2026-09-30,PATRICK GRADY,IND,Menlo Park,CA,94025,507763.89
+1486767,F497,2026-09-30,SARAH GUO,IND,Menlo Park,CA,94025,507763.89
+1486767,F497,2026-10-13,KEN GOLDMAN,IND,Atherton,CA,94027,11847.0
+1486767,F497,2026-10-13,TONY XU,IND,San Francisco,CA,94115,69616.72
+1486767,F497,2026-10-14,ALPHAFOXTROT LLC(RESPONSIBLE OFFICER: LYNSI SNYDER),OTH,Irvine,CA,92612,4968061.28
+1486767,F497,2026-10-14,JOHN HERING,IND,San Rafael,CA,94901,543585.75
+1486767,F497,2026-10-14,MARY MEEKER,IND,San Francisco,CA,94105,202663.8
+1486767,F497,2026-10-15,SAMEER GANDHI,IND,Palo Alto,CA,94301,500000.0
+1486767,F497,2026-10-15,MARK HEISING,IND,San Francisco,CA,94105,1000000.0
+1486767,F497,2026-10-15,GEORGE MARCUS,IND,Palo Alto,CA,94304,1000000.0
+1486767,F497,2026-10-15,GEORGE MARCUS,IND,Palo Alto,CA,94304,1000000.0
+1486767,F497,2026-10-16,GREGORY BASZUCKI,IND,San Mateo,CA,94401,274892.11
+1486767,F497,2026-10-16,BAIJU BHATT,IND,San Francisco,CA,94105,1000000.0
+1486767,F497,2026-10-16,DIVESH MAKAN,IND,San Francisco,CA,94105,990479.52
+1486767,F497,2026-10-16,MEYER MALKA,IND,Palo Alto,CA,94301,998968.95
+1486767,F497,2026-10-16,NICK SHALEK,IND,Palo Alto,CA,94301,971600.76
+1486767,F497,2026-09-30,PHILIPPE LAFFONT,IND,New York,NY,10019,1500076.6
+1486767,F497,2026-09-30,THOMAS LAFFONT,IND,New York,NY,10019,1500076.6
+1486767,F497,2026-09-30,FRANK SLOOTMAN,IND,West Palm Beach,FL,33401,5000000.0
+1486767,F497,2026-09-30,HEMANT TANEJA,IND,Los Altos Hills,CA,94022,1047667.5
+1486767,F497,2026-10-01,ANDREW PHILLIPS REED,IND,Menlo Park,CA,94025,1074114.3
+1486767,F497,2026-10-01,BENNETT ROSENTHAL,IND,Los Angeles,CA,90067,250000.0
+1486767,F497,2026-10-01,ERIC SCHMIDT,IND,West Hollywood,CA,90069,7943406.0
+1486767,F497,2026-10-01,VLADIMIR TENEV,IND,Mountain View,CA,94040,1001053.37
+1486767,F497,2026-10-02,PATRICK COLLISON,IND,Redwood City,CA,94061,11169793.76
+1486767,F497,2026-10-02,"L. JOHN DOERR, III",IND,San Rafael,CA,94901,10000000.0
+1486767,F497,2026-10-02,DYLAN FIELD,IND,San Francisco,CA,94110,471329.76
+1486767,F497,2026-10-02,ALASTAIR RAMPELL,IND,Los Altos Hills,CA,94022,1000000.0
+1484470,F497,2026-10-07,James Stone,IND,Boston,MA,02111,25000.0

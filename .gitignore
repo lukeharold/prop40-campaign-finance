@@ -1,0 +1,8 @@
+# 1.6 GB Cal-Access download; re-downloaded on every run
+raw/
+logs/
+__pycache__/
+.DS_Store
+.Rhistory
+# Mac-only scheduler (the daily update will run on GitHub instead)
+com.lukeharold.prop40.plist

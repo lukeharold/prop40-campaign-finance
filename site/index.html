@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Billionaire Tax Fight</title>
+<meta name="description" content="Who is funding each side of California Props 40, 41 and 42, from Cal-Access campaign finance filings.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #fcfcfb;
+    --surface-2: #f3f2ef;
+    --rule: #e2e1dc;
+    --text: #0b0b0b;
+    --text-2: #52514e;
+    --text-3: #75746f;
+    --focus: #0b0b0b;
+    /* Amber vs. teal: deliberately not red vs. blue. */
+    --yes40: #d18f00;
+    /* The three linked slices: one teal, dark to light. */
+    --multi: #08403b;  /* only shown if a committee works on several measures */
+    --no40: #0f5e57;
+    --yes41: #1f8a7d;
+    --yes42: #5fb5a7;
+    --other: #b9b8b2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface: #1a1a19;
+      --surface-2: #242423;
+      --rule: #383835;
+      --text: #f0efec;
+      --text-2: #c3c2b7;
+      --text-3: #9a998f;
+      --focus: #f0efec;
+      --yes40: #c98500;
+      --multi: #13675f;
+      --no40: #1f8578;
+      --yes41: #3aa898;
+      --yes42: #8ad9cb;
+      --other: #5d5c57;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface: #1a1a19;
+    --surface-2: #242423;
+    --rule: #383835;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --text-3: #9a998f;
+    --focus: #f0efec;
+    --yes40: #c98500;
+    --multi: #13675f;
+    --no40: #1f8578;
+    --yes41: #3aa898;
+    --yes42: #8ad9cb;
+    --other: #5d5c57;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--text);
+    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 30px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .dek { color: var(--text-2); margin: 0 0 4px; max-width: 680px; }
+  .meta { color: var(--text-3); font-size: 13px; margin: 0 0 28px; }
+
+  .headline { font-size: 20px; line-height: 1.35; margin: 0 0 6px; max-width: 680px; }
+  .headline b { font-variant-numeric: tabular-nums; }
+  .pie-wrap { max-width: 640px; margin: 0 auto; }
+  #pie { width: 100%; height: auto; display: block; overflow: visible; }
+  .slice { cursor: pointer; stroke: var(--surface); stroke-width: 1; transition: opacity .15s, transform .15s; outline: none; }
+  .slice:hover, .slice:focus-visible, .slice.selected { transform: var(--lift); }
+  .slice:focus-visible { stroke: var(--focus); stroke-width: 3; }
+  .has-selection .slice:not(.selected) { opacity: .45; }
+  .has-selection .lbl:not(.selected) { opacity: .55; }
+  .lbl { pointer-events: none; font-weight: 700; }
+  .lbl .amt { font-weight: 600; }
+  .lbl.in { fill: #fff; }
+  .lbl.in.dark { fill: #1a1a19; }
+  .lbl.out { fill: var(--text); }
+  .lbl.out .sub { fill: var(--text-2); font-weight: 500; }
+  .camp-arc { fill: none; stroke: var(--text-3); stroke-width: 1.5; }
+  .leader { stroke: var(--text-3); stroke-width: 1; fill: none; }
+  .hint { color: var(--text-3); font-size: 13px; margin: 8px 0 0; text-align: center; }
+  .camp-keys { display: grid; gap: 8px; margin-top: 14px; }
+  .camp-key { display: grid; grid-template-columns: 14px 1fr; column-gap: 8px; text-align: left; font: inherit; font-size: 14px;
+    background: none; border: 0; padding: 0; color: var(--text); }
+  button.camp-key { cursor: pointer; }
+  .camp-key i { width: 14px; height: 14px; border-radius: 3px; margin-top: 3px; grid-row: span 2; }
+  .camp-key span { color: var(--text-2); font-size: 13px; }
+  .prompt { text-align: center; color: var(--text-2); padding: 12px 0; }
+  .prompt b { color: var(--text); }
+
+  .tip {
+    position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--text);
+    border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.12); max-width: 260px; display: none;
+  }
+  .tip strong { display: block; font-size: 15px; font-variant-numeric: tabular-nums; }
+  .tip em { font-style: normal; color: var(--text-2); }
+
+  #detail { border-top: 1px solid var(--rule); margin-top: 28px; padding-top: 24px; }
+  .crumbs { font-size: 13px; margin-bottom: 8px; }
+  .crumbs button { background: none; border: 0; padding: 0; color: var(--text-2); font: inherit; cursor: pointer; text-decoration: underline; }
+  .detail-head { display: flex; align-items: center; gap: 10px; }
+  .detail-head i { width: 14px; height: 14px; border-radius: 3px; flex: none; }
+  .detail-head h2 { margin: 0; font-size: 22px; }
+  .lede { color: var(--text-2); margin: 6px 0 16px; max-width: 720px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 22px; }
+  .stat { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; }
+  .stat b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 12px; color: var(--text-2); }
+  .cols { display: grid; grid-template-columns: 3fr 2fr; gap: 28px; }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } h1 { font-size: 25px; } }
+  h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-2); margin: 0 0 10px; }
+
+  .rows { list-style: none; margin: 0; padding: 0; }
+  .row { padding: 7px 0; border-bottom: 1px solid var(--rule); }
+  .row-top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .row-name { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+  .row-amt { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 14px; white-space: nowrap; }
+  .row-sub { font-size: 12px; color: var(--text-3); }
+  .row-bar { height: 6px; border-radius: 0 3px 3px 0; margin-top: 5px; min-width: 2px; }
+  .row-note { font-size: 12px; color: var(--text-2); margin-top: 4px; }
+  .drill {
+    margin-top: 6px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+    background: var(--surface-2); color: var(--text); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 10px;
+  }
+  .drill:hover { border-color: var(--text-3); }
+  .committees { font-size: 13px; color: var(--text-2); margin: 0 0 18px; padding-left: 18px; }
+  .committees li { margin: 2px 0; }
+  .committees b { font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; }
+
+  .split { display: flex; gap: 2px; height: 26px; margin: 4px 0 6px; }
+  .split div { min-width: 2px; }
+  .split div:first-child { border-radius: 4px 0 0 4px; }
+  .split div:last-child { border-radius: 0 4px 4px 0; }
+  .split-key { font-size: 12px; color: var(--text-2); display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 18px; }
+  .split-key i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 5px; vertical-align: -1px; }
+
+  .callout { background: var(--surface-2); border-radius: 8px; padding: 12px 14px; font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+  footer { border-top: 1px solid var(--rule); margin-top: 36px; padding-top: 16px; font-size: 13px; color: var(--text-3); }
+  footer p { margin: 0 0 8px; max-width: 760px; }
+  footer a { color: var(--text-2); }
+  .error { color: var(--text-2); }
+
+  .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--rule); margin: 0 0 24px; }
+  .tab { font: inherit; font-size: 15px; font-weight: 600; background: none; border: 0; border-bottom: 3px solid transparent;
+    padding: 8px 12px; margin-bottom: -1px; color: var(--text-2); cursor: pointer; }
+  .tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--text); }
+  .tab:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  .filters { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .filters label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--text-2); }
+  .filters input, .filters select { font: inherit; font-size: 15px; color: var(--text); background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; min-width: 0; }
+  .filters input:focus, .filters select:focus { outline: 2px solid var(--focus); outline-offset: 0; }
+  @media (max-width: 720px) { .filters { grid-template-columns: 1fr 1fr; } .filters .wide { grid-column: 1 / -1; } }
+  .toolbar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin: 4px 0 12px; }
+  .toolbar .warn { display: block; color: var(--text-2); font-size: 13px; margin-top: 4px; }
+  .btns { display: flex; gap: 8px; }
+  .btn { font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; background: var(--surface-2); color: var(--text);
+    border: 1px solid var(--rule); border-radius: 999px; padding: 5px 12px; }
+  .btn:hover { border-color: var(--text-3); }
+  .search-note { font-size: 13px; color: var(--text-3); margin: 0 0 14px; }
+
+  table.res { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.res th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-2);
+    border-bottom: 1px solid var(--rule); padding: 6px 8px; white-space: nowrap; }
+  table.res th button { font: inherit; text-transform: inherit; letter-spacing: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+  table.res th[aria-sort="ascending"] button::after { content: " ▲"; }
+  table.res th[aria-sort="descending"] button::after { content: " ▼"; }
+  table.res td { border-bottom: 1px solid var(--rule); padding: 8px; vertical-align: top; }
+  table.res .num, table.res th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.res td:first-child { white-space: nowrap; color: var(--text-2); font-variant-numeric: tabular-nums; }
+  table.res .sub { font-size: 12px; color: var(--text-3); }
+  .chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+  .chip i { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+  #more { margin: 14px auto 0; display: block; }
+  #more[hidden], #no-results[hidden] { display: none; }
+  #no-results { color: var(--text-2); padding: 16px 0; }
+  @media (max-width: 720px) {
+    table.res thead { display: none; }
+    table.res tr { display: block; border-bottom: 1px solid var(--rule); padding: 8px 0; }
+    table.res td { display: flex; justify-content: space-between; gap: 12px; border: 0; padding: 3px 0; text-align: right; }
+    table.res td > * { text-align: right; }
+    table.res td::before { content: attr(data-label); font-size: 12px; color: var(--text-3); text-align: left; flex: none; }
+    table.res td[data-label="Contributor"] { flex-direction: column; text-align: left; gap: 0; }
+    table.res td[data-label="Contributor"]::before { display: none; }
+    table.res td[data-label="Contributor"] > * { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>The billionaire tax fight</h1>
+  <p class="dek">Two camps are fighting over three linked measures: Prop 40, a one-time tax on Californians worth $1 billion or more, and Props 41 and 42, which would limit new taxes.</p>
+  <p class="meta" id="meta"></p>
+
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button class="tab" role="tab" type="button" data-tab="overview" aria-selected="true">Overview</button>
+    <button class="tab" role="tab" type="button" data-tab="search" aria-selected="false">Search contributions</button>
+  </nav>
+
+  <div id="tab-overview">
+  <p class="headline" id="headline"></p>
+  <div class="pie-wrap" id="chart"></div>
+  <p class="hint">Click or tap a slice to see who's paying for it. Slices are the totals each committee reports to the state.</p>
+
+  <section id="detail" aria-live="polite"></section>
+  </div>
+
+  <section id="tab-search" hidden>
+    <p class="search-note">Every itemized contribution ($100 or more) to the committees on Props 40, 41 and 42, and to Building a Better California, the pass-through committee that funds most of the No on 40 / Yes on 41 and 42 side. Type to filter; results update as you go.</p>
+    <div class="filters">
+      <label class="wide">Name, employer or occupation <input id="f-q" type="search" placeholder="e.g. Brin, SEIU, attorney" autocomplete="off"></label>
+      <label>City <input id="f-city" type="search" list="cities" placeholder="Any city" autocomplete="off"><datalist id="cities"></datalist></label>
+      <label>State <select id="f-state"></select></label>
+      <label>Recipient <select id="f-faction"></select></label>
+      <label>Donor type <select id="f-type"></select></label>
+      <label>Minimum amount ($) <input id="f-min" type="number" min="0" step="100" inputmode="numeric" placeholder="0"></label>
+    </div>
+    <div class="toolbar">
+      <div id="summary" aria-live="polite"></div>
+      <div class="btns"><button class="btn" id="reset" type="button">Reset</button><button class="btn" id="csv" type="button">Download CSV</button></div>
+    </div>
+    <div id="results">
+      <table class="res">
+        <thead><tr>
+          <th data-sort="date" aria-sort="none"><button type="button">Date</button></th>
+          <th data-sort="name" aria-sort="none"><button type="button">Contributor</button></th>
+          <th>Location</th>
+          <th>Recipient</th>
+          <th data-sort="amount" class="num" aria-sort="descending"><button type="button">Amount</button></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+      <p id="no-results" hidden>No contributions match those filters.</p>
+      <button class="btn" id="more" type="button" hidden></button>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>About the data.</b> From the California Secretary of State's Cal-Access campaign finance database, updated daily. Slice totals are each committee's own reported contributions: the totals on its Form 460 campaign statements (including in-kind and under-$100 gifts), plus contributions on 24-hour Form 497 reports filed since its last statement. Donor lists use itemized contributions of $100 or more. Amounts are money raised, not money spent.</p>
+    <p>The Yes on 40 camp's main committee, SEIU-UHW's "Yes on 40 - Billionaire Tax Now - No on 41 &amp; 42," also campaigns against Props 41 and 42; the Secretary of State lists it only under Prop 40. Money for Props 41 and 42 pays for those campaigns and is not all spent against Prop 40. Donors are grouped by name as reported, so spelling variants may appear separately. Locations are the addresses donors report, which for organizations is usually an office.</p>
+    <p>Reporting by Luke Harold. Source: <a href="https://www.sos.ca.gov/campaign-lobbying/helpful-resources/measure-contributions/2026-ballot-measure-contribution-totals">California Secretary of State</a>.</p>
+  </footer>
+</main>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+(() => {
+  const COLORS = { yes40: "--yes40", multi: "--multi", no40: "--no40", yes41: "--yes41", yes42: "--yes42", other: "--other" };
+  const CAMPS = [
+    { id: "pro", label: "Yes on 40, No on 41 and 42" },
+    { id: "anti", label: "No on 40, Yes on 41 and 42" },
+  ];
+  const SEG_NAMES = { yes40: "Yes on 40 / No on 41 and 42", multi: "Multiple measures (No on 40, Yes on 41 or 42)", no40: "No on 40", yes41: "Yes on 41", yes42: "Yes on 42" };
+  const $ = (sel) => document.querySelector(sel);
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v;
+      else if (k === "style") Object.assign(n.style, v);
+      else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v);
+    }
+    for (const kid of kids) if (kid != null) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+    return n;
+  };
+  const usd = (n) => n >= 1e6 ? `$${(n / 1e6).toFixed(n >= 1e8 ? 0 : 1)}M`
+                    : n >= 1e3 ? `$${Math.round(n / 1e3).toLocaleString()}K` : `$${Math.round(n).toLocaleString()}`;
+  const usdFull = (n) => `$${Math.round(n).toLocaleString()}`;
+  const pct = (x) => `${Math.round(x * 100)}%`;
+  const color = (id) => `var(${COLORS[id] || "--other"})`;
+  const prettyDate = (s) => s ? new Date(s + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "";
+
+  let data, selected = null;
+
+  // ---- tooltip ----
+  const tip = $("#tip");
+  function showTip(evt, value, label, sub) {
+    tip.replaceChildren(el("strong", {}, value), el("span", {}, label), sub ? el("div", {}, el("em", {}, sub)) : null);
+    tip.style.display = "block";
+    const r = tip.getBoundingClientRect();
+    let x = evt.clientX + 14, y = evt.clientY + 14;
+    if (x + r.width > innerWidth - 8) x = evt.clientX - r.width - 14;
+    if (y + r.height > innerHeight - 8) y = evt.clientY - r.height - 14;
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  }
+  const hideTip = () => { tip.style.display = "none"; };
+
+  // ---- main chart: one pie, the Yes on 40 slice first from 12 o'clock ----
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = (tag, attrs = {}, ...kids) => {
+    const n = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v);
+    }
+    for (const kid of kids) if (kid != null) n.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+    return n;
+  };
+  // Wide screens: labels around the pie. Narrow: a bigger pie, camp totals below it.
+  let W, H, CX, CY, R, narrow;
+  function setGeometry() {
+    narrow = $("#chart").clientWidth < 520;
+    [W, H, CX, CY, R] = narrow ? [400, 416, 200, 214, 182] : [640, 540, 320, 262, 190];
+  }
+  const pt = (deg, rad) => [CX + rad * Math.sin(deg * Math.PI / 180), CY - rad * Math.cos(deg * Math.PI / 180)];
+  const arcPath = (a0, a1, rad) => {
+    const [x0, y0] = pt(a0, rad), [x1, y1] = pt(a1, rad);
+    return `M${x0},${y0} A${rad},${rad} 0 ${a1 - a0 > 180 ? 1 : 0} 1 ${x1},${y1}`;
+  };
+  const anchorFor = (deg) => { const s = Math.sin(deg * Math.PI / 180); return s > 0.3 ? "start" : s < -0.3 ? "end" : "middle"; };
+  // Slices come from data.json in display order; each committee is in exactly one.
+  const PULL = 16;  // how far the Yes on 40 slice sits out from the pie
+  const SHORT = { yes40: "Yes on 40", multi: "Multiple", no40: "No on 40", yes41: "Yes on 41", yes42: "Yes on 42" };
+
+  function renderChart() {
+    setGeometry();
+    const segs = data.segments;
+    const total = segs.reduce((a, s) => a + s.reported_total, 0);
+    const pro = segs.filter((s) => s.camp === "pro").reduce((a, s) => a + s.reported_total, 0);
+    const anti = total - pro;
+
+    const hl = $("#headline");
+    hl.replaceChildren("Committees against Prop 40 and for Props 41 and 42 have reported ",
+      el("b", {}, `$${(anti / 1e6).toFixed(1)} million`), `, ${(anti / pro).toFixed(1)} times the `,
+      el("b", {}, `$${(pro / 1e6).toFixed(1)} million`), " reported by the other side.");
+
+    const slices = svg("g"), labels = svg("g");
+    let a = 0;
+    const span = {};
+    for (const s of segs) {
+      const a0 = a, a1 = a + (s.reported_total / total) * 360, mid = (a0 + a1) / 2;
+      a = a1;
+      span[s.id] = [a0, a1];
+      const [x0, y0] = pt(a0, R), [x1, y1] = pt(a1, R);
+      const [dx, dy] = [Math.sin(mid * Math.PI / 180) * 8, -Math.cos(mid * Math.PI / 180) * 8];
+      const label = `${SEG_NAMES[s.id]}: ${usdFull(s.reported_total)}, ${pct(s.reported_total / total)} of all money reported`;
+      const p = svg("path", {
+        class: `slice ${s.id}`, d: `M${CX},${CY} L${x0},${y0} A${R},${R} 0 ${a1 - a0 > 180 ? 1 : 0} 1 ${x1},${y1} Z`,
+        fill: color(s.id), tabindex: "0", role: "button", "aria-label": `${label}. Show donors.`, "aria-pressed": "false",
+        onclick: () => select(s.id),
+        onkeydown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(s.id); } },
+        onpointermove: (e) => showTip(e, usdFull(s.reported_total), SEG_NAMES[s.id], `${pct(s.reported_total / total)} of all money · click for donors`),
+        onpointerleave: hideTip,
+      });
+      p.style.setProperty("--lift", `translate(${dx}px, ${dy}px)`);
+      p.dataset.id = s.id;
+      if (s.camp === "pro") {
+        // Set the Yes on 40 slice apart from the three linked slices.
+        const [ox, oy] = [Math.sin(mid * Math.PI / 180) * PULL, -Math.cos(mid * Math.PI / 180) * PULL];
+        slices.append(svg("g", { transform: `translate(${ox},${oy})` }, p));
+      } else {
+        slices.append(p);
+      }
+
+      if (a1 - a0 >= 40) {
+        // Big enough: label inside the slice.
+        const [lx, ly] = pt(mid, R * 0.6);
+        const f = narrow ? 1.45 : 1;
+        labels.append(svg("text", { class: `lbl in ${s.id === "yes42" ? "dark" : ""}`, "data-id": s.id, x: lx, y: ly - 4 * f, "text-anchor": "middle", "font-size": 17 * f },
+          SHORT[s.id], svg("tspan", { class: "amt", x: lx, dy: 21 * f, "font-size": 16 * f }, usd(s.reported_total))));
+      }
+    }
+
+    const root = svg("svg", { id: "pie", viewBox: `0 0 ${W} ${H}`, role: "group",
+      "aria-label": `Pie chart of money reported by each side: ${segs.map((s) => `${SEG_NAMES[s.id]} ${usd(s.reported_total)}`).join("; ")}.` },
+      slices, labels);
+
+    if (narrow) {
+      const key = (id, text, sub) => el("button", { class: "camp-key", type: "button", "data-id": id, onclick: () => select(id) },
+        el("i", { style: { background: color(id) } }), el("b", {}, text), el("span", {}, sub));
+      $("#chart").replaceChildren(root, el("div", { class: "camp-keys" },
+        key("yes40", "Yes on 40, No on 41 and 42", `${usd(pro)} · ${pct(pro / total)} of all money`),
+        el("div", { class: "camp-key static" }, el("i", { style: { background: `linear-gradient(90deg, ${color("no40")} 0 33%, ${color("yes41")} 33% 66%, ${color("yes42")} 66%)` } }),
+          el("b", {}, "No on 40, Yes on 41 and 42"), el("span", {}, `${usd(anti)} · ${pct(anti / total)} of all money`))));
+      return;
+    }
+
+    // The Yes on 40 camp is a single slice: label it outside with a leader.
+    const [p0, p1] = span.yes40, pm = (p0 + p1) / 2;
+    const [ex, ey] = pt(pm, R + PULL + 6), [kx, ky] = pt(pm, R + PULL + 30);
+    const proLbl = svg("g", { class: "lbl out", "data-id": "yes40" },
+      svg("path", { class: "leader", d: `M${ex},${ey} L${kx},${ky} L${kx + 14},${ky}` }),
+      svg("text", { x: kx + 20, y: ky - 4, "font-size": 17 }, "Yes on 40, No on 41 and 42",
+        svg("tspan", { class: "sub", x: kx + 20, dy: 21, "font-size": 15 }, `${usd(pro)} · ${pct(pro / total)} of all money`)));
+    labels.append(proLbl);
+
+    // The other camp spans three slices: bracket them with an outer arc.
+    const antiSegs = segs.filter((s) => s.camp === "anti");
+    const g0 = span[antiSegs[0].id][0] + 1.5, g1 = span[antiSegs[antiSegs.length - 1].id][1] - 1.5, gm = (g0 + g1) / 2;
+    const [tx, ty] = pt(gm, R + 34);
+    const anc = anchorFor(gm);
+    labels.append(svg("g", { class: "lbl out camp-anti" },
+      svg("path", { class: "camp-arc", d: arcPath(g0, g1, R + 14) }),
+      svg("text", { x: tx, y: ty + 8, "text-anchor": anc, "font-size": 17 }, "No on 40, Yes on 41 and 42",
+        svg("tspan", { class: "sub", x: tx, dy: 21, "font-size": 15 }, `${usd(anti)} · ${pct(anti / total)} of all money`))));
+    $("#chart").replaceChildren(root);
+  }
+  let resizeTimer;
+  addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (!data || ($("#chart").clientWidth < 520) === narrow) return;
+      renderChart(); markSelected();
+    }, 100);
+  });
+
+  function markSelected() {
+    const chart = $("#chart");
+    chart.classList.toggle("has-selection", !!selected);
+    chart.querySelectorAll(".slice").forEach((p) => {
+      const on = p.dataset.id === selected;
+      p.classList.toggle("selected", on);
+      p.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    chart.querySelectorAll(".lbl[data-id]").forEach((t) => t.classList.toggle("selected", t.dataset.id === selected));
+  }
+
+  // ---- shared pieces of the detail panel ----
+  function donorList(summary, colorId) {
+    const max = summary.top_donors[0]?.amount || 1;
+    return el("ol", { class: "rows" }, ...summary.top_donors.map((d) => {
+      const li = el("li", { class: "row" },
+        el("div", { class: "row-top" }, el("span", { class: "row-name" }, d.name), el("span", { class: "row-amt" }, usdFull(d.amount))),
+        el("div", { class: "row-sub" }, `${d.type} · ${d.place}${d.n > 1 ? ` · ${d.n} contributions` : ""}`),
+        el("div", { class: "row-bar", style: { width: `${(d.amount / max) * 100}%`, background: color(colorId) } }));
+      if (d.note) li.append(el("div", { class: "row-note" }, d.note));
+      if (d.drill === "bbc") li.append(el("button", { class: "drill", type: "button", onclick: () => showBBC(selected) }, "Who funds Building a Better California? →"));
+      return li;
+    }));
+  }
+
+  function placeList(summary, colorId) {
+    const max = summary.top_places[0]?.amount || 1;
+    return el("ol", { class: "rows" }, ...summary.top_places.map((p) =>
+      el("li", { class: "row" },
+        el("div", { class: "row-top" }, el("span", { class: "row-name" }, p.place), el("span", { class: "row-amt" }, usd(p.amount))),
+        el("div", { class: "row-bar", style: { width: `${(p.amount / max) * 100}%`, background: color(colorId) } }))));
+  }
+
+  function stateStats(summary) {
+    const t = summary.itemized_total || 1;
+    const s = summary.by_state;
+    const ind = summary.by_type["Individual"] || 0;
+    return el("div", { class: "stats" },
+      el("div", { class: "stat" }, el("b", {}, usd(summary.itemized_total)), el("span", {}, `itemized from ${summary.donor_count.toLocaleString()} donors`)),
+      el("div", { class: "stat" }, el("b", {}, pct((s["California"] || 0) / t)), el("span", {}, "from California addresses")),
+      el("div", { class: "stat" }, el("b", {}, pct((s["Out of state"] || 0) / t)), el("span", {}, "from out of state")),
+      el("div", { class: "stat" }, el("b", {}, pct(ind / t)), el("span", {}, "from individuals")));
+  }
+
+  // ---- detail: one faction ----
+  function select(id, userAction = true) {
+    selected = id;
+    markSelected();
+    history.replaceState(null, "", `#${id}`);
+    const s = data.segments.find((x) => x.id === id);
+    const det = $("#detail");
+    det.replaceChildren(
+      el("div", { class: "detail-head" }, el("i", { style: { background: color(id) } }), el("h2", {}, SEG_NAMES[id])),
+      el("p", { class: "lede" }, `${usdFull(s.reported_total)} reported by ${s.committees.length === 1 ? "one committee" : `${s.committees.length} committees`}.`),
+      el("ul", { class: "committees" }, ...s.committees.map((c) => el("li", {}, `${c.name}: `, el("b", {}, usdFull(c.reported_total))))),
+      stateStats(s),
+      el("div", { class: "cols" },
+        el("div", {}, el("h3", {}, "Top contributors"), donorList(s, id)),
+        el("div", {}, el("h3", {}, "Where the money comes from"), placeList(s, id))));
+    if (userAction && det.getBoundingClientRect().top > innerHeight * 0.75) det.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // ---- detail: Building a Better California ----
+  function showBBC(fromId) {
+    const b = data.bbc;
+    const det = $("#detail");
+    const parts = ["multi", "no40", "yes41", "yes42", "other"].map((k) => ({ k, v: b.spent_to[k] || 0 })).filter((p) => p.v > 0);
+    const labels = { multi: "Multiple measures", no40: "No on 40", yes41: "Yes on 41", yes42: "Yes on 42", other: "Other measures and costs" };
+    const share = fromId && b.spent_to[fromId] ? pct(b.spent_to[fromId] / b.spent) : null;
+    det.replaceChildren(
+      el("div", { class: "crumbs" }, el("button", { type: "button", onclick: () => select(fromId) }, `← Back to ${SEG_NAMES[fromId]}`)),
+      el("div", { class: "detail-head" }, el("i", { style: { background: "var(--other)" } }), el("h2", {}, b.name)),
+      el("p", { class: "lede" }, `A committee that collects money from wealthy donors and passes it to ballot campaigns. It raised ${usdFull(b.raised)} and spent ${usdFull(b.spent)}${share ? `, ${share} of it on ${SEG_NAMES[fromId]}` : ""}.`),
+      el("h3", {}, "Where its money went"),
+      el("div", { class: "split", role: "img", "aria-label": parts.map((p) => `${labels[p.k]} ${usdFull(p.v)}`).join(", ") },
+        ...parts.map((p) => {
+          const d = el("div", { style: { flex: `${p.v} 1 0`, background: color(p.k) } });
+          d.addEventListener("pointermove", (e) => showTip(e, usdFull(p.v), labels[p.k], pct(p.v / b.spent) + " of spending"));
+          d.addEventListener("pointerleave", hideTip);
+          return d;
+        })),
+      el("div", { class: "split-key" }, ...parts.map((p) =>
+        el("span", {}, el("i", { style: { background: color(p.k) } }), `${labels[p.k]} ${usd(p.v)}`))),
+      el("p", { class: "callout" }, "These are gifts to Building a Better California, not to any one campaign. Money in a committee's account can't be traced to a specific expense, so these donors can't be credited with a specific amount for or against any measure."),
+      stateStats(b),
+      el("div", { class: "cols" },
+        el("div", {}, el("h3", {}, "Top donors to Building a Better California"), donorList(b, fromId || "no40")),
+        el("div", {}, el("h3", {}, "Where its donors are"), placeList(b, fromId || "no40"))));
+    det.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // ---- tabs ----
+  function showTab(name) {
+    const search = name === "search";
+    $("#tab-overview").hidden = search;
+    $("#tab-search").hidden = !search;
+    document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", t.dataset.tab === name ? "true" : "false"));
+    if (search) loadSearch();
+    else if (data) { renderChart(); markSelected(); }  // re-measure: the pie can't size itself while hidden
+  }
+  document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
+    if (t.dataset.tab === "search") history.replaceState(null, "", "#search");
+    else history.replaceState(null, "", selected ? `#${selected}` : location.pathname);
+    showTab(t.dataset.tab);
+  }));
+
+  // ---- search ----
+  const FACTIONS = {
+    yes40: "Yes on 40 / No on 41 and 42", multi: "Multiple measures (No on 40, Yes on 41 or 42)",
+    no40: "No on 40", yes41: "Yes on 41", yes42: "Yes on 42",
+    bbc: "Building a Better California (pass-through)",
+  };
+  const PAGE = 100;
+  let rows = null, shown = PAGE, sortKey = "amount", sortDir = -1, searchLoading = false;
+
+  function loadSearch() {
+    if (rows || searchLoading) return;
+    searchLoading = true;
+    fetch("contributions.json", { cache: "no-cache" })
+      .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then((d) => {
+        rows = d.rows.map((r) => Object.fromEntries(d.columns.map((c, i) => [c, r[i]])));
+        for (const r of rows) {
+          r._text = `${r.name} ${r.employer} ${r.occupation}`.toLowerCase();
+          // Filers spell the union both ways; make either spelling find both.
+          if (/service employees international union|\bseiu\b/.test(r._text)) r._text += " seiu service employees international union";
+        }
+        buildFilters();
+        runSearch();
+      })
+      .catch(() => { $("#results").replaceChildren(el("p", { class: "error" }, "The contribution data couldn't be loaded. Try refreshing the page.")); });
+  }
+
+  function buildFilters() {
+    const states = [...new Set(rows.map((r) => r.state).filter(Boolean))].sort();
+    $("#f-state").replaceChildren(
+      el("option", { value: "" }, "All states"),
+      el("option", { value: "CA" }, "California"),
+      el("option", { value: "_out" }, "Outside California"),
+      ...states.filter((s) => s !== "CA").map((s) => el("option", { value: s }, s)));
+    $("#f-faction").replaceChildren(el("option", { value: "" }, "All recipients"),
+      ...Object.entries(FACTIONS).map(([k, v]) => el("option", { value: k }, v)));
+    const types = [...new Set(rows.map((r) => r.type))].sort();
+    $("#f-type").replaceChildren(el("option", { value: "" }, "All donor types"), ...types.map((t) => el("option", { value: t }, t)));
+    $("#cities").replaceChildren(...[...new Set(rows.map((r) => r.city).filter(Boolean))].sort().map((c) => el("option", { value: c })));
+    const start = new URLSearchParams(location.search).get("q");
+    if (start) $("#f-q").value = start;
+  }
+
+  function filtered() {
+    const q = $("#f-q").value.trim().toLowerCase();
+    const city = $("#f-city").value.trim().toLowerCase();
+    const state = $("#f-state").value, faction = $("#f-faction").value, type = $("#f-type").value;
+    const minRaw = $("#f-min").value.trim();
+    const min = minRaw === "" ? null : parseFloat(minRaw);  // empty = no floor, so refunds (negative) still show
+    const words = q.split(/\s+/).filter(Boolean);
+    const out = rows.filter((r) =>
+      words.every((w) => r._text.includes(w)) &&
+      (!city || r.city.toLowerCase().includes(city)) &&
+      (!state || (state === "_out" ? r.state && r.state !== "CA" : r.state === state)) &&
+      (!faction || r.faction === faction) &&
+      (!type || r.type === type) &&
+      (min === null || r.amount >= min));
+    const val = (r) => sortKey === "amount" ? r.amount : sortKey === "date" ? r.date : r.name.toLowerCase();
+    return out.sort((a, b) => (val(a) < val(b) ? -1 : val(a) > val(b) ? 1 : 0) * sortDir);
+  }
+
+  function runSearch(resetPage = true) {
+    if (!rows) return;
+    if (resetPage) shown = PAGE;
+    const res = filtered();
+    const total = res.reduce((a, r) => a + r.amount, 0);
+    const bbcIn = res.some((r) => r.faction === "bbc") && res.some((r) => r.faction !== "bbc");
+    $("#summary").replaceChildren(...[
+      el("b", {}, `${res.length.toLocaleString()} contribution${res.length === 1 ? "" : "s"}`),
+      ` totaling `, el("b", {}, usdFull(total)),
+      bbcIn ? el("span", { class: "warn" }, "Includes gifts to Building a Better California, which also passes money to these committees, so this total counts some money twice. Filter by recipient to avoid that.") : null,
+    ].filter(Boolean));
+
+    document.querySelectorAll("#results th[data-sort]").forEach((th) => {
+      th.setAttribute("aria-sort", th.dataset.sort === sortKey ? (sortDir > 0 ? "ascending" : "descending") : "none");
+    });
+    const body = $("#results tbody");
+    body.replaceChildren(...res.slice(0, shown).map((r) => el("tr", {},
+      el("td", { "data-label": "Date" }, r.date || "—"),
+      el("td", { "data-label": "Contributor" }, el("b", {}, r.name),
+        el("div", { class: "sub" }, [r.type, r.occupation, r.employer].filter(Boolean).join(" · "))),
+      el("td", { "data-label": "Location" }, [r.city, r.state].filter(Boolean).join(", ") + (r.zip ? ` ${r.zip}` : "")),
+      el("td", { "data-label": "Recipient" },
+        el("span", { class: "chip" }, el("i", { style: { background: color(r.faction === "bbc" ? "other" : r.faction) } }), FACTIONS[r.faction]),
+        el("div", { class: "sub" }, r.recipient)),
+      el("td", { "data-label": "Amount", class: "num" }, usdFull(r.amount)))));
+    $("#more").hidden = res.length <= shown;
+    $("#more").textContent = `Show ${Math.min(PAGE, res.length - shown)} more`;
+    $("#no-results").hidden = res.length > 0;
+  }
+
+  function downloadCsv() {
+    const res = filtered();
+    const cols = ["date", "name", "type", "occupation", "employer", "city", "state", "zip", "recipient", "amount", "form"];
+    const esc = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+    const csv = [cols.join(","), ...res.map((r) => cols.map((c) => esc(r[c])).join(","))].join("\n");
+    const a = el("a", { href: URL.createObjectURL(new Blob([csv], { type: "text/csv" })), download: "prop40-41-42-contributions.csv" });
+    document.body.append(a); a.click(); a.remove();
+  }
+
+  let typing;
+  ["#f-q", "#f-city", "#f-min"].forEach((s) => $(s).addEventListener("input", () => { clearTimeout(typing); typing = setTimeout(runSearch, 150); }));
+  ["#f-state", "#f-faction", "#f-type"].forEach((s) => $(s).addEventListener("change", () => runSearch()));
+  $("#more").addEventListener("click", () => { shown += PAGE; runSearch(false); });
+  $("#csv").addEventListener("click", downloadCsv);
+  $("#reset").addEventListener("click", () => {
+    ["#f-q", "#f-city", "#f-min"].forEach((s) => { $(s).value = ""; });
+    ["#f-state", "#f-faction", "#f-type"].forEach((s) => { $(s).selectedIndex = 0; });
+    runSearch();
+  });
+  document.querySelectorAll("#results th[data-sort]").forEach((th) => th.querySelector("button").addEventListener("click", () => {
+    if (sortKey === th.dataset.sort) sortDir *= -1;
+    else { sortKey = th.dataset.sort; sortDir = sortKey === "name" ? 1 : -1; }
+    runSearch();
+  }));
+
+  // ---- boot ----
+  fetch("data.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((d) => {
+      data = d;
+      $("#meta").textContent = `Contributions reported through ${prettyDate(d.updated)}.`;
+      renderChart();
+      const start = location.hash.slice(1);
+      if (start === "search") showTab("search");
+      if (data.segments.some((s) => s.id === start)) select(start, false);
+      else $("#detail").replaceChildren(el("p", { class: "prompt" }, el("b", {}, "Select a slice"), " to see the committees, top donors and where the money comes from."));
+      addEventListener("hashchange", () => {
+        const id = location.hash.slice(1);
+        if (id === "search") { showTab("search"); return; }
+        if (data.segments.some((s) => s.id === id)) {
+          if ($("#tab-overview").hidden) showTab("overview");
+          if (id !== selected) select(id);
+        }
+      });
+    })
+    .catch(() => { $("#chart").replaceChildren(el("p", { class: "error" }, "The data couldn't be loaded. Try refreshing the page.")); });
+})();
+</script>
+</body>
+</html>
