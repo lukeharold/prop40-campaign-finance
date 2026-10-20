@@ -640,16 +640,11 @@ def main():
     bbc_to_40 = sum(s["amount"] for s in bbc_spending
                     if s["payee_cmte_id"] in COMMITTEES or PROP40_NAME.search(s["payee"].upper()))
     bbc_out_of_state = sum(r["amount"] for r in bbc if r["state"] and r["state"] != "CA")
-    # Split each donor's total by California vs. out-of-state address, so
-    # the chart has two series readers can highlight by hovering.
-    bbc_split = defaultdict(lambda: {"CA": 0.0, "out": 0.0})
-    for r in bbc:
-        bbc_split[norm(r["name"])]["CA" if r["state"] == "CA" else "out"] += r["amount"]
     write_csv(
         OUT / "bbc_donors.csv",
-        ["Donor", "California donors", "Out-of-state donors"],
-        [[bbc_display[k], round(bbc_split[k]["CA"]) or "", round(bbc_split[k]["out"]) or ""]
-         for k, v in sorted(bbc_donors.items(), key=lambda kv: -kv[1])[:15]],
+        ["Donor", "Contributed"],
+        [[bbc_display[k], round(v)]
+         for k, v in sorted(bbc_donors.items(), key=lambda kv: -kv[1])[:25]],
     )
 
     # Who pays for each side of Props 40, 41 and 42, and for each camp across

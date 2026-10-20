@@ -140,17 +140,14 @@ CHARTS = {
     },
     "bbc_donors": {
         "csv": "bbc_donors.csv",
-        "type": "d3-bars-stacked",
+        "type": "d3-bars",
         "title": "Who funds the main committee behind No on 40",
-        "intro": "Largest donors to Building a Better California, the committee that supplies most of the No campaign's money",
+        "intro": "The 25 largest donors to Building a Better California, the committee that supplies most of the No campaign's money",
         "visualize": {
-            "custom-colors": {"California donors": NO, "Out-of-state donors": "#7a3d12"},
+            "base-color": NO,
             "value-label-format": "$0.[0]a",
-            "show-color-key": True,
-            # Each donor is in one group, so show the total at the end of the
-            # bar instead of a label inside it (small bars can't fit one).
-            "show-value-labels": False,
-            "totals-labels": True,
+            "show-value-labels": True,
+            "show-color-key": False,
         },
     },
     "coalition": {
