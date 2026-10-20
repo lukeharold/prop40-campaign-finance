@@ -118,13 +118,22 @@ def slice_of(filer_id):
 csv.field_size_limit(sys.maxsize)
 
 
+# Problems found while reading, reported (and fatal) in check_data().
+# Nothing questionable is dropped or guessed at silently.
+RUN = {"rows_read": defaultdict(int), "malformed": defaultdict(list),
+       "bad_amounts": [], "undated_late": [], "duplicates_removed": []}
+
+
 def read_tsv(zf, name, col=None, keep=None):
     """Yield dict rows from a TSV inside the zip. Cal-Access files are
     latin-1-ish, tab separated, and not reliably quoted.
 
     With col/keep, rows whose `col` value isn't in `keep` are skipped
     before any parsing; these tables run to millions of rows and we need
-    a few thousand, so this is most of the run time."""
+    a few thousand, so this is most of the run time. A row for one of our
+    filings with the wrong number of fields (a stray tab or line break in
+    the source) is recorded in RUN["malformed"] instead of being dropped
+    or misaligned."""
     member = next(n for n in zf.namelist() if n.upper().endswith("/" + name + ".TSV"))
     with zf.open(member) as raw:
         text = io.TextIOWrapper(raw, encoding="latin-1", newline="")
@@ -132,9 +141,14 @@ def read_tsv(zf, name, col=None, keep=None):
         idx = header.index(col) if col else None
         for line in text:
             row = line.rstrip("\r\n").split("\t")
-            if len(row) < len(header):
-                continue
-            if idx is not None and row[idx].strip() not in keep:
+            if idx is not None:
+                if len(row) <= idx or row[idx].strip() not in keep:
+                    continue
+                if len(row) != len(header):
+                    RUN["malformed"][name].append(line[:200])
+                    continue
+                RUN["rows_read"][name] += 1
+            elif len(row) < len(header):
                 continue
             yield dict(zip(header, (c.strip() for c in row)))
 
@@ -148,10 +162,16 @@ def parse_date(s):
     return None
 
 
-def money(s):
+def money(s, where="", blank_ok=False):
+    """Parse an amount. A blank (where blank isn't allowed) or unreadable
+    amount is recorded in RUN["bad_amounts"] rather than quietly becoming $0."""
+    s = (s or "").strip()
+    if not s and blank_ok:
+        return 0.0
     try:
         return float(s.replace(",", "").replace("$", ""))
     except ValueError:
+        RUN["bad_amounts"].append(f"{where}: {s!r}")
         return 0.0
 
 
@@ -213,7 +233,7 @@ def load_receipts(zf, filings, cutoff):
             "entity": r.get("ENTITY_CD", ""), "donor_cmte_id": r.get("CMTE_ID", ""),
             "city": r.get("CTRIB_CITY", ""), "state": r.get("CTRIB_ST", "").upper(),
             "zip": zip5(r.get("CTRIB_ZIP4", "")), "employer": r.get("CTRIB_EMP", ""), "occupation": r.get("CTRIB_OCC", ""),
-            "date": parse_date(r.get("RCPT_DATE", "")), "amount": money(r.get("AMOUNT", "0")),
+            "date": parse_date(r.get("RCPT_DATE", "")), "amount": money(r.get("AMOUNT"), f"RCPT_CD filing {r.get('FILING_ID')} {r.get('TRAN_ID')}"),
         })
     return rows
 
@@ -227,7 +247,7 @@ def load_reported_totals(zf, filings):
     for r in read_tsv(zf, "SMRY_CD", "FILING_ID", filings):
         f = current(filings, r, "F460")
         if f and r.get("FORM_TYPE", "").upper() == "F460" and r.get("LINE_ITEM") in ("1", "2", "4", "5"):
-            totals[f["filer_id"]][r["LINE_ITEM"]] += money(r.get("AMOUNT_A", "0"))
+            totals[f["filer_id"]][r["LINE_ITEM"]] += money(r.get("AMOUNT_A"), f"SMRY_CD filing {r.get('FILING_ID')} line {r.get('LINE_ITEM')}", blank_ok=True)
     return totals
 
 
@@ -240,7 +260,7 @@ def load_bbc_spending(zf, filings):
         if f and f["filer_id"] == BBC_ID and r.get("FORM_TYPE", "").upper() == "E":
             rows.append({"payee": name_of(r, "PAYEE_NAMF", "PAYEE_NAML"),
                          "payee_cmte_id": r.get("CMTE_ID", ""),
-                         "amount": money(r.get("AMOUNT", "0"))})
+                         "amount": money(r.get("AMOUNT"), f"EXPN_CD filing {r.get('FILING_ID')} {r.get('TRAN_ID')}")})
     return rows
 
 
@@ -250,8 +270,16 @@ def load_497s(zf, filings, cutoff, receipts, bbc_spending):
         if not f:
             continue
         d = parse_date(r.get("CTRIB_DATE", ""))
+        if d is None:
+            # Without a date we can't tell whether it's already on a 460,
+            # so it can't be counted or skipped safely. check_data() stops
+            # the run so a person can look at it.
+            RUN["undated_late"].append(f"filing {r.get('FILING_ID')} {r.get('TRAN_ID')} "
+                                       f"{r.get('ENTY_NAML', '')} {r.get('AMOUNT', '')} "
+                                       f"date={r.get('CTRIB_DATE', '')!r}")
+            continue
         cut = cutoff.get(f["filer_id"])
-        if cut and d and d <= cut:
+        if cut and d <= cut:
             continue  # already on a 460
         part = r.get("FORM_TYPE", "").upper()
         if part == "F497P1":  # received
@@ -261,24 +289,63 @@ def load_497s(zf, filings, cutoff, receipts, bbc_spending):
                 "entity": r.get("ENTITY_CD", ""), "donor_cmte_id": r.get("CMTE_ID", ""),
                 "city": r.get("ENTY_CITY", ""), "state": r.get("ENTY_ST", "").upper(),
                 "zip": zip5(r.get("ENTY_ZIP4", "")), "employer": r.get("CTRIB_EMP", ""), "occupation": r.get("CTRIB_OCC", ""),
-                "date": d, "amount": money(r.get("AMOUNT", "0")),
+                "date": d, "amount": money(r.get("AMOUNT"), f"S497_CD filing {r.get('FILING_ID')} {r.get('TRAN_ID')}"),
             })
         elif part == "F497P2" and f["filer_id"] == BBC_ID:  # made
             bbc_spending.append({"payee": name_of(r, "ENTY_NAMF", "ENTY_NAML"),
                                  "payee_cmte_id": r.get("CMTE_ID", ""),
-                                 "amount": money(r.get("AMOUNT", "0"))})
+                                 "amount": money(r.get("AMOUNT"), f"S497_CD filing {r.get('FILING_ID')} {r.get('TRAN_ID')}")})
 
 
 def dedupe(rows):
-    """Same 497 can be filed twice under different filing IDs."""
+    """Same 497 can be filed twice under different filing IDs. Two rows are
+    one contribution only if committee, report type, transaction ID, amount,
+    date and contributor name all match; removals are recorded and printed."""
     seen, out = set(), []
     for row in rows:
-        key = (row["filer_id"], row["source"], row["tran_id"], row["amount"])
+        key = (row["filer_id"], row["source"], row["tran_id"], row["amount"],
+               row["date"], norm(row["name"]))
         if row["tran_id"] and key in seen:
+            RUN["duplicates_removed"].append(
+                f"{row['filer_id']} {row['source']} {row['tran_id']} {row['date']} "
+                f"{row['name']} {row['amount']:,.2f}")
             continue
         seen.add(key)
         out.append(row)
     return out
+
+
+def check_data(receipts, reported_by_cmte):
+    """Print what was read and stop the run, before anything is written or
+    published, if the source data has problems we'd otherwise handle
+    silently. GitHub emails on a failed run."""
+    print("Run checks")
+    for t, n in sorted(RUN["rows_read"].items()):
+        print(f"  {t}: {n:,} rows read for our committees, "
+              f"{len(RUN['malformed'][t])} malformed")
+    print(f"  duplicate late reports removed: {len(RUN['duplicates_removed'])}")
+    for d in RUN["duplicates_removed"]:
+        print(f"    {d}")
+    undated_460 = [r for r in receipts if r["source"] == "F460" and r["date"] is None]
+    zero = [r for r in receipts if r["amount"] == 0]
+    print(f"  undated statement contributions (dates only affect charts): {len(undated_460)}")
+    print(f"  zero-dollar contributions: {len(zero)}")
+
+    problems = []
+    for t, lines in RUN["malformed"].items():
+        if lines:
+            problems.append(f"{len(lines)} malformed {t} row(s) for our committees, e.g. {lines[0]!r}")
+    if RUN["bad_amounts"]:
+        problems.append(f"{len(RUN['bad_amounts'])} unreadable amount(s), e.g. {RUN['bad_amounts'][0]}")
+    if RUN["undated_late"]:
+        problems.append(f"{len(RUN['undated_late'])} late contribution(s) with no usable date, "
+                        f"e.g. {RUN['undated_late'][0]}")
+    negative = {f: v for f, v in reported_by_cmte.items() if v < 0}
+    if negative:
+        problems.append(f"negative reported total(s): {negative}")
+    if problems:
+        sys.exit("STOPPED, nothing written or published:\n  - " + "\n  - ".join(problems))
+    print("  all checks passed")
 
 
 def load_crosswalk():
@@ -471,6 +538,24 @@ def main():
     receipts = dedupe(receipts)
     xwalk = load_crosswalk()
 
+    # Each committee's reported total: Form 460 summary line 5 (all
+    # contributions, including unitemized and in-kind) summed over every
+    # statement, plus 24-hour reports filed since its last statement.
+    late = defaultdict(float)
+    for r in receipts:
+        if r["source"] == "F497" and r["filer_id"] in POSITIONS:
+            late[r["filer_id"]] += r["amount"]
+    # Money moved between committees in the same camp would count twice.
+    intra = defaultdict(float)
+    for r in receipts:
+        if (r["filer_id"] in POSITIONS and r["donor_cmte_id"] in POSITIONS
+                and camp(r["filer_id"]) == camp(r["donor_cmte_id"])):
+            intra[r["filer_id"]] += r["amount"]
+    reported_by_cmte = {f: reported[f]["5"] + late[f] - intra[f] for f in POSITIONS}
+
+    # Stop here, before writing anything, if the source data has problems.
+    check_data(receipts, reported_by_cmte)
+
     # Transfers between Prop 40 committees would be counted twice.
     rows = [r for r in receipts
             if r["filer_id"] in COMMITTEES and r["donor_cmte_id"] not in COMMITTEES]
@@ -491,18 +576,19 @@ def main():
           r["county"], f'{r["amount"]:.2f}'] for r in rows],
     )
 
-    # Top donors: combine by normalized name across committees on one side.
-    donors, display = defaultdict(float), {}
+    # Top donors: one row per donor (merged by normalized name across
+    # committees), with separate Yes and No amounts, ranked by their total.
+    donors = defaultdict(lambda: {"Yes": 0.0, "No": 0.0})
+    display = {}
     for r in rows:
-        key = (r["side"], norm(r["name"]))
-        donors[key] += r["amount"]
-        display.setdefault(key, r["name"])
-    top = sorted(donors.items(), key=lambda kv: -kv[1])[:20]
+        k = norm(r["name"])
+        donors[k][r["side"]] += r["amount"]
+        display.setdefault(k, r["name"])
+    top = sorted(donors.items(), key=lambda kv: -(kv[1]["Yes"] + kv[1]["No"]))[:20]
     write_csv(
         OUT / "top_donors.csv",
         ["Donor", "Yes on 40", "No on 40"],
-        [[display[k], round(v) if k[0] == "Yes" else "", round(v) if k[0] == "No" else ""]
-         for k, v in top],
+        [[display[k], round(v["Yes"]) or "", round(v["No"]) or ""] for k, v in top],
     )
 
     # In vs. out of state.
@@ -582,22 +668,6 @@ def main():
             table.append([f"{side} on {m}"] + [round(money_in[g]) for g in FUNDERS])
         write_csv(OUT / f"funding_{m}.csv", ["Side"] + list(FUNDERS), table)
 
-    # Three-measure comparison from the totals the committees themselves
-    # report: Form 460 summary line 5 (all contributions, including
-    # unitemized and in-kind) summed over every statement, plus 24-hour
-    # reports filed since the last statement. This is the same method as
-    # the Secretary of State's measure totals.
-    late = defaultdict(float)
-    for r in receipts:
-        if r["source"] == "F497" and r["filer_id"] in POSITIONS:
-            late[r["filer_id"]] += r["amount"]
-    # Money moved between committees in the same camp would count twice.
-    intra = defaultdict(float)
-    for r in receipts:
-        if (r["filer_id"] in POSITIONS and r["donor_cmte_id"] in POSITIONS
-                and camp(r["filer_id"]) == camp(r["donor_cmte_id"])):
-            intra[r["filer_id"]] += r["amount"]
-    reported_by_cmte = {f: reported[f]["5"] + late[f] - intra[f] for f in POSITIONS}
 
     # One column per slice that has committees; each committee in exactly one.
     parts = [(sid, label) for sid, label in SLICES if any(slice_of(f) == sid for f in POSITIONS)]

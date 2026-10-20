@@ -145,6 +145,7 @@
   .split-key { font-size: 12px; color: var(--text-2); display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 18px; }
   .split-key i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 5px; vertical-align: -1px; }
 
+  .totals-note { font-size: 13px; color: var(--text-3); margin: -10px 0 20px; max-width: 720px; }
   .callout { background: var(--surface-2); border-radius: 8px; padding: 12px 14px; font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
   footer { border-top: 1px solid var(--rule); margin-top: 36px; padding-top: 16px; font-size: 13px; color: var(--text-3); }
   footer p { margin: 0 0 8px; max-width: 760px; }
@@ -454,7 +455,7 @@
     const s = summary.by_state;
     const ind = summary.by_type["Individual"] || 0;
     return el("div", { class: "stats" },
-      el("div", { class: "stat" }, el("b", {}, usd(summary.itemized_total)), el("span", {}, `itemized from ${summary.donor_count.toLocaleString()} donors`)),
+      el("div", { class: "stat" }, el("b", {}, usd(summary.itemized_total)), el("span", {}, `itemized ($100+) from ${summary.donor_count.toLocaleString()} donors`)),
       el("div", { class: "stat" }, el("b", {}, pct((s["California"] || 0) / t)), el("span", {}, "from California addresses")),
       el("div", { class: "stat" }, el("b", {}, pct((s["Out of state"] || 0) / t)), el("span", {}, "from out of state")),
       el("div", { class: "stat" }, el("b", {}, pct(ind / t)), el("span", {}, "from individuals")));
@@ -469,12 +470,16 @@
     const det = $("#detail");
     det.replaceChildren(
       el("div", { class: "detail-head" }, el("i", { style: { background: color(id) } }), el("h2", {}, SEG_NAMES[id])),
-      el("p", { class: "lede" }, `${usdFull(s.reported_total)} reported by ${s.committees.length === 1 ? "one committee" : `${s.committees.length} committees`}.`),
+      el("p", { class: "lede" }, `${usdFull(s.reported_total)} in contributions reported by ${s.committees.length === 1 ? "one committee" : `${s.committees.length} committees`}.`),
       el("ul", { class: "committees" }, ...s.committees.map((c) => el("li", {}, `${c.name}: `, el("b", {}, usdFull(c.reported_total))))),
       stateStats(s),
+      el("p", { class: "totals-note" },
+        "Reported totals are what the committees report to the state, including gifts under $100. " +
+        `Everything below uses itemized contributions of $100 or more (${usdFull(s.itemized_total)} here), ` +
+        "so the two can differ slightly."),
       el("div", { class: "cols" },
-        el("div", {}, el("h3", {}, "Top contributors"), donorList(s, id)),
-        el("div", {}, el("h3", {}, "Where the money comes from"), placeList(s, id))));
+        el("div", {}, el("h3", {}, "Top contributors (itemized)"), donorList(s, id)),
+        el("div", {}, el("h3", {}, "Where the money comes from (itemized)"), placeList(s, id))));
     if (userAction && det.getBoundingClientRect().top > innerHeight * 0.75) det.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -488,7 +493,7 @@
     det.replaceChildren(
       el("div", { class: "crumbs" }, el("button", { type: "button", onclick: () => select(fromId) }, `← Back to ${SEG_NAMES[fromId]}`)),
       el("div", { class: "detail-head" }, el("i", { style: { background: "var(--other)" } }), el("h2", {}, b.name)),
-      el("p", { class: "lede" }, `A committee that collects money from wealthy donors and passes it to ballot campaigns. It raised ${usdFull(b.raised)} and spent ${usdFull(b.spent)}${share ? `, ${share} of it on ${SEG_NAMES[fromId]}` : ""}.`),
+      el("p", { class: "lede" }, `A committee that collects money from wealthy donors and passes it to ballot campaigns. It raised ${usdFull(b.raised)} in itemized contributions and spent ${usdFull(b.spent)}${share ? `, ${share} of it on ${SEG_NAMES[fromId]}` : ""}.`),
       el("h3", {}, "Where its money went"),
       el("div", { class: "split", role: "img", "aria-label": parts.map((p) => `${labels[p.k]} ${usdFull(p.v)}`).join(", ") },
         ...parts.map((p) => {
