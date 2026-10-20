@@ -1,0 +1,64 @@
+# Daily refresh: download the newest Cal-Access snapshot, rebuild the data,
+# commit the page data (Vercel redeploys on push), and republish the
+# Datawrapper charts. Any failed step stops the run and GitHub emails you.
+name: Daily data update
+
+on:
+  schedule:
+    # 13:00 UTC = 6 a.m. Pacific in October (5 a.m. after Nov. 1).
+    # The state posts each new snapshot around 2 a.m. Pacific.
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}  # "Run workflow" button for manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download Cal-Access snapshot
+        run: |
+          mkdir -p raw
+          curl -sSL --fail --retry 3 --retry-delay 30 \
+            -o raw/dbwebexport.zip \
+            https://campaignfinance.cdn.sos.ca.gov/dbwebexport.zip
+          ls -la raw/dbwebexport.zip
+          # A blocked or partial download is small or isn't a zip; stop here
+          # rather than build from it.
+          python -c "
+          import zipfile, sys
+          names = zipfile.ZipFile('raw/dbwebexport.zip').namelist()
+          sys.exit(0 if any(n.endswith('RCPT_CD.TSV') for n in names) else 'Download is not the Cal-Access export')
+          "
+
+      - name: Build data
+        run: python build_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data.json site/contributions.json output/
+          if git diff --cached --quiet; then
+            echo "No data changes today."
+          else
+            git commit -m "Data update $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Republish Datawrapper charts
+        env:
+          DATAWRAPPER_TOKEN: ${{ secrets.DATAWRAPPER_TOKEN }}
+        run: python push_datawrapper.py
