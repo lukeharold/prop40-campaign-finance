@@ -513,9 +513,9 @@
         el("span", {}, el("i", { style: { background: color(p.k) } }), `${labels[p.k]} ${usd(p.v)}`))),
       el("p", { class: "callout" }, "These are gifts to Building a Better California, not to any one campaign. Money in a committee's account can't be traced to a specific expense, so these donors can't be credited with a specific amount for or against any measure."),
       stateStats(b, { showStates: false }),
-      el("div", { class: "cols" },
-        el("div", {}, el("h3", {}, "Top donors to Building a Better California"), donorList(b, fromId || "no40")),
-        el("div", {}, el("h3", {}, "Where its donors are"), placeList(b, fromId || "no40"))));
+      // No location breakdown here: reported addresses (e.g. an office in
+      // another state) would misstate where this committee's donors live.
+      el("div", {}, el("h3", {}, "Top donors to Building a Better California"), donorList(b, fromId || "no40")));
     det.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 

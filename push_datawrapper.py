@@ -54,9 +54,7 @@ def notes(s):
            f"({pct(s['bbc_share_to_40'])} of its spending) to No on 40.")
     return {
         "top_donors": f"{base} {bbc}",
-        "in_out_state": (f"{base} Counts direct donors only. {bbc} "
-                         f"{pct(s['bbc_out_of_state_share'])} of that committee's money came "
-                         "from donors with out-of-state addresses."),
+        "in_out_state": f"{base} Counts direct donors only. {bbc}",
         "bbc_donors": (f"Itemized contributions to Building a Better California since Jan. 1, "
                        f"2025. {as_of(s)} The committee spent {usd(s['bbc_spent'])}, "
                        f"{pct(s['bbc_share_to_40'])} of it on No on 40; the rest went mainly to "
