@@ -224,14 +224,33 @@ CHARTS = {
     },
     "donors_by_recipient": {
         "csv": "donors_by_recipient.csv",
-        "type": "d3-bars-stacked",
+        "type": "tables",
         "title": "The next biggest donors on Props 40, 41 and 42",
-        "intro": "Top 15 donors other than Building a Better California and SEIU-UHW, colored by the kind of committee that received the money. Shown on a much smaller scale than the two main funders.",
+        # {n} is filled in with the number of donors in the table.
+        "intro": "{n} donors other than Building a Better California and SEIU-UHW, and the committees they gave to. Search or sort by any column.",
         "visualize": {
-            "custom-colors": RECIPIENT_COLORS,
-            "value-label-format": "$0.[0]a",
-            "show-color-key": True,
-            "totals-labels": True,
+            "searchable": True,
+            "sortTable": True,
+            "sortBy": "Contributed ($)",
+            "sortDirection": "desc",
+            "perPage": 10,
+            "pagination": {"enabled": True, "position": "bottom"},
+            "showHeader": True,
+            "striped": False,
+            "compactMode": False,
+            "firstRowIsHeader": False,
+            "columns": {
+                # One bar color: rows mix both sides, and "Gave to" names the side.
+                "Contributed ($)": {
+                    "showAsBar": True,
+                    "barColor": "#6b6b66",
+                    "number-format": "0,0",
+                    "alignment": "right",
+                },
+                "Location": {"alignment": "left"},
+                "Occupation / employer": {"alignment": "left"},
+                "Gave to": {"alignment": "left"},
+            },
         },
     },
     "map_county": {

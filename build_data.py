@@ -723,7 +723,8 @@ def main():
     # combined), then the top 15 everyone else on their own scale.
     main = defaultdict(lambda: defaultdict(float))
     other = defaultdict(lambda: defaultdict(float))
-    other_name = {}
+    other_rows = []
+    other_recipients = defaultdict(set)
     for r in receipts:
         if r["filer_id"] not in POSITIONS:
             continue
@@ -734,19 +735,31 @@ def main():
         if group != FUNDERS[2]:
             main[group][sid] += r["amount"]
         else:
-            k = norm(r["name"])
-            other[k][sid] += r["amount"]
-            other_name.setdefault(k, tidy(r["name"]))
+            other[norm(r["name"])][sid] += r["amount"]
+            other_rows.append(r)
+            other_recipients[norm(r["name"])].add(r["filer_id"])
     write_csv(
         OUT / "donors_main.csv",
         ["Funder"] + header,
         [[g] + [round(main[g][sid]) or "" for sid in present] for g in FUNDERS[:2]],
     )
-    top_other = sorted(other.items(), key=lambda kv: -sum(kv[1].values()))[:15]
+    # Everyone else: a Datawrapper table (up to 150 donors, currently all
+    # of them) with location, occupation and which committee(s) they gave to.
+    def positions_label(filer_id):
+        """A committee's own positions, e.g. 'Yes on 40, No on 41 & 42'."""
+        by_side = defaultdict(list)
+        for m, side in sorted(POSITIONS[filer_id].items()):
+            by_side[side].append(m)
+        parts = [f"{side} on {' & '.join(ms)}" for side, ms in sorted(by_side.items(), key=lambda kv: kv[1][0])]
+        return ", ".join(parts) + (" (multi-prop committee)" if len(POSITIONS[filer_id]) > 1 else "")
     write_csv(
         OUT / "donors_by_recipient.csv",
-        ["Donor"] + header,
-        [[other_name[k]] + [round(v[sid]) or "" for sid in present] for k, v in top_other],
+        ["Donor", "Location", "Occupation / employer", "Gave to", "Contributed ($)"],
+        [[tidy(d["name"]), d["place"],
+          ", ".join(x for x in (d.get("occupation", ""), d.get("employer", "")) if x),
+          "; ".join(sorted({positions_label(f) for f in other_recipients[norm(d["name"])]})),
+          d["amount"]]
+         for d in donor_summary(other_rows, limit=150)["top_donors"]],
     )
 
 
