@@ -140,14 +140,33 @@ CHARTS = {
     },
     "bbc_donors": {
         "csv": "bbc_donors.csv",
-        "type": "d3-bars",
+        "type": "tables",
         "title": "Who funds the main committee behind No on 40",
-        "intro": "The 25 largest donors to Building a Better California, the committee that supplies most of the No campaign's money",
+        "intro": "The 25 largest donors to Building a Better California, the committee that supplies most of the No campaign's money. Search or sort by any column.",
+        # Datawrapper table: sortable, searchable, with a bar in the amount column.
         "visualize": {
-            "base-color": NO,
-            "value-label-format": "$0.[0]a",
-            "show-value-labels": True,
-            "show-color-key": False,
+            "searchable": True,
+            "sortTable": True,
+            "sortBy": "Contributed ($)",
+            "sortDirection": "desc",
+            "perPage": 10,
+            "pagination": {"enabled": True, "position": "bottom"},
+            "showHeader": True,
+            "striped": False,
+            "compactMode": False,
+            "firstRowIsHeader": False,
+            "columns": {
+                # Datawrapper tables ignore a "$" prefix set through the API,
+                # so the header carries the unit instead.
+                "Contributed ($)": {
+                    "showAsBar": True,
+                    "barColor": NO,
+                    "number-format": "0,0",
+                    "alignment": "right",
+                },
+                "Location": {"alignment": "left"},
+                "Occupation / employer": {"alignment": "left"},
+            },
         },
     },
     "coalition": {

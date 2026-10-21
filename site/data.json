@@ -64,7 +64,9 @@
      "amount": 325000,
      "n": 3,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "Director",
+     "employer": "WhyNot Initiative"
     },
     {
      "name": "United Domestic Workers of America Issues PAC",
@@ -78,21 +80,27 @@
      "amount": 201000,
      "n": 1,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "President",
+     "employer": "New Consensus"
     },
     {
      "name": "Ross Boucher",
      "amount": 200000,
      "n": 2,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "Hillary Perkins",
      "amount": 100000,
      "n": 1,
      "type": "Individual",
-     "place": "San Rafael, CA"
+     "place": "San Rafael, CA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "PACE of California School Employees Association - Issues",
@@ -127,28 +135,36 @@
      "amount": 25000,
      "n": 1,
      "type": "Individual",
-     "place": "Atherton, CA"
+     "place": "Atherton, CA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "William Connell",
      "amount": 25000,
      "n": 1,
      "type": "Individual",
-     "place": "Lake Forest, IL"
+     "place": "Lake Forest, IL",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "John Esler",
      "amount": 25000,
      "n": 1,
      "type": "Individual",
-     "place": "Sutton, MA"
+     "place": "Sutton, MA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "James Stone",
      "amount": 25000,
      "n": 1,
      "type": "Individual",
-     "place": "Boston, MA"
+     "place": "Boston, MA",
+     "occupation": "CEO",
+     "employer": "Plymouth Rock Assurance Group"
     },
     {
      "name": "California Donor Table Issues Committee",
@@ -162,7 +178,9 @@
      "amount": 10000,
      "n": 1,
      "type": "Individual",
-     "place": "Modesto, CA"
+     "place": "Modesto, CA",
+     "occupation": "Not-Employed",
+     "employer": ""
     },
     {
      "name": "JB Moss Voice of the Electorate (Vote) FED PAC ID# C00007898",
@@ -176,35 +194,45 @@
      "amount": 7500,
      "n": 1,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "David Olsen",
      "amount": 5100,
      "n": 2,
      "type": "Individual",
-     "place": "Ventura, CA"
+     "place": "Ventura, CA",
+     "occupation": "Not-Employed",
+     "employer": ""
     },
     {
      "name": "Betsy Krieger",
      "amount": 5000,
      "n": 1,
      "type": "Individual",
-     "place": "Baltimore, MD"
+     "place": "Baltimore, MD",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "Louise Brotsky",
      "amount": 5000,
      "n": 1,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "Neil (Tony) Holtzman",
      "amount": 4000,
      "n": 2,
      "type": "Individual",
-     "place": "Menlo Park, CA"
+     "place": "Menlo Park, CA",
+     "occupation": "Retired",
+     "employer": ""
     }
    ],
    "top_places": [
@@ -311,7 +339,9 @@
      "amount": 5000000,
      "n": 1,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "Executive Chairman",
+     "employer": "Ripple Labs"
     },
     {
      "name": "Ripple Labs",
@@ -332,7 +362,9 @@
      "amount": 200000,
      "n": 1,
      "type": "Individual",
-     "place": "Chicago, IL"
+     "place": "Chicago, IL",
+     "occupation": "Administrator",
+     "employer": "Wicklow Capital, Inc."
     },
     {
      "name": "RIGHT PATH CALIFORNIA ISSUES PAC",
@@ -346,7 +378,9 @@
      "amount": 100000,
      "n": 1,
      "type": "Individual",
-     "place": "San Francisco, CA"
+     "place": "San Francisco, CA",
+     "occupation": "Investor",
+     "employer": "SV Angel LLC"
     },
     {
      "name": "Intersect USA, LLC(Michael Wheeler)",
@@ -466,7 +500,9 @@
      "amount": 100,
      "n": 1,
      "type": "Individual",
-     "place": "Daly City, CA"
+     "place": "Daly City, CA",
+     "occupation": "Retired",
+     "employer": ""
     }
    ],
    "top_places": [
@@ -579,63 +615,81 @@
     "amount": 102000000,
     "n": 7,
     "type": "Individual",
-    "place": "Reno, NV"
+    "place": "Reno, NV",
+    "occupation": "Co-Founder",
+    "employer": "Google"
    },
    {
     "name": "ERIC SCHMIDT",
     "amount": 40236457,
     "n": 6,
     "type": "Individual",
-    "place": "West Hollywood, CA"
+    "place": "West Hollywood, CA",
+    "occupation": "Investor/Philanthropist",
+    "employer": ""
    },
    {
     "name": "L. JOHN DOERR, III",
     "amount": 40000000,
     "n": 6,
     "type": "Individual",
-    "place": "San Rafael, CA"
+    "place": "San Rafael, CA",
+    "occupation": "Chairman",
+    "employer": "Kleiner Perkins"
    },
    {
     "name": "PATRICK COLLISON",
     "amount": 33169794,
     "n": 5,
     "type": "Individual",
-    "place": "Redwood City, CA"
+    "place": "Redwood City, CA",
+    "occupation": "CEO",
+    "employer": "Stripe"
    },
    {
     "name": "VINOD KHOSLA",
     "amount": 12561504,
     "n": 1,
     "type": "Individual",
-    "place": "Portola Valley, CA"
+    "place": "Portola Valley, CA",
+    "occupation": "Venture Capitalist",
+    "employer": "Khosla Ventures LLC"
    },
    {
     "name": "CHRIS LARSEN",
     "amount": 12511845,
     "n": 3,
     "type": "Individual",
-    "place": "San Francisco, CA"
+    "place": "San Francisco, CA",
+    "occupation": "Executive Chairman",
+    "employer": "Ripple, Inc."
    },
    {
     "name": "MICHAEL MORITZ",
     "amount": 7500000,
     "n": 3,
     "type": "Individual",
-    "place": "Palo Alto, CA"
+    "place": "Palo Alto, CA",
+    "occupation": "Investor/Philanthropist",
+    "employer": ""
    },
    {
     "name": "KAVITARK RAM SHRIRAM",
     "amount": 5005599,
     "n": 1,
     "type": "Individual",
-    "place": "Palo Alto, CA"
+    "place": "Palo Alto, CA",
+    "occupation": "Investor",
+    "employer": "Self-Employed; Kavitark Ram Shriram"
    },
    {
     "name": "FRANK SLOOTMAN",
     "amount": 5000000,
     "n": 1,
     "type": "Individual",
-    "place": "West Palm Beach, FL"
+    "place": "West Palm Beach, FL",
+    "occupation": "Retired",
+    "employer": ""
    },
    {
     "name": "ALPHAFOXTROT LLC(RESPONSIBLE OFFICER: LYNSI SNYDER)",
@@ -649,105 +703,135 @@
     "amount": 4500000,
     "n": 3,
     "type": "Individual",
-    "place": "Los Angeles, CA"
+    "place": "Los Angeles, CA",
+    "occupation": "President & Chairman",
+    "employer": "The Wonderful Company"
    },
    {
     "name": "JOHN HERING",
     "amount": 3921961,
     "n": 3,
     "type": "Individual",
-    "place": "San Rafael, CA"
+    "place": "San Rafael, CA",
+    "occupation": "Vy Capital",
+    "employer": "Private Investor"
    },
    {
     "name": "TONY XU",
     "amount": 3493982,
     "n": 3,
     "type": "Individual",
-    "place": "San Francisco, CA"
+    "place": "San Francisco, CA",
+    "occupation": "CEO",
+    "employer": "Doordash"
    },
    {
     "name": "MAKSIM RAFAEL LEVCHIN",
     "amount": 3021884,
     "n": 3,
     "type": "Individual",
-    "place": "San Francisco, CA"
+    "place": "San Francisco, CA",
+    "occupation": "CEO",
+    "employer": "Affirm"
    },
    {
     "name": "ALFRED LIN",
     "amount": 3000000,
     "n": 1,
     "type": "Individual",
-    "place": "San Mateo, CA"
+    "place": "San Mateo, CA",
+    "occupation": "Managing Partner",
+    "employer": "Sequoia Capital"
    },
    {
     "name": "ANDREW KARAM",
     "amount": 3000000,
     "n": 2,
     "type": "Individual",
-    "place": "Atherton, CA"
+    "place": "Atherton, CA",
+    "occupation": "Investor",
+    "employer": "Self-Employed; Andrew Karam"
    },
    {
     "name": "MEYER MALKA",
     "amount": 2986174,
     "n": 3,
     "type": "Individual",
-    "place": "Palo Alto, CA"
+    "place": "Palo Alto, CA",
+    "occupation": "Investor",
+    "employer": "Ribbit Management Company LLC"
    },
    {
     "name": "JAMES COULTER",
     "amount": 2527189,
     "n": 1,
     "type": "Individual",
-    "place": "Fort Worth, TX"
+    "place": "Fort Worth, TX",
+    "occupation": "Investor",
+    "employer": "Tpg"
    },
    {
     "name": "BRUCE DUNLEVIE",
     "amount": 2110000,
     "n": 1,
     "type": "Individual",
-    "place": "Woodside, CA"
+    "place": "Woodside, CA",
+    "occupation": "Partner",
+    "employer": "Benchmark"
    },
    {
     "name": "GEORGE MARCUS",
     "amount": 2000000,
     "n": 2,
     "type": "Individual",
-    "place": "Palo Alto, CA"
+    "place": "Palo Alto, CA",
+    "occupation": "Chairman",
+    "employer": "Marcus + Millichap Co."
    },
    {
     "name": "JAMES SLAVIK",
     "amount": 1998899,
     "n": 2,
     "type": "Individual",
-    "place": "Newport Beach, CA"
+    "place": "Newport Beach, CA",
+    "occupation": "President",
+    "employer": "Mark IV Capital Inc."
    },
    {
     "name": "PAUL SLAVIK",
     "amount": 1998899,
     "n": 2,
     "type": "Individual",
-    "place": "Newport Beach, CA"
+    "place": "Newport Beach, CA",
+    "occupation": "Retired",
+    "employer": ""
    },
    {
     "name": "FREDERICK E EHRSAM III",
     "amount": 1979908,
     "n": 2,
     "type": "Individual",
-    "place": "San Francisco, CA"
+    "place": "San Francisco, CA",
+    "occupation": "CEO",
+    "employer": "Nudge"
    },
    {
     "name": "PHILIPPE LAFFONT",
     "amount": 1500077,
     "n": 1,
     "type": "Individual",
-    "place": "New York, NY"
+    "place": "New York, NY",
+    "occupation": "Founder & Portfolio Manager",
+    "employer": "Coatue Management LLC"
    },
    {
     "name": "THOMAS LAFFONT",
     "amount": 1500077,
     "n": 1,
     "type": "Individual",
-    "place": "New York, NY"
+    "place": "New York, NY",
+    "occupation": "Co-Founder",
+    "employer": "Coatue Management LLC"
    }
   ],
   "top_places": [

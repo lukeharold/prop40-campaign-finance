@@ -396,6 +396,20 @@ def place(r):
     return f"{city}, {r['state']}" if city else r["state"]
 
 
+KEEP_UPPER = {"LLC", "LP", "LLP", "CEO", "CFO", "COO", "CTO", "SEIU", "PAC", "USA",
+              "II", "III", "IV", "UHW", "VP", "MD", "UC", "AI", "IT", "NA"}
+NOT_AN_EMPLOYER = {"", "NONE", "N/A", "NA", "-", "NOT EMPLOYED", "INFORMATION REQUESTED"}
+
+
+def tidy(s):
+    """'CO-FOUNDER' -> 'Co-Founder'; leaves acronyms like LLC and CEO alone.
+    Only applied to text filed in all caps."""
+    if not s or s != s.upper():
+        return s
+    return re.sub(r"[A-Za-z]+", lambda m: m.group(0) if m.group(0) in KEEP_UPPER
+                  else m.group(0).capitalize(), s)
+
+
 def donor_summary(rows, limit=25):
     """Top donors (merged by normalized name) and top places for a set of
     itemized receipts."""
@@ -404,13 +418,22 @@ def donor_summary(rows, limit=25):
         k = norm(r["name"])
         d = donors.setdefault(k, {"name": r["name"], "amount": 0.0, "n": 0,
                                   "type": ENTITY_TYPES.get(r["entity"], "Other"),
-                                  "_places": defaultdict(float)})
+                                  "_places": defaultdict(float), "_jobs": defaultdict(float)})
         d["amount"] += r["amount"]
         d["n"] += 1
         d["_places"][place(r)] += r["amount"]
+        occ = r.get("occupation", "").strip()
+        emp = r.get("employer", "").strip()
+        emp = "" if emp.upper() in NOT_AN_EMPLOYER else emp
+        if occ or emp:
+            d["_jobs"][(tidy(occ), tidy(emp))] += abs(r["amount"])
     top = sorted(donors.values(), key=lambda d: -d["amount"])[:limit]
     for d in top:
         d["place"] = max(d.pop("_places").items(), key=lambda kv: kv[1])[0]
+        # Occupation and employer as filed on the donor's largest contributions.
+        jobs = d.pop("_jobs")
+        if jobs:
+            d["occupation"], d["employer"] = max(jobs.items(), key=lambda kv: kv[1])[0]
         d["amount"] = round(d["amount"])
         nm = d["name"].upper()
         if "BUILDING A BETTER CALIFORNIA" in nm:
@@ -419,6 +442,7 @@ def donor_summary(rows, limit=25):
             d["note"] = "Union treasury or union committee; its money comes from member dues and isn't itemized further."
     for d in donors.values():
         d.pop("_places", None)
+        d.pop("_jobs", None)
 
     places = defaultdict(float)
     states = defaultdict(float)
@@ -640,11 +664,15 @@ def main():
     bbc_to_40 = sum(s["amount"] for s in bbc_spending
                     if s["payee_cmte_id"] in COMMITTEES or PROP40_NAME.search(s["payee"].upper()))
     bbc_out_of_state = sum(r["amount"] for r in bbc if r["state"] and r["state"] != "CA")
+    # Datawrapper table: top 25 donors with where they're from and what
+    # they do, as reported on the filings.
     write_csv(
         OUT / "bbc_donors.csv",
-        ["Donor", "Contributed"],
-        [[bbc_display[k], round(v)]
-         for k, v in sorted(bbc_donors.items(), key=lambda kv: -kv[1])[:25]],
+        ["Donor", "Location", "Occupation / employer", "Contributed ($)"],
+        [[tidy(d["name"]), d["place"],
+          ", ".join(x for x in (d.get("occupation", ""), d.get("employer", "")) if x),
+          d["amount"]]
+         for d in donor_summary(bbc, limit=25)["top_donors"]],
     )
 
     # Who pays for each side of Props 40, 41 and 42, and for each camp across

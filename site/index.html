@@ -127,6 +127,7 @@
   .row-name { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
   .row-amt { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 14px; white-space: nowrap; }
   .row-sub { font-size: 12px; color: var(--text-3); }
+  .row-job { color: var(--text-2); }
   .row-bar { height: 6px; border-radius: 0 3px 3px 0; margin-top: 5px; min-width: 2px; }
   .row-note { font-size: 12px; color: var(--text-2); margin-top: 4px; }
   .drill {
@@ -435,6 +436,9 @@
       const li = el("li", { class: "row" },
         el("div", { class: "row-top" }, el("span", { class: "row-name" }, d.name), el("span", { class: "row-amt" }, usdFull(d.amount))),
         el("div", { class: "row-sub" }, `${d.type} · ${d.place}${d.n > 1 ? ` · ${d.n} contributions` : ""}`),
+        d.occupation || d.employer
+          ? el("div", { class: "row-sub row-job" }, [d.occupation, d.employer].filter(Boolean).join(", "))
+          : null,
         el("div", { class: "row-bar", style: { width: `${(d.amount / max) * 100}%`, background: color(colorId) } }));
       if (d.note) li.append(el("div", { class: "row-note" }, d.note));
       if (d.drill === "bbc") li.append(el("button", { class: "drill", type: "button", onclick: () => showBBC(selected) }, "Who funds Building a Better California? →"));
