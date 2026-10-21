@@ -717,22 +717,36 @@ def main():
     }
     seg_ids = {sid: {f for f in POSITIONS if slice_of(f) == sid} for sid, _ in SLICES}
     present = [sid for sid, _ in SLICES if seg_ids[sid]]
-    by_donor = defaultdict(lambda: defaultdict(float))
-    donor_name = {}
+    header = [recipient_labels[sid] for sid in present]
+    # Two charts so small donors aren't dwarfed: the two main funders
+    # (Building a Better California, and SEIU-UHW with its committees
+    # combined), then the top 15 everyone else on their own scale.
+    main = defaultdict(lambda: defaultdict(float))
+    other = defaultdict(lambda: defaultdict(float))
+    other_name = {}
     for r in receipts:
         if r["filer_id"] not in POSITIONS:
             continue
         sid = slice_of(r["filer_id"])
         if r["donor_cmte_id"] in seg_ids[sid]:
             continue
-        k = norm(r["name"])
-        by_donor[k][sid] += r["amount"]
-        donor_name.setdefault(k, tidy(r["name"]))
-    top_all = sorted(by_donor.items(), key=lambda kv: -sum(kv[1].values()))[:15]
+        group = funder(r)
+        if group != FUNDERS[2]:
+            main[group][sid] += r["amount"]
+        else:
+            k = norm(r["name"])
+            other[k][sid] += r["amount"]
+            other_name.setdefault(k, tidy(r["name"]))
+    write_csv(
+        OUT / "donors_main.csv",
+        ["Funder"] + header,
+        [[g] + [round(main[g][sid]) or "" for sid in present] for g in FUNDERS[:2]],
+    )
+    top_other = sorted(other.items(), key=lambda kv: -sum(kv[1].values()))[:15]
     write_csv(
         OUT / "donors_by_recipient.csv",
-        ["Donor"] + [recipient_labels[sid] for sid in present],
-        [[donor_name[k]] + [round(v[sid]) or "" for sid in present] for k, v in top_all],
+        ["Donor"] + header,
+        [[other_name[k]] + [round(v[sid]) or "" for sid in present] for k, v in top_other],
     )
 
 

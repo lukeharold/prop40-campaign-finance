@@ -67,14 +67,8 @@ def notes(s):
                 f"{s['people_no']} to the No side ({pct(s['people_share_no'])} of its money). "
                 "Most money on both sides comes from unions, companies and committees, which "
                 f"are not mapped. {bbc} {as_of(s)}"),
-        "donors_by_recipient": (
-            "Itemized contributions ($100+) to the committees on Props 40, 41 and 42, from Form 460s "
-            f"and 24-hour Form 497 reports. {as_of(s)} The Yes on 40 / No on 41 and 42 committees "
-            "(SEIU-UHW's \"Yes on 40 - Billionaire Tax Now - No on 41 & 42,\" Tax the Ultra-Rich Now "
-            "and Working Families Say No to Props 41 and 42) each campaign on more than one measure "
-            "from a single account, so their money can't be split by measure. Building a Better "
-            "California gave separately to three single-measure committees. Money moved between "
-            "committees on the same side is not counted. Contributions raised, not money spent."),
+        "donors_main": recipient_note(s, main=True),
+        "donors_by_recipient": recipient_note(s, main=False),
         "coalition": ("Totals are each committee's own reported contributions: the totals on its "
                       "Form 460 campaign statements (including in-kind and contributions under $100), "
                       "plus contributions on 24-hour reports filed since its last statement. "
@@ -86,6 +80,20 @@ def notes(s):
                       "measures to limit new taxes; money for them is not all spent against Prop 40. "
                       "Contributions raised, not money spent."),
     }
+
+
+def recipient_note(s, main):
+    first = ("SEIU-UHW combines the union's nonprofit arm, political issues committee and PAC. "
+             if main else
+             "Excludes Building a Better California and SEIU-UHW, shown in a separate chart. ")
+    return (first +
+            "Itemized contributions ($100+) to the committees on Props 40, 41 and 42, from Form 460s "
+            f"and 24-hour Form 497 reports. {as_of(s)} The Yes on 40 / No on 41 and 42 committees "
+            "(SEIU-UHW's \"Yes on 40 - Billionaire Tax Now - No on 41 & 42,\" Tax the Ultra-Rich Now "
+            "and Working Families Say No to Props 41 and 42) each campaign on more than one measure "
+            "from a single account, so their money can't be split by measure. Building a Better "
+            "California gave separately to three single-measure committees. Money moved between "
+            "committees on the same side is not counted. Contributions raised, not money spent.")
 
 
 def funding_note(s):
@@ -107,6 +115,14 @@ MAP_COLORSCALE = {
                {"color": YES, "position": 0.6},
                {"color": "#0b3d3a", "position": 1}],
     "interpolation": "equidistant",
+}
+
+RECIPIENT_COLORS = {
+    "Yes on 40 / No on 41 & 42 (committees covering several props)": YES,
+    "No on 40 / Yes on 41 or 42 (committees covering several props)": "#8f4a1c",
+    "No on 40 (single-prop committees)": NO,
+    "Yes on 41 (single-prop committee)": "#e8a96b",
+    "Yes on 42 (single-prop committee)": "#f3cfa6",
 }
 
 FUNDER_VIZ = {
@@ -191,20 +207,27 @@ CHARTS = {
             "show-color-key": True,
         },
     },
-    # Replaces the three per-measure funding charts (funding_40/41/42).
+    # Replaces the three per-measure funding charts. Two charts with their
+    # own scales, so smaller donors aren't dwarfed by the two main funders.
+    "donors_main": {
+        "csv": "donors_main.csv",
+        "type": "d3-bars-stacked",
+        "title": "The two funders behind most of the money on Props 40, 41 and 42",
+        "intro": "Itemized contributions, colored by the kind of committee that received the money",
+        "visualize": {
+            "custom-colors": RECIPIENT_COLORS,
+            "value-label-format": "$0.[0]a",
+            "show-color-key": True,
+            "totals-labels": True,
+        },
+    },
     "donors_by_recipient": {
         "csv": "donors_by_recipient.csv",
         "type": "d3-bars-stacked",
-        "title": "The biggest donors across Props 40, 41 and 42, and where their money went",
-        "intro": "Each bar is one donor, colored by the kind of committee that received the money",
+        "title": "The next biggest donors on Props 40, 41 and 42",
+        "intro": "Top 15 donors other than Building a Better California and SEIU-UHW, colored by the kind of committee that received the money. Shown on a much smaller scale than the two main funders.",
         "visualize": {
-            "custom-colors": {
-                "Yes on 40 / No on 41 & 42 (committees covering several props)": YES,
-                "No on 40 / Yes on 41 or 42 (committees covering several props)": "#8f4a1c",
-                "No on 40 (single-prop committees)": NO,
-                "Yes on 41 (single-prop committee)": "#e8a96b",
-                "Yes on 42 (single-prop committee)": "#f3cfa6",
-            },
+            "custom-colors": RECIPIENT_COLORS,
             "value-label-format": "$0.[0]a",
             "show-color-key": True,
             "totals-labels": True,
