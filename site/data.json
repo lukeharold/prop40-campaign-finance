@@ -1,17 +1,17 @@
 {
- "updated": "2026-10-16",
- "as_of": "2026-10-20",
+ "updated": "2026-10-20",
+ "as_of": "2026-10-21",
  "segments": [
   {
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 33858112,
+   "reported_total": 34071487,
    "committees": [
     {
      "id": "1484470",
      "name": "Yes on 40 - Billionaire Tax Now - No on 41 & 42 (SEIU-UHW)",
-     "reported_total": 32482814
+     "reported_total": 32691189
     },
     {
      "id": "1497412",
@@ -21,12 +21,12 @@
     {
      "id": "1495036",
      "name": "Tax the Ultra-Rich Now, Yes on 3 & 40, No on 41 & 42",
-     "reported_total": 424298
+     "reported_total": 429298
     }
    ],
-   "itemized_total": 33843246,
-   "contributions": 202,
-   "donor_count": 91,
+   "itemized_total": 34056620,
+   "contributions": 205,
+   "donor_count": 94,
    "top_donors": [
     {
      "name": "Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",
@@ -92,6 +92,13 @@
      "place": "San Francisco, CA",
      "occupation": "Retired",
      "employer": ""
+    },
+    {
+     "name": "California Labor Federation AFL-CIO",
+     "amount": 200000,
+     "n": 1,
+     "type": "Committee",
+     "place": "Oakland, CA"
     },
     {
      "name": "Hillary Perkins",
@@ -190,6 +197,13 @@
      "place": "New York, NY"
     },
     {
+     "name": "California Democratic Party",
+     "amount": 8375,
+     "n": 1,
+     "type": "Party",
+     "place": "Sacramento, CA"
+    },
+    {
      "name": "Mark Schlesinger",
      "amount": 7500,
      "n": 1,
@@ -215,24 +229,6 @@
      "place": "Baltimore, MD",
      "occupation": "Retired",
      "employer": ""
-    },
-    {
-     "name": "Louise Brotsky",
-     "amount": 5000,
-     "n": 1,
-     "type": "Individual",
-     "place": "San Francisco, CA",
-     "occupation": "Retired",
-     "employer": ""
-    },
-    {
-     "name": "Neil (Tony) Holtzman",
-     "amount": 4000,
-     "n": 2,
-     "type": "Individual",
-     "place": "Menlo Park, CA",
-     "occupation": "Retired",
-     "employer": ""
     }
    ],
    "top_places": [
@@ -242,11 +238,11 @@
     },
     {
      "place": "Sacramento, CA",
-     "amount": 8446964
+     "amount": 8455339
     },
     {
      "place": "Oakland, CA",
-     "amount": 2000100
+     "amount": 2200100
     },
     {
      "place": "San Francisco, CA",
@@ -286,25 +282,26 @@
     }
    ],
    "by_state": {
-    "California": 33696673,
-    "Out of state": 146573
+    "California": 33905047,
+    "Out of state": 151573
    },
    "by_type": {
-    "Committee": 32809563,
-    "Individual": 991083,
-    "Business or group": 42600
+    "Committee": 33009563,
+    "Individual": 996083,
+    "Business or group": 42600,
+    "Party": 8375
    }
   },
   {
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 130009744,
+   "reported_total": 130243783,
    "committees": [
     {
      "id": "1492108",
      "name": "No on Prop 40 - Doctors, Teachers, Small Businesses...",
-     "reported_total": 118736019
+     "reported_total": 118738960
     },
     {
      "id": "1486695",
@@ -314,7 +311,7 @@
     {
      "id": "1485228",
      "name": "Californians Against Tax Increases (CA Business Roundtable)",
-     "reported_total": 423724
+     "reported_total": 654822
     },
     {
      "id": "1485007",
@@ -322,9 +319,9 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 130009744,
-   "contributions": 32,
-   "donor_count": 13,
+   "itemized_total": 130243783,
+   "contributions": 35,
+   "donor_count": 15,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
@@ -358,6 +355,13 @@
      "place": "Sacramento, CA"
     },
     {
+     "name": "RIGHT PATH CALIFORNIA ISSUES PAC",
+     "amount": 399822,
+     "n": 3,
+     "type": "Committee",
+     "place": "San Rafael, CA"
+    },
+    {
      "name": "Daniel Tierney",
      "amount": 200000,
      "n": 1,
@@ -365,13 +369,6 @@
      "place": "Chicago, IL",
      "occupation": "Administrator",
      "employer": "Wicklow Capital, Inc."
-    },
-    {
-     "name": "RIGHT PATH CALIFORNIA ISSUES PAC",
-     "amount": 168724,
-     "n": 2,
-     "type": "Committee",
-     "place": "San Rafael, CA"
     },
     {
      "name": "Ronald Conway",
@@ -423,12 +420,26 @@
      "n": 1,
      "type": "Business or group",
      "place": "Sacramento, CA"
+    },
+    {
+     "name": "UNITED DOMESTIC WORKERS OF AMERICA ISSUES PAC",
+     "amount": 1501,
+     "n": 1,
+     "type": "Committee",
+     "place": "San Diego, CA"
+    },
+    {
+     "name": "UNITED DOMESTIC WORKERS OF AMERICA ACTION FUND",
+     "amount": 1440,
+     "n": 1,
+     "type": "Committee",
+     "place": "San Diego, CA"
     }
    ],
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 118918724
+     "amount": 119149822
     },
     {
      "place": "San Francisco, CA",
@@ -445,14 +456,18 @@
     {
      "place": "Beaverton, OR",
      "amount": 100000
+    },
+    {
+     "place": "San Diego, CA",
+     "amount": 2941
     }
    ],
    "by_state": {
-    "California": 129709744,
+    "California": 129943783,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 119408018,
+    "Committee": 119642057,
     "Business or group": 5301726,
     "Individual": 5300000
    }
