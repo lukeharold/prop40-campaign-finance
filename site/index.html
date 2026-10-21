@@ -454,14 +454,17 @@
         el("div", { class: "row-bar", style: { width: `${(p.amount / max) * 100}%`, background: color(colorId) } }))));
   }
 
-  function stateStats(summary) {
+  // showStates: false hides the California / out-of-state shares. Used for
+  // Building a Better California, where a few reported addresses (e.g. an
+  // office in another state) would badly misstate where its donors live.
+  function stateStats(summary, { showStates = true } = {}) {
     const t = summary.itemized_total || 1;
     const s = summary.by_state;
     const ind = summary.by_type["Individual"] || 0;
     return el("div", { class: "stats" },
       el("div", { class: "stat" }, el("b", {}, usd(summary.itemized_total)), el("span", {}, `itemized ($100+) from ${summary.donor_count.toLocaleString()} donors`)),
-      el("div", { class: "stat" }, el("b", {}, pct((s["California"] || 0) / t)), el("span", {}, "from California addresses")),
-      el("div", { class: "stat" }, el("b", {}, pct((s["Out of state"] || 0) / t)), el("span", {}, "from out of state")),
+      showStates ? el("div", { class: "stat" }, el("b", {}, pct((s["California"] || 0) / t)), el("span", {}, "from California addresses")) : null,
+      showStates ? el("div", { class: "stat" }, el("b", {}, pct((s["Out of state"] || 0) / t)), el("span", {}, "from out of state")) : null,
       el("div", { class: "stat" }, el("b", {}, pct(ind / t)), el("span", {}, "from individuals")));
   }
 
@@ -509,7 +512,7 @@
       el("div", { class: "split-key" }, ...parts.map((p) =>
         el("span", {}, el("i", { style: { background: color(p.k) } }), `${labels[p.k]} ${usd(p.v)}`))),
       el("p", { class: "callout" }, "These are gifts to Building a Better California, not to any one campaign. Money in a committee's account can't be traced to a specific expense, so these donors can't be credited with a specific amount for or against any measure."),
-      stateStats(b),
+      stateStats(b, { showStates: false }),
       el("div", { class: "cols" },
         el("div", {}, el("h3", {}, "Top donors to Building a Better California"), donorList(b, fromId || "no40")),
         el("div", {}, el("h3", {}, "Where its donors are"), placeList(b, fromId || "no40"))));
