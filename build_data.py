@@ -396,7 +396,7 @@ def place(r):
     return f"{city}, {r['state']}" if city else r["state"]
 
 
-KEEP_UPPER = {"LLC", "LP", "LLP", "CEO", "CFO", "COO", "CTO", "SEIU", "PAC", "USA",
+KEEP_UPPER = {"PORAC", "PIC", "AFL", "CIO", "LLC", "LP", "LLP", "CEO", "CFO", "COO", "CTO", "SEIU", "PAC", "USA",
               "II", "III", "IV", "UHW", "VP", "MD", "UC", "AI", "IT", "NA"}
 NOT_AN_EMPLOYER = {"", "NONE", "N/A", "NA", "-", "NOT EMPLOYED", "INFORMATION REQUESTED"}
 
@@ -406,8 +406,16 @@ def tidy(s):
     Only applied to text filed in all caps."""
     if not s or s != s.upper():
         return s
-    return re.sub(r"[A-Za-z]+", lambda m: m.group(0) if m.group(0) in KEEP_UPPER
-                  else m.group(0).capitalize(), s)
+    small = {"A", "AN", "AND", "OF", "THE", "FOR", "ON", "TO", "IN", "AT", "BY"}
+
+    def word(m):
+        w = m.group(0)
+        if w in KEEP_UPPER:
+            return w
+        if w in small and m.start() > 0:
+            return w.lower()
+        return w.capitalize()
+    return re.sub(r"[A-Za-z]+", word, s)
 
 
 def donor_summary(rows, limit=25):
@@ -694,6 +702,38 @@ def main():
             measure_totals[f"{side.lower()}_{m}"] = round(sum(money_in.values()))
             table.append([f"{side} on {m}"] + [round(money_in[g]) for g in FUNDERS])
         write_csv(OUT / f"funding_{m}.csv", ["Side"] + list(FUNDERS), table)
+
+    # One chart across all three measures: each top donor's itemized money,
+    # split by the kind of committee that received it. Committees on the
+    # Yes on 40 / No on 41 and 42 side each work on several measures from one
+    # account, so their money can't be split by measure; the other side has
+    # one committee per measure. Transfers within a slice are excluded.
+    recipient_labels = {
+        "yes40": "Yes on 40 / No on 41 & 42 (committees covering several props)",
+        "multi": "No on 40 / Yes on 41 or 42 (committees covering several props)",
+        "no40": "No on 40 (single-prop committees)",
+        "yes41": "Yes on 41 (single-prop committee)",
+        "yes42": "Yes on 42 (single-prop committee)",
+    }
+    seg_ids = {sid: {f for f in POSITIONS if slice_of(f) == sid} for sid, _ in SLICES}
+    present = [sid for sid, _ in SLICES if seg_ids[sid]]
+    by_donor = defaultdict(lambda: defaultdict(float))
+    donor_name = {}
+    for r in receipts:
+        if r["filer_id"] not in POSITIONS:
+            continue
+        sid = slice_of(r["filer_id"])
+        if r["donor_cmte_id"] in seg_ids[sid]:
+            continue
+        k = norm(r["name"])
+        by_donor[k][sid] += r["amount"]
+        donor_name.setdefault(k, tidy(r["name"]))
+    top_all = sorted(by_donor.items(), key=lambda kv: -sum(kv[1].values()))[:15]
+    write_csv(
+        OUT / "donors_by_recipient.csv",
+        ["Donor"] + [recipient_labels[sid] for sid in present],
+        [[donor_name[k]] + [round(v[sid]) or "" for sid in present] for k, v in top_all],
+    )
 
 
     # One column per slice that has committees; each committee in exactly one.

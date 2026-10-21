@@ -67,7 +67,14 @@ def notes(s):
                 f"{s['people_no']} to the No side ({pct(s['people_share_no'])} of its money). "
                 "Most money on both sides comes from unions, companies and committees, which "
                 f"are not mapped. {bbc} {as_of(s)}"),
-        **{f"funding_{m}": funding_note(s) for m in ("40", "41", "42")},
+        "donors_by_recipient": (
+            "Itemized contributions ($100+) to the committees on Props 40, 41 and 42, from Form 460s "
+            f"and 24-hour Form 497 reports. {as_of(s)} The Yes on 40 / No on 41 and 42 committees "
+            "(SEIU-UHW's \"Yes on 40 - Billionaire Tax Now - No on 41 & 42,\" Tax the Ultra-Rich Now "
+            "and Working Families Say No to Props 41 and 42) each campaign on more than one measure "
+            "from a single account, so their money can't be split by measure. Building a Better "
+            "California gave separately to three single-measure committees. Money moved between "
+            "committees on the same side is not counted. Contributions raised, not money spent."),
         "coalition": ("Totals are each committee's own reported contributions: the totals on its "
                       "Form 460 campaign statements (including in-kind and contributions under $100), "
                       "plus contributions on 24-hour reports filed since its last statement. "
@@ -184,26 +191,24 @@ CHARTS = {
             "show-color-key": True,
         },
     },
-    "funding_40": {
-        "csv": "funding_40.csv",
+    # Replaces the three per-measure funding charts (funding_40/41/42).
+    "donors_by_recipient": {
+        "csv": "donors_by_recipient.csv",
         "type": "d3-bars-stacked",
-        "title": "Who's paying for each side of Prop 40",
-        "intro": "Prop 40 would impose a one-time 5% tax on California residents and trusts worth $1 billion or more",
-        "visualize": FUNDER_VIZ,
-    },
-    "funding_41": {
-        "csv": "funding_41.csv",
-        "type": "d3-bars-stacked",
-        "title": "Who's paying for each side of Prop 41",
-        "intro": "Prop 41 would require audits of programs funded by new state special taxes, among other changes",
-        "visualize": FUNDER_VIZ,
-    },
-    "funding_42": {
-        "csv": "funding_42.csv",
-        "type": "d3-bars-stacked",
-        "title": "Who's paying for each side of Prop 42",
-        "intro": "Prop 42 would prohibit new state personal property taxes and certain retroactive state taxes",
-        "visualize": FUNDER_VIZ,
+        "title": "The biggest donors across Props 40, 41 and 42, and where their money went",
+        "intro": "Each bar is one donor, colored by the kind of committee that received the money",
+        "visualize": {
+            "custom-colors": {
+                "Yes on 40 / No on 41 & 42 (committees covering several props)": YES,
+                "No on 40 / Yes on 41 or 42 (committees covering several props)": "#8f4a1c",
+                "No on 40 (single-prop committees)": NO,
+                "Yes on 41 (single-prop committee)": "#e8a96b",
+                "Yes on 42 (single-prop committee)": "#f3cfa6",
+            },
+            "value-label-format": "$0.[0]a",
+            "show-color-key": True,
+            "totals-labels": True,
+        },
     },
     "map_county": {
         "csv": "map_county.csv",
