@@ -165,7 +165,8 @@ CHARTS = {
         "csv": "bbc_donors.csv",
         "type": "tables",
         "title": "Who funds the main committee behind No on 40",
-        "intro": "The 25 largest donors to Building a Better California, the committee that supplies most of the No campaign's money. Search or sort by any column.",
+        # {n} is filled in with the number of donors in the table.
+        "intro": "{n} donors to Building a Better California, the committee that supplies most of the No campaign's money. Search or sort by any column.",
         # Datawrapper table: sortable, searchable, with a bar in the amount column.
         "visualize": {
             "searchable": True,
@@ -313,9 +314,11 @@ def main():
 
         call("PUT", f"/charts/{cid}/data", csv_text, "text/csv")
 
+        n_rows = len(csv_text.strip().splitlines()) - 1
+        intro = spec["intro"].replace("{n}", f"All {n_rows}" if n_rows < 150 else f"The top {n_rows}")
         meta = {
             "describe": {
-                "intro": spec["intro"],
+                "intro": intro,
                 "source-name": SOURCE,
                 "source-url": SOURCE_URL,
                 "byline": "Luke Harold",

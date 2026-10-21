@@ -396,7 +396,7 @@ def place(r):
     return f"{city}, {r['state']}" if city else r["state"]
 
 
-KEEP_UPPER = {"PORAC", "PIC", "AFL", "CIO", "LLC", "LP", "LLP", "CEO", "CFO", "COO", "CTO", "SEIU", "PAC", "USA",
+KEEP_UPPER = {"VC", "PORAC", "PIC", "AFL", "CIO", "LLC", "LP", "LLP", "CEO", "CFO", "COO", "CTO", "SEIU", "PAC", "USA",
               "II", "III", "IV", "UHW", "VP", "MD", "UC", "AI", "IT", "NA"}
 NOT_AN_EMPLOYER = {"", "NONE", "N/A", "NA", "-", "NOT EMPLOYED", "INFORMATION REQUESTED"}
 
@@ -672,15 +672,15 @@ def main():
     bbc_to_40 = sum(s["amount"] for s in bbc_spending
                     if s["payee_cmte_id"] in COMMITTEES or PROP40_NAME.search(s["payee"].upper()))
     bbc_out_of_state = sum(r["amount"] for r in bbc if r["state"] and r["state"] != "CA")
-    # Datawrapper table: top 25 donors with where they're from and what
-    # they do, as reported on the filings.
+    # Datawrapper table: up to the top 150 donors (currently all of them)
+    # with where they're from and what they do, as reported on the filings.
     write_csv(
         OUT / "bbc_donors.csv",
         ["Donor", "Location", "Occupation / employer", "Contributed ($)"],
         [[tidy(d["name"]), d["place"],
           ", ".join(x for x in (d.get("occupation", ""), d.get("employer", "")) if x),
           d["amount"]]
-         for d in donor_summary(bbc, limit=25)["top_donors"]],
+         for d in donor_summary(bbc, limit=150)["top_donors"]],
     )
 
     # Who pays for each side of Props 40, 41 and 42, and for each camp across
