@@ -1,32 +1,32 @@
 {
- "updated": "2026-10-20",
- "as_of": "2026-10-21",
+ "updated": "2026-10-21",
+ "as_of": "2026-10-22",
  "segments": [
   {
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 34071487,
+   "reported_total": 34102487,
    "committees": [
     {
      "id": "1484470",
      "name": "Yes on 40 - Billionaire Tax Now - No on 41 & 42 (SEIU-UHW)",
-     "reported_total": 32691189
+     "reported_total": 32711189
     },
     {
      "id": "1497412",
      "name": "Working Families Say No to Props 41 and 42, Sponsored by Labor Unions",
-     "reported_total": 951000
+     "reported_total": 961000
     },
     {
      "id": "1495036",
      "name": "Tax the Ultra-Rich Now, Yes on 3 & 40, No on 41 & 42",
-     "reported_total": 429298
+     "reported_total": 430298
     }
    ],
-   "itemized_total": 34056620,
-   "contributions": 205,
-   "donor_count": 94,
+   "itemized_total": 34087620,
+   "contributions": 208,
+   "donor_count": 96,
    "top_donors": [
     {
      "name": "Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",
@@ -131,6 +131,13 @@
      "place": "Washington, DC"
     },
     {
+     "name": "California Donor Table Issues Committee",
+     "amount": 40000,
+     "n": 2,
+     "type": "Committee",
+     "place": "Sacramento, CA"
+    },
+    {
      "name": "American Federation of State, County & Municipal Employees Council 57 Issues PAC",
      "amount": 25000,
      "n": 1,
@@ -174,13 +181,6 @@
      "employer": "Plymouth Rock Assurance Group"
     },
     {
-     "name": "California Donor Table Issues Committee",
-     "amount": 20000,
-     "n": 1,
-     "type": "Committee",
-     "place": "Sacramento, CA"
-    },
-    {
      "name": "Nicole Pesco",
      "amount": 10000,
      "n": 1,
@@ -195,6 +195,15 @@
      "n": 1,
      "type": "Committee",
      "place": "New York, NY"
+    },
+    {
+     "name": "Henry Scott Wallace",
+     "amount": 10000,
+     "n": 1,
+     "type": "Individual",
+     "place": "Doylestown, PA",
+     "occupation": "Retired",
+     "employer": ""
     },
     {
      "name": "California Democratic Party",
@@ -220,15 +229,6 @@
      "place": "Ventura, CA",
      "occupation": "Not-Employed",
      "employer": ""
-    },
-    {
-     "name": "Betsy Krieger",
-     "amount": 5000,
-     "n": 1,
-     "type": "Individual",
-     "place": "Baltimore, MD",
-     "occupation": "Retired",
-     "employer": ""
     }
    ],
    "top_places": [
@@ -238,11 +238,11 @@
     },
     {
      "place": "Sacramento, CA",
-     "amount": 8455339
+     "amount": 8475339
     },
     {
      "place": "Oakland, CA",
-     "amount": 2200100
+     "amount": 2201100
     },
     {
      "place": "San Francisco, CA",
@@ -282,12 +282,12 @@
     }
    ],
    "by_state": {
-    "California": 33905047,
-    "Out of state": 151573
+    "California": 33926047,
+    "Out of state": 161573
    },
    "by_type": {
-    "Committee": 33009563,
-    "Individual": 996083,
+    "Committee": 33029563,
+    "Individual": 1007083,
     "Business or group": 42600,
     "Party": 8375
    }
@@ -296,7 +296,7 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 130243783,
+   "reported_total": 130343783,
    "committees": [
     {
      "id": "1492108",
@@ -311,7 +311,7 @@
     {
      "id": "1485228",
      "name": "Californians Against Tax Increases (CA Business Roundtable)",
-     "reported_total": 654822
+     "reported_total": 754822
     },
     {
      "id": "1485007",
@@ -319,8 +319,8 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 130243783,
-   "contributions": 35,
+   "itemized_total": 130343783,
+   "contributions": 36,
    "donor_count": 15,
    "top_donors": [
     {
@@ -349,8 +349,8 @@
     },
     {
      "name": "CALIFORNIA BUSINESS ROUNDTABLE ISSUES PAC",
-     "amount": 700000,
-     "n": 9,
+     "amount": 800000,
+     "n": 10,
      "type": "Committee",
      "place": "Sacramento, CA"
     },
@@ -439,7 +439,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 119149822
+     "amount": 119249822
     },
     {
      "place": "San Francisco, CA",
@@ -463,11 +463,11 @@
     }
    ],
    "by_state": {
-    "California": 129943783,
+    "California": 130043783,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 119642057,
+    "Committee": 119742057,
     "Business or group": 5301726,
     "Individual": 5300000
    }
