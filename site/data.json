@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-21",
- "as_of": "2026-10-23",
+ "updated": "2026-10-22",
+ "as_of": "2026-10-24",
  "segments": [
   {
    "id": "yes40",
@@ -295,7 +295,7 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 130344804,
+   "reported_total": 130369804,
    "committees": [
     {
      "id": "1492108",
@@ -310,7 +310,7 @@
     {
      "id": "1485228",
      "name": "Californians Against Tax Increases (CA Business Roundtable)",
-     "reported_total": 754822
+     "reported_total": 779822
     },
     {
      "id": "1485007",
@@ -318,8 +318,8 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 130344804,
-   "contributions": 36,
+   "itemized_total": 130369804,
+   "contributions": 37,
    "donor_count": 15,
    "top_donors": [
     {
@@ -348,8 +348,8 @@
     },
     {
      "name": "CALIFORNIA BUSINESS ROUNDTABLE ISSUES PAC",
-     "amount": 800000,
-     "n": 10,
+     "amount": 825000,
+     "n": 11,
      "type": "Committee",
      "place": "Sacramento, CA"
     },
@@ -438,7 +438,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 119249822
+     "amount": 119274822
     },
     {
      "place": "San Francisco, CA",
@@ -462,11 +462,11 @@
     }
    ],
    "by_state": {
-    "California": 130044804,
+    "California": 130069804,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 119742057,
+    "Committee": 119767057,
     "Business or group": 5302748,
     "Individual": 5300000
    }
