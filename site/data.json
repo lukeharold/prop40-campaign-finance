@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22",
- "as_of": "2026-10-24",
+ "updated": "2026-10-23",
+ "as_of": "2026-10-25",
  "segments": [
   {
    "id": "yes40",
@@ -295,12 +295,12 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 130369804,
+   "reported_total": 140869804,
    "committees": [
     {
      "id": "1492108",
      "name": "No on Prop 40 - Doctors, Teachers, Small Businesses...",
-     "reported_total": 118739982
+     "reported_total": 129239982
     },
     {
      "id": "1486695",
@@ -318,14 +318,14 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 130369804,
-   "contributions": 37,
+   "itemized_total": 140869804,
+   "contributions": 38,
    "donor_count": 15,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
-     "amount": 118500000,
-     "n": 10,
+     "amount": 129000000,
+     "n": 11,
      "type": "Committee",
      "place": "San Rafael, CA",
      "drill": "bbc"
@@ -438,7 +438,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 119274822
+     "amount": 129774822
     },
     {
      "place": "San Francisco, CA",
@@ -462,11 +462,11 @@
     }
    ],
    "by_state": {
-    "California": 130069804,
+    "California": 140569804,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 119767057,
+    "Committee": 130267057,
     "Business or group": 5302748,
     "Individual": 5300000
    }
@@ -545,22 +545,22 @@
    "id": "yes42",
    "label": "Yes on 42",
    "camp": "anti",
-   "reported_total": 127977037,
+   "reported_total": 145977037,
    "committees": [
     {
      "id": "1488418",
      "name": "Yes on 42 - Protect Retirement & Life Savings",
-     "reported_total": 127977037
+     "reported_total": 145977037
     }
    ],
-   "itemized_total": 127977037,
-   "contributions": 21,
+   "itemized_total": 145977037,
+   "contributions": 22,
    "donor_count": 4,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
-     "amount": 127800000,
-     "n": 18,
+     "amount": 145800000,
+     "n": 19,
      "type": "Committee",
      "place": "San Rafael, CA",
      "drill": "bbc"
@@ -590,7 +590,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 127800000
+     "amount": 145800000
     },
     {
      "place": "Sacramento, CA",
@@ -602,10 +602,10 @@
     }
    ],
    "by_state": {
-    "California": 127977037
+    "California": 145977037
    },
    "by_type": {
-    "Committee": 127977037
+    "Committee": 145977037
    }
   }
  ],
@@ -613,12 +613,12 @@
   "name": "Building a Better California",
   "filer_id": "1486767",
   "raised": 333247889,
-  "spent": 325308484,
+  "spent": 353808484,
   "spent_to": {
    "other": 20658484,
    "yes41": 58350000,
-   "yes42": 127800000,
-   "no40": 118500000
+   "yes42": 145800000,
+   "no40": 129000000
   },
   "itemized_total": 333247889,
   "contributions": 122,
