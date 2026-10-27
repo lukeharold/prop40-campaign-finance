@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-23",
- "as_of": "2026-10-26",
+ "updated": "2026-10-26",
+ "as_of": "2026-10-27",
  "segments": [
   {
    "id": "yes40",
@@ -132,18 +132,18 @@
      "place": "Sacramento, CA"
     },
     {
-     "name": "California Donor Table Issues Committee",
-     "amount": 40000,
-     "n": 2,
-     "type": "Committee",
-     "place": "Sacramento, CA"
-    },
-    {
      "name": "Excessive Wealth",
      "amount": 40000,
      "n": 1,
      "type": "Business or group",
      "place": "Washington, DC"
+    },
+    {
+     "name": "California Donor Table Issues Committee",
+     "amount": 40000,
+     "n": 2,
+     "type": "Committee",
+     "place": "Sacramento, CA"
     },
     {
      "name": "American Federation of State, County & Municipal Employees Council 57 Issues PAC",
@@ -295,12 +295,12 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 140869804,
+   "reported_total": 147054293,
    "committees": [
     {
      "id": "1492108",
      "name": "No on Prop 40 - Doctors, Teachers, Small Businesses...",
-     "reported_total": 129239982
+     "reported_total": 135239982
     },
     {
      "id": "1486695",
@@ -310,7 +310,7 @@
     {
      "id": "1485228",
      "name": "Californians Against Tax Increases (CA Business Roundtable)",
-     "reported_total": 779822
+     "reported_total": 964311
     },
     {
      "id": "1485007",
@@ -318,14 +318,14 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 140869804,
-   "contributions": 38,
+   "itemized_total": 147054293,
+   "contributions": 40,
    "donor_count": 15,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
-     "amount": 129000000,
-     "n": 11,
+     "amount": 135000000,
+     "n": 12,
      "type": "Committee",
      "place": "San Rafael, CA",
      "drill": "bbc"
@@ -355,8 +355,8 @@
     },
     {
      "name": "RIGHT PATH CALIFORNIA ISSUES PAC",
-     "amount": 399822,
-     "n": 3,
+     "amount": 584311,
+     "n": 4,
      "type": "Committee",
      "place": "San Rafael, CA"
     },
@@ -438,7 +438,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 129774822
+     "amount": 135959311
     },
     {
      "place": "San Francisco, CA",
@@ -462,11 +462,11 @@
     }
    ],
    "by_state": {
-    "California": 140569804,
+    "California": 146754293,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 130267057,
+    "Committee": 136451545,
     "Business or group": 5302748,
     "Individual": 5300000
    }
@@ -545,22 +545,22 @@
    "id": "yes42",
    "label": "Yes on 42",
    "camp": "anti",
-   "reported_total": 145977037,
+   "reported_total": 154277037,
    "committees": [
     {
      "id": "1488418",
      "name": "Yes on 42 - Protect Retirement & Life Savings",
-     "reported_total": 145977037
+     "reported_total": 154277037
     }
    ],
-   "itemized_total": 145977037,
-   "contributions": 22,
+   "itemized_total": 154277037,
+   "contributions": 23,
    "donor_count": 4,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
-     "amount": 145800000,
-     "n": 19,
+     "amount": 154100000,
+     "n": 20,
      "type": "Committee",
      "place": "San Rafael, CA",
      "drill": "bbc"
@@ -590,7 +590,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 145800000
+     "amount": 154100000
     },
     {
      "place": "Sacramento, CA",
@@ -602,10 +602,10 @@
     }
    ],
    "by_state": {
-    "California": 145977037
+    "California": 154277037
    },
    "by_type": {
-    "Committee": 145977037
+    "Committee": 154277037
    }
   }
  ],
@@ -613,12 +613,12 @@
   "name": "Building a Better California",
   "filer_id": "1486767",
   "raised": 333247889,
-  "spent": 353808484,
+  "spent": 368108484,
   "spent_to": {
    "other": 20658484,
    "yes41": 58350000,
-   "yes42": 145800000,
-   "no40": 129000000
+   "yes42": 154100000,
+   "no40": 135000000
   },
   "itemized_total": 333247889,
   "contributions": 122,
