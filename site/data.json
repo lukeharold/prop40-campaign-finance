@@ -1,17 +1,17 @@
 {
- "updated": "2026-10-27",
- "as_of": "2026-10-28",
+ "updated": "2026-10-28",
+ "as_of": "2026-10-29",
  "segments": [
   {
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 34337671,
+   "reported_total": 34347671,
    "committees": [
     {
      "id": "1484470",
      "name": "Yes on 40 - Billionaire Tax Now - No on 41 & 42 (SEIU-UHW)",
-     "reported_total": 32777092
+     "reported_total": 32787092
     },
     {
      "id": "1497412",
@@ -24,8 +24,8 @@
      "reported_total": 549579
     }
    ],
-   "itemized_total": 34416294,
-   "contributions": 513,
+   "itemized_total": 34426294,
+   "contributions": 514,
    "donor_count": 286,
    "top_donors": [
     {
@@ -146,20 +146,20 @@
      "place": "Sacramento, CA"
     },
     {
+     "name": "John O'Farrell",
+     "amount": 35000,
+     "n": 2,
+     "type": "Individual",
+     "place": "Atherton, CA",
+     "occupation": "Retired",
+     "employer": ""
+    },
+    {
      "name": "American Federation of State, County & Municipal Employees Council 57 Issues PAC",
      "amount": 25000,
      "n": 1,
      "type": "Committee",
      "place": "Norwalk, CA"
-    },
-    {
-     "name": "John O'Farrell",
-     "amount": 25000,
-     "n": 1,
-     "type": "Individual",
-     "place": "Atherton, CA",
-     "occupation": "Retired",
-     "employer": ""
     },
     {
      "name": "James Stone",
@@ -264,11 +264,11 @@
      "amount": 42750
     },
     {
-     "place": "Norwalk, CA",
-     "amount": 25000
+     "place": "Atherton, CA",
+     "amount": 35000
     },
     {
-     "place": "Atherton, CA",
+     "place": "Norwalk, CA",
      "amount": 25000
     },
     {
@@ -281,12 +281,12 @@
     }
    ],
    "by_state": {
-    "California": 34221734,
+    "California": 34231734,
     "Out of state": 194560
    },
    "by_type": {
     "Committee": 33087063,
-    "Individual": 1111321,
+    "Individual": 1121321,
     "Business or group": 209536,
     "Party": 8375
    }
@@ -295,7 +295,7 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 152054293,
+   "reported_total": 152064293,
    "committees": [
     {
      "id": "1492108",
@@ -310,7 +310,7 @@
     {
      "id": "1485228",
      "name": "Californians Against Tax Increases (CA Business Roundtable)",
-     "reported_total": 964311
+     "reported_total": 974311
     },
     {
      "id": "1485007",
@@ -318,8 +318,8 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 152054293,
-   "contributions": 41,
+   "itemized_total": 152064293,
+   "contributions": 42,
    "donor_count": 15,
    "top_donors": [
     {
@@ -348,8 +348,8 @@
     },
     {
      "name": "CALIFORNIA BUSINESS ROUNDTABLE ISSUES PAC",
-     "amount": 825000,
-     "n": 11,
+     "amount": 835000,
+     "n": 12,
      "type": "Committee",
      "place": "Sacramento, CA"
     },
@@ -438,7 +438,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 140959311
+     "amount": 140969311
     },
     {
      "place": "San Francisco, CA",
@@ -462,11 +462,11 @@
     }
    ],
    "by_state": {
-    "California": 151754293,
+    "California": 151764293,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 141451545,
+    "Committee": 141461545,
     "Business or group": 5302748,
     "Individual": 5300000
    }
