@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-29",
- "as_of": "2026-10-31",
+ "updated": "2026-10-30",
+ "as_of": "2026-11-01",
  "segments": [
   {
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 34374671,
+   "reported_total": 34404671,
    "committees": [
     {
      "id": "1484470",
@@ -21,11 +21,11 @@
     {
      "id": "1495036",
      "name": "Tax the Ultra-Rich Now, Yes on 3 & 40, No on 41 & 42",
-     "reported_total": 549579
+     "reported_total": 579579
     }
    ],
-   "itemized_total": 34453294,
-   "contributions": 517,
+   "itemized_total": 34483294,
+   "contributions": 519,
    "donor_count": 287,
    "top_donors": [
     {
@@ -61,8 +61,8 @@
     },
     {
      "name": "Alan Davis",
-     "amount": 375000,
-     "n": 4,
+     "amount": 400000,
+     "n": 5,
      "type": "Individual",
      "place": "San Francisco, CA",
      "occupation": "Director",
@@ -133,8 +133,8 @@
     },
     {
      "name": "Excessive Wealth",
-     "amount": 40000,
-     "n": 1,
+     "amount": 45000,
+     "n": 2,
      "type": "Business or group",
      "place": "Washington, DC"
     },
@@ -247,7 +247,7 @@
     },
     {
      "place": "San Francisco, CA",
-     "amount": 797151
+     "amount": 822151
     },
     {
      "place": "San Diego, CA",
@@ -263,7 +263,7 @@
     },
     {
      "place": "Washington, DC",
-     "amount": 42750
+     "amount": 47750
     },
     {
      "place": "Atherton, CA",
@@ -283,13 +283,13 @@
     }
    ],
    "by_state": {
-    "California": 34256734,
-    "Out of state": 196560
+    "California": 34281734,
+    "Out of state": 201560
    },
    "by_type": {
     "Committee": 33087063,
-    "Individual": 1148321,
-    "Business or group": 209536,
+    "Individual": 1173321,
+    "Business or group": 214536,
     "Party": 8375
    }
   },
@@ -297,12 +297,12 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 166204293,
+   "reported_total": 170704293,
    "committees": [
     {
      "id": "1492108",
      "name": "No on Prop 40 - Doctors, Teachers, Small Businesses...",
-     "reported_total": 154239982
+     "reported_total": 158739982
     },
     {
      "id": "1486695",
@@ -320,14 +320,14 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 166204293,
-   "contributions": 46,
+   "itemized_total": 170704293,
+   "contributions": 47,
    "donor_count": 15,
    "top_donors": [
     {
      "name": "BUILDING A BETTER CALIFORNIA",
-     "amount": 154000000,
-     "n": 16,
+     "amount": 158500000,
+     "n": 17,
      "type": "Committee",
      "place": "San Rafael, CA",
      "drill": "bbc"
@@ -440,7 +440,7 @@
    "top_places": [
     {
      "place": "San Rafael, CA",
-     "amount": 155109311
+     "amount": 159609311
     },
     {
      "place": "San Francisco, CA",
@@ -464,11 +464,11 @@
     }
    ],
    "by_state": {
-    "California": 165904293,
+    "California": 170404293,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 155601545,
+    "Committee": 160101545,
     "Business or group": 5302748,
     "Individual": 5300000
    }
@@ -615,12 +615,12 @@
   "name": "Building a Better California",
   "filer_id": "1486767",
   "raised": 333247889,
-  "spent": 392108484,
+  "spent": 396608484,
   "spent_to": {
    "other": 20658484,
    "yes41": 58350000,
    "yes42": 159100000,
-   "no40": 154000000
+   "no40": 158500000
   },
   "itemized_total": 333247889,
   "contributions": 122,
