@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-30",
- "as_of": "2026-11-01",
+ "updated": "2026-11-01",
+ "as_of": "2026-11-02",
  "segments": [
   {
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 34404671,
+   "reported_total": 34408671,
    "committees": [
     {
      "id": "1484470",
@@ -21,11 +21,11 @@
     {
      "id": "1495036",
      "name": "Tax the Ultra-Rich Now, Yes on 3 & 40, No on 41 & 42",
-     "reported_total": 579579
+     "reported_total": 583579
     }
    ],
-   "itemized_total": 34483294,
-   "contributions": 519,
+   "itemized_total": 34487294,
+   "contributions": 522,
    "donor_count": 287,
    "top_donors": [
     {
@@ -251,7 +251,7 @@
     },
     {
      "place": "San Diego, CA",
-     "amount": 252880
+     "amount": 256880
     },
     {
      "place": "San Rafael, CA",
@@ -283,12 +283,12 @@
     }
    ],
    "by_state": {
-    "California": 34281734,
+    "California": 34285734,
     "Out of state": 201560
    },
    "by_type": {
     "Committee": 33087063,
-    "Individual": 1173321,
+    "Individual": 1177321,
     "Business or group": 214536,
     "Party": 8375
    }
