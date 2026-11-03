@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-01",
- "as_of": "2026-11-02",
+ "as_of": "2026-11-03",
  "segments": [
   {
    "id": "yes40",
@@ -297,12 +297,12 @@
    "id": "no40",
    "label": "No on 40",
    "camp": "anti",
-   "reported_total": 170704293,
+   "reported_total": 170704496,
    "committees": [
     {
      "id": "1492108",
      "name": "No on Prop 40 - Doctors, Teachers, Small Businesses...",
-     "reported_total": 158739982
+     "reported_total": 158740186
     },
     {
      "id": "1486695",
@@ -320,7 +320,7 @@
      "reported_total": 400000
     }
    ],
-   "itemized_total": 170704293,
+   "itemized_total": 170704496,
    "contributions": 47,
    "donor_count": 15,
    "top_donors": [
@@ -403,7 +403,7 @@
     },
     {
      "name": "PLANNED PARENTHOOD AFFILIATES OF CALIFORNIA VOTES PAC",
-     "amount": 34294,
+     "amount": 34497,
      "n": 2,
      "type": "Committee",
      "place": "Sacramento, CA"
@@ -448,7 +448,7 @@
     },
     {
      "place": "Sacramento, CA",
-     "amount": 692041
+     "amount": 692245
     },
     {
      "place": "Chicago, IL",
@@ -464,11 +464,11 @@
     }
    ],
    "by_state": {
-    "California": 170404293,
+    "California": 170404496,
     "Out of state": 300000
    },
    "by_type": {
-    "Committee": 160101545,
+    "Committee": 160101749,
     "Business or group": 5302748,
     "Individual": 5300000
    }
