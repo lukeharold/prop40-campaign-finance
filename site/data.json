@@ -1,17 +1,17 @@
 {
- "updated": "2026-11-01",
- "as_of": "2026-11-03",
+ "updated": "2026-11-02",
+ "as_of": "2026-11-04",
  "segments": [
   {
    "id": "yes40",
    "label": "Yes on 40 / No on 41 and 42",
    "camp": "pro",
-   "reported_total": 34408671,
+   "reported_total": 34418671,
    "committees": [
     {
      "id": "1484470",
      "name": "Yes on 40 - Billionaire Tax Now - No on 41 & 42 (SEIU-UHW)",
-     "reported_total": 32814092
+     "reported_total": 32824092
     },
     {
      "id": "1497412",
@@ -24,14 +24,14 @@
      "reported_total": 583579
     }
    ],
-   "itemized_total": 34487294,
-   "contributions": 522,
+   "itemized_total": 34497294,
+   "contributions": 523,
    "donor_count": 287,
    "top_donors": [
     {
      "name": "Service Employees International Union, United Healthcare Workers West Nonprofit 501(c)(5)",
-     "amount": 22077899,
-     "n": 73,
+     "amount": 22087899,
+     "n": 74,
      "type": "Committee",
      "place": "Los Angeles, CA",
      "note": "Union treasury or union committee; its money comes from member dues and isn't itemized further."
@@ -235,7 +235,7 @@
    "top_places": [
     {
      "place": "Los Angeles, CA",
-     "amount": 22079849
+     "amount": 22089849
     },
     {
      "place": "Sacramento, CA",
@@ -283,11 +283,11 @@
     }
    ],
    "by_state": {
-    "California": 34285734,
+    "California": 34295734,
     "Out of state": 201560
    },
    "by_type": {
-    "Committee": 33087063,
+    "Committee": 33097063,
     "Individual": 1177321,
     "Business or group": 214536,
     "Party": 8375
