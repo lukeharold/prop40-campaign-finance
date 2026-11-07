@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-03",
- "as_of": "2026-11-06",
+ "as_of": "2026-11-07",
  "segments": [
   {
    "id": "yes40",
@@ -614,7 +614,7 @@
  "bbc": {
   "name": "Building a Better California",
   "filer_id": "1486767",
-  "raised": 333247889,
+  "raised": 366270535,
   "spent": 396608484,
   "spent_to": {
    "other": 20658484,
@@ -622,14 +622,14 @@
    "yes42": 159100000,
    "no40": 158500000
   },
-  "itemized_total": 333247889,
-  "contributions": 122,
-  "donor_count": 78,
+  "itemized_total": 366270535,
+  "contributions": 140,
+  "donor_count": 87,
   "top_donors": [
    {
     "name": "SERGEY BRIN",
-    "amount": 102000000,
-    "n": 7,
+    "amount": 112000000,
+    "n": 8,
     "type": "Individual",
     "place": "Reno, NV",
     "occupation": "Co-Founder",
@@ -655,8 +655,8 @@
    },
    {
     "name": "PATRICK COLLISON",
-    "amount": 33169794,
-    "n": 5,
+    "amount": 39987493,
+    "n": 9,
     "type": "Individual",
     "place": "Redwood City, CA",
     "occupation": "CEO",
@@ -708,6 +708,15 @@
     "employer": ""
    },
    {
+    "name": "HENRY SAMUELI",
+    "amount": 5000000,
+    "n": 1,
+    "type": "Individual",
+    "place": "Corona Del Mar, CA",
+    "occupation": "Owner",
+    "employer": "H&S Ventures, LLC"
+   },
+   {
     "name": "ALPHAFOXTROT LLC(RESPONSIBLE OFFICER: LYNSI SNYDER)",
     "amount": 4968061,
     "n": 1,
@@ -731,6 +740,15 @@
     "place": "San Rafael, CA",
     "occupation": "Vy Capital",
     "employer": "Private Investor"
+   },
+   {
+    "name": "SCOTT D. COOK",
+    "amount": 3687250,
+    "n": 1,
+    "type": "Individual",
+    "place": "Redwood City, CA",
+    "occupation": "Co-Founder",
+    "employer": "Intuit"
    },
    {
     "name": "TONY XU",
@@ -787,6 +805,24 @@
     "employer": "Tpg"
    },
    {
+    "name": "PAUL SLAVIK",
+    "amount": 2253234,
+    "n": 3,
+    "type": "Individual",
+    "place": "Newport Beach, CA",
+    "occupation": "Retired",
+    "employer": ""
+   },
+   {
+    "name": "JAMES SLAVIK",
+    "amount": 2248899,
+    "n": 3,
+    "type": "Individual",
+    "place": "Newport Beach, CA",
+    "occupation": "President",
+    "employer": "Mark IV Capital Inc."
+   },
+   {
     "name": "BRUCE DUNLEVIE",
     "amount": 2110000,
     "n": 1,
@@ -796,6 +832,15 @@
     "employer": "Benchmark"
    },
    {
+    "name": "NEIL MEHTA",
+    "amount": 2000000,
+    "n": 3,
+    "type": "Individual",
+    "place": "San Francisco, CA",
+    "occupation": "Founder",
+    "employer": "Greenoaks Capital"
+   },
+   {
     "name": "GEORGE MARCUS",
     "amount": 2000000,
     "n": 2,
@@ -803,77 +848,32 @@
     "place": "Palo Alto, CA",
     "occupation": "Chairman",
     "employer": "Marcus + Millichap Co."
-   },
-   {
-    "name": "JAMES SLAVIK",
-    "amount": 1998899,
-    "n": 2,
-    "type": "Individual",
-    "place": "Newport Beach, CA",
-    "occupation": "President",
-    "employer": "Mark IV Capital Inc."
-   },
-   {
-    "name": "PAUL SLAVIK",
-    "amount": 1998899,
-    "n": 2,
-    "type": "Individual",
-    "place": "Newport Beach, CA",
-    "occupation": "Retired",
-    "employer": ""
-   },
-   {
-    "name": "FREDERICK E EHRSAM III",
-    "amount": 1979908,
-    "n": 2,
-    "type": "Individual",
-    "place": "San Francisco, CA",
-    "occupation": "CEO",
-    "employer": "Nudge"
-   },
-   {
-    "name": "PHILIPPE LAFFONT",
-    "amount": 1500077,
-    "n": 1,
-    "type": "Individual",
-    "place": "New York, NY",
-    "occupation": "Founder & Portfolio Manager",
-    "employer": "Coatue Management LLC"
-   },
-   {
-    "name": "THOMAS LAFFONT",
-    "amount": 1500077,
-    "n": 1,
-    "type": "Individual",
-    "place": "New York, NY",
-    "occupation": "Co-Founder",
-    "employer": "Coatue Management LLC"
    }
   ],
   "top_places": [
    {
     "place": "Reno, NV",
-    "amount": 102000000
+    "amount": 112000000
    },
    {
     "place": "San Rafael, CA",
-    "amount": 44196853
+    "amount": 45208497
+   },
+   {
+    "place": "Redwood City, CA",
+    "amount": 45201900
    },
    {
     "place": "West Hollywood, CA",
     "amount": 40236457
    },
    {
-    "place": "Redwood City, CA",
-    "amount": 34696951
-   },
-   {
     "place": "San Francisco, CA",
-    "amount": 28388102
+    "amount": 30888102
    },
    {
     "place": "Palo Alto, CA",
-    "amount": 19852501
+    "amount": 21852501
    },
    {
     "place": "Portola Valley, CA",
@@ -881,31 +881,31 @@
    },
    {
     "place": "Menlo Park, CA",
-    "amount": 6085968
+    "amount": 6587685
    },
    {
     "place": "Los Angeles, CA",
     "amount": 5753329
    },
    {
+    "place": "Newport Beach, CA",
+    "amount": 5015403
+   },
+   {
     "place": "West Palm Beach, FL",
     "amount": 5000000
    },
    {
-    "place": "Irvine, CA",
-    "amount": 4968061
-   },
-   {
-    "place": "Newport Beach, CA",
-    "amount": 4511068
+    "place": "Corona Del Mar, CA",
+    "amount": 5000000
    }
   ],
   "by_state": {
-   "Out of state": 116757966,
-   "California": 216489924
+   "Out of state": 127257966,
+   "California": 239012569
   },
   "by_type": {
-   "Individual": 327279827,
+   "Individual": 360302472,
    "Business or group": 5968063
   }
  }

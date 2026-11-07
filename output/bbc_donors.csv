@@ -1,40 +1,44 @@
 Donor,Location,Occupation / employer,Contributed ($)
-Sergey Brin,"Reno, NV","Co-Founder, Google",102000000
+Sergey Brin,"Reno, NV","Co-Founder, Google",112000000
 Eric Schmidt,"West Hollywood, CA",Investor/Philanthropist,40236457
 "L. John Doerr, III","San Rafael, CA","Chairman, Kleiner Perkins",40000000
-Patrick Collison,"Redwood City, CA","CEO, Stripe",33169794
+Patrick Collison,"Redwood City, CA","CEO, Stripe",39987493
 Vinod Khosla,"Portola Valley, CA","Venture Capitalist, Khosla Ventures LLC",12561504
 Chris Larsen,"San Francisco, CA","Executive Chairman, Ripple, Inc.",12511845
 Michael Moritz,"Palo Alto, CA",Investor/Philanthropist,7500000
 Kavitark Ram Shriram,"Palo Alto, CA","Investor, Self-Employed; Kavitark Ram Shriram",5005599
 Frank Slootman,"West Palm Beach, FL",Retired,5000000
+Henry Samueli,"Corona Del Mar, CA","Owner, H&S Ventures, LLC",5000000
 Alphafoxtrot LLC(Responsible Officer: Lynsi Snyder),"Irvine, CA",,4968061
 Stewart Resnick,"Los Angeles, CA","President & Chairman, The Wonderful Company",4500000
 John Hering,"San Rafael, CA","Vy Capital, Private Investor",3921961
+Scott D. Cook,"Redwood City, CA","Co-Founder, Intuit",3687250
 Tony Xu,"San Francisco, CA","CEO, Doordash",3493982
 Maksim Rafael Levchin,"San Francisco, CA","CEO, Affirm",3021884
 Alfred Lin,"San Mateo, CA","Managing Partner, Sequoia Capital",3000000
 Andrew Karam,"Atherton, CA","Investor, Self-Employed; Andrew Karam",3000000
 Meyer Malka,"Palo Alto, CA","Investor, Ribbit Management Company LLC",2986174
 James Coulter,"Fort Worth, TX","Investor, Tpg",2527189
+Paul Slavik,"Newport Beach, CA",Retired,2253234
+James Slavik,"Newport Beach, CA","President, Mark IV Capital Inc.",2248899
 Bruce Dunlevie,"Woodside, CA","Partner, Benchmark",2110000
+Neil Mehta,"San Francisco, CA","Founder, Greenoaks Capital",2000000
 George Marcus,"Palo Alto, CA","Chairman, Marcus + Millichap Co.",2000000
-James Slavik,"Newport Beach, CA","President, Mark IV Capital Inc.",1998899
-Paul Slavik,"Newport Beach, CA",Retired,1998899
+Sean Parker,"Palo Alto, CA","Chairman, Sean N. Parker Foundation",2000000
 Frederick E Ehrsam III,"San Francisco, CA","CEO, Nudge",1979908
+Andrew Phillips Reed,"Menlo Park, CA","Partner, Sequoia Capital",1575831
 Philippe Laffont,"New York, NY","Founder & Portfolio Manager, Coatue Management LLC",1500077
 Thomas Laffont,"New York, NY","Co-Founder, Coatue Management LLC",1500077
 David Baszucki,"San Mateo, CA","Founder & CEO, Roblox",1500000
 Mark Pincus,"Woody Creek, CO","President, Ql Ventures LLC",1085747
-Andrew Phillips Reed,"Menlo Park, CA","Partner, Sequoia Capital",1074114
 Hemant Taneja,"Los Altos Hills, CA","CEO, General Catalyst",1047668
 Robert Fisher,"Redwood City, CA","Managing Director, Pisces Inc.",1018105
+Andrew Houston,"San Rafael, CA","Co-Founder, Dropbox",1011644
 Brook Byers,"Menlo Park, CA","Investor, Kleiner Perkins",1004394
 Shaun Maguire,"Los Angeles, CA","Partner, Sequoia Capital",1003329
 Steve Jurvetson,"Incline Village, NV","Investor, Future Ventures",1001608
 Vladimir Tenev,"Mountain View, CA","CEO, Robinhood Markets, Inc.",1001053
 Kleiner Perkins,"Menlo Park, CA",,1000001
-Neil Mehta,"San Francisco, CA","Founder, Greenoaks Capital",1000000
 Matthew Huang,"New York, NY","Managing Partner, Paradigm",1000000
 Jed Mccaleb,"Berkeley, CA","Co-Founder, Stellar Development Foundation",1000000
 Kevin Kelly,"Menlo Park, CA","Partner, Hrtg",1000000
@@ -42,6 +46,7 @@ Alastair Rampell,"Los Altos Hills, CA","Venture Capitalist, A16Z",1000000
 Thomas Coates,"San Francisco, CA","Chairman, Jackson Square Properties",1000000
 Mark Heising,"San Francisco, CA","Managing Director, Medley Partners LLC",1000000
 Baiju Bhatt,"San Francisco, CA","CEO, Cowboy Space Corp",1000000
+Oliver Mulherin,"San Francisco, CA","Software Engineer, Self-Employed; Oliver Mulherin",1000000
 Brad Gerstner,"Menlo Park, CA","CEO, Altimeter Capital",991931
 Divesh Makan,"San Francisco, CA","Founding Partner, Iconiq Capital",990480
 Nick Shalek,"Palo Alto, CA","Investor, Ribbit Capital",971601
@@ -53,6 +58,8 @@ Sarah Guo,"Menlo Park, CA","Partner, Conviction Partners, LLC",507764
 Kim Degeorge,"Santa Monica, CA",Not Employed,500113
 Daniel Tierney,"Chicago, IL","Administrator, Wicklow Capital Inc.",500000
 Sameer Gandhi,"Palo Alto, CA","Managing Member, Accel Partners",500000
+Bret Taylor,"San Francisco, CA","Co-Founder, Sierra",500000
+Scott D. Sandell,"Palm Beach, FL","Venture Capitalist, Nea",500000
 Peter Fenton,"San Francisco, CA","Venture Capitalist, Benchmark Capital",496988
 Naval Ravikant,"Las Vegas, NV","Entrepreneur, Self-Employed; Naval Ravikant",493399
 Stanley Tang,"San Francisco, CA","Co-Founder, Doordash Labs",491015
@@ -62,6 +69,8 @@ Michael Vernal,"Palo Alto, CA","Investor, Conviction",391500
 Gregory Baszucki,"San Rafael, CA",Retired,274892
 Bennett Rosenthal,"Los Angeles, CA","Partner, Ares Management Corporation",250000
 John a. Pritzker,"San Francisco, CA","President, Aperture Group, LLC",250000
+Bruce Karsh,"Beverly Hills, CA","CIO, Oaktree Capital Management",250000
+Martha Karsh,"Beverly Hills, CA",Retired,250000
 Mary Meeker,"San Francisco, CA","General Partner, Bond Capital Management, LP",202664
 Steve Huffman,"San Francisco, CA","CEO, Reddit",101803
 Matthew Murphy,"Palo Alto, CA","Venture Capitalist, Menlo Ventures",101797
