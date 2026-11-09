@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-03",
- "as_of": "2026-11-08",
+ "as_of": "2026-11-09",
  "segments": [
   {
    "id": "yes40",
@@ -614,7 +614,7 @@
  "bbc": {
   "name": "Building a Better California",
   "filer_id": "1486767",
-  "raised": 366270535,
+  "raised": 398532002,
   "spent": 396608484,
   "spent_to": {
    "other": 20658484,
@@ -622,14 +622,14 @@
    "yes42": 159100000,
    "no40": 158500000
   },
-  "itemized_total": 366270535,
-  "contributions": 140,
-  "donor_count": 87,
+  "itemized_total": 398532002,
+  "contributions": 151,
+  "donor_count": 91,
   "top_donors": [
    {
     "name": "SERGEY BRIN",
-    "amount": 112000000,
-    "n": 8,
+    "amount": 132000000,
+    "n": 10,
     "type": "Individual",
     "place": "Reno, NV",
     "occupation": "Co-Founder",
@@ -637,8 +637,8 @@
    },
    {
     "name": "ERIC SCHMIDT",
-    "amount": 40236457,
-    "n": 6,
+    "amount": 45558173,
+    "n": 7,
     "type": "Individual",
     "place": "West Hollywood, CA",
     "occupation": "Investor/Philanthropist",
@@ -733,6 +733,15 @@
     "employer": "The Wonderful Company"
    },
    {
+    "name": "SCOTT D. COOK",
+    "amount": 4014250,
+    "n": 2,
+    "type": "Individual",
+    "place": "Redwood City, CA",
+    "occupation": "Co-Founder",
+    "employer": "Intuit"
+   },
+   {
     "name": "JOHN HERING",
     "amount": 3921961,
     "n": 3,
@@ -740,15 +749,6 @@
     "place": "San Rafael, CA",
     "occupation": "Vy Capital",
     "employer": "Private Investor"
-   },
-   {
-    "name": "SCOTT D. COOK",
-    "amount": 3687250,
-    "n": 1,
-    "type": "Individual",
-    "place": "Redwood City, CA",
-    "occupation": "Co-Founder",
-    "employer": "Intuit"
    },
    {
     "name": "TONY XU",
@@ -796,6 +796,15 @@
     "employer": "Ribbit Management Company LLC"
    },
    {
+    "name": "ROELOF BOTHA",
+    "amount": 2985827,
+    "n": 1,
+    "type": "Individual",
+    "place": "Hillsborough, CA",
+    "occupation": "CEO",
+    "employer": "Tensegrity LLC"
+   },
+   {
     "name": "JAMES COULTER",
     "amount": 2527189,
     "n": 1,
@@ -839,33 +848,24 @@
     "place": "San Francisco, CA",
     "occupation": "Founder",
     "employer": "Greenoaks Capital"
-   },
-   {
-    "name": "GEORGE MARCUS",
-    "amount": 2000000,
-    "n": 2,
-    "type": "Individual",
-    "place": "Palo Alto, CA",
-    "occupation": "Chairman",
-    "employer": "Marcus + Millichap Co."
    }
   ],
   "top_places": [
    {
     "place": "Reno, NV",
-    "amount": 112000000
+    "amount": 132000000
+   },
+   {
+    "place": "Redwood City, CA",
+    "amount": 46028900
+   },
+   {
+    "place": "West Hollywood, CA",
+    "amount": 45558173
    },
    {
     "place": "San Rafael, CA",
     "amount": 45208497
-   },
-   {
-    "place": "Redwood City, CA",
-    "amount": 45201900
-   },
-   {
-    "place": "West Hollywood, CA",
-    "amount": 40236457
    },
    {
     "place": "San Francisco, CA",
@@ -881,7 +881,7 @@
    },
    {
     "place": "Menlo Park, CA",
-    "amount": 6587685
+    "amount": 7594342
    },
    {
     "place": "Los Angeles, CA",
@@ -901,11 +901,11 @@
    }
   ],
   "by_state": {
-   "Out of state": 127257966,
-   "California": 239012569
+   "Out of state": 147257966,
+   "California": 251274037
   },
   "by_type": {
-   "Individual": 360302472,
+   "Individual": 392563940,
    "Business or group": 5968063
   }
  }
